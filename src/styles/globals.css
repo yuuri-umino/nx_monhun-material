@@ -1,13 +1,15 @@
 /* 共通のスタイル設定 */
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  padding: 80px 0;
   font-family: 'Noto Serif JP', serif;
   font-weight: 500;
   font-style: normal;
-  color: #000;
-  background-color: #e3e3e3 !important;
+  color: #434343;
+  background-color: #edf6ff !important;
 }
 
 a {
@@ -51,4 +53,10 @@ a {
   font-weight: 900;
   font-style: normal;
   letter-spacing: 0.1rem;
+}
+
+.vdl-shadow {
+  font-family: 'vdl-linegrpop-shadow', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

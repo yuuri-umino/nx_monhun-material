@@ -1,4 +1,4 @@
-import { WeaponMaterialList } from './materialTypes'
+import { WeaponMaterialList } from './materialsTypes'
 
 export const swordData: WeaponMaterialList[] = [
   {
