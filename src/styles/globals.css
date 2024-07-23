@@ -1,0 +1,54 @@
+/* 共通のスタイル設定 */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+  background-color: #e3e3e3 !important;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.din-reg {
+  font-family: 'din-2014', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.2rem;
+}
+
+.din-bold {
+  font-family: 'din-2014', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.2rem;
+}
+
+.noto-serif-reg {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 400;
+}
+
+.dnp-normal {
+  font-family: 'dnp-shuei-mgothic-std', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dnp-bold {
+  font-family: 'dnp-shuei-mgothic-std', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.titillium-web-black {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}
