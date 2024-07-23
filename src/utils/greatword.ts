@@ -1,4 +1,4 @@
-import { WeaponType } from '../utils/materialsTypes'
+import { WeaponType } from './materialsTypes'
 
 const greatsword: WeaponType = {
   type: '大剣',
