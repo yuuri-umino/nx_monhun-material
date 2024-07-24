@@ -24,15 +24,7 @@ const greatsword: WeaponType = {
       weapons: [],
     },
     {
-      name: 'リュウノアギト系',
-      weapons: [],
-    },
-    {
       name: '恐暴竜系',
-      weapons: [],
-    },
-    {
-      name: '竜熱機関系',
       weapons: [],
     },
     {
@@ -40,7 +32,7 @@ const greatsword: WeaponType = {
       weapons: [],
     },
     {
-      name: 'レイトウマグロ系',
+      name: 'ゲイボルグ系',
       weapons: [],
     },
     {

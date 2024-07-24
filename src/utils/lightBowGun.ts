@@ -24,7 +24,7 @@ const greatsword: WeaponType = {
       weapons: [],
     },
     {
-      name: 'リュウノアギト系',
+      name: 'クロスボウガン系',
       weapons: [],
     },
     {
@@ -32,15 +32,7 @@ const greatsword: WeaponType = {
       weapons: [],
     },
     {
-      name: '竜熱機関系',
-      weapons: [],
-    },
-    {
       name: '炎妃龍系',
-      weapons: [],
-    },
-    {
-      name: 'レイトウマグロ系',
       weapons: [],
     },
     {
@@ -65,6 +57,10 @@ const greatsword: WeaponType = {
     },
     {
       name: 'ミラボレアス',
+      weapons: [],
+    },
+    {
+      name: 'ストームスリンガー系',
       weapons: [],
     },
     {
