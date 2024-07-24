@@ -1546,7 +1546,7 @@ const greatsword: WeaponType = {
       ],
     },
     {
-      name: '臨海ブラキ',
+      name: '臨界ブラキ',
       weapons: [
         {
           name: '砕光の撃剣',

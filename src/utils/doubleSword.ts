@@ -56,7 +56,7 @@ const greatsword: WeaponType = {
       weapons: [],
     },
     {
-      name: '臨海ブラキ',
+      name: '臨界ブラキ',
       weapons: [],
     },
     {

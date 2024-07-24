@@ -1,7 +1,7 @@
 import { WeaponType } from './materialsTypes'
 
 const greatsword: WeaponType = {
-  type: '太刀',
+  type: 'ハンマー',
   derivations: [
     {
       name: '防衛隊系',
@@ -56,7 +56,7 @@ const greatsword: WeaponType = {
       weapons: [],
     },
     {
-      name: '臨海ブラキ',
+      name: '臨界ブラキ',
       weapons: [],
     },
     {
