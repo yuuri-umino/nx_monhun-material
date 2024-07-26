@@ -60,3 +60,9 @@ a {
   font-weight: 400;
   font-style: normal;
 }
+
+.toppan {
+  font-family: 'toppan-bunkyu-midashi-go-std', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}

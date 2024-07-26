@@ -5,6 +5,7 @@ import DefaultLayout from '@/components/layout/default-layout'
 import CustomHead from '@/components/organisms/head'
 import WeaponCategory from '@/components/Weapon/WeaponCategory'
 import WeaponDerivated from '@/components/Weapon/WeaponDerivated'
+import WeaponSelectSection from '@/components/Weapon/WeaponSelectSection'
 
 import { WeaponType } from '../utils/materialsTypes'
 import greatSword from '../utils/greatSword'
@@ -56,6 +57,7 @@ const Home: NextPageWithLayout = () => {
         {selectedWeapon && (
           <WeaponDerivated derivations={selectedWeapon.derivations} />
         )}
+        <WeaponSelectSection />
       </MainContents>
     </>
   )

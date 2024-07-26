@@ -3,41 +3,37 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import IconWeapon from '../../assets/icon-weapon.png'
 
-import { Derivation } from '../../utils/materialsTypes'
-interface WeaponDerivatedProps {
-  derivations: Derivation[]
+import { Weapon } from '../../utils/materialsTypes'
+interface SelectProps {
+  Weapons: Weapon[]
 }
 
-const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({ derivations }) => {
+const DerivatedCategory: React.FC<SelectProps> = ({ Weapons }) => {
   return (
     <>
-      <DerivatedSection>
+      <SelectSection>
         <div className="section-border">
-          <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
-            {derivations.map((derivation, index) => (
-              <button
-                key={index}
-                className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2"
-                type="button"
-              >
-                <Image src={IconWeapon} alt="" className="weapon-icon" />
-                <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
-              </button>
-            ))}
+          <div className="weapon-list d-flex flex-wrap justify-content-between align-items-center">
+            <button
+              className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2"
+              type="button"
+            >
+              <p className="mb-0 ms-1 ms-lg-2">武器名</p>
+            </button>
           </div>
         </div>
-      </DerivatedSection>
+      </SelectSection>
     </>
   )
 }
 
-const DerivatedSection = styled.div`
+const SelectSection = styled.div`
   margin-inline: auto;
   .section-border {
     padding: 20px 0;
     border-bottom: 2px solid #f6dd94;
   }
-  .weapon-derivated-list {
+  .weapon-list {
     &::after {
       content: '';
       display: block;
@@ -63,7 +59,7 @@ const DerivatedSection = styled.div`
       padding: 30px 0;
       border-bottom: 3px solid #f6dd94;
     }
-    .weapon-derivated-list {
+    .weapon-list {
       &::after {
         width: 45%;
       }
@@ -78,7 +74,7 @@ const DerivatedSection = styled.div`
     }
   }
   @media screen and (min-width: 992px) {
-    .weapon-derivated-list {
+    .weapon-list {
       &::after {
         width: 30%;
       }
