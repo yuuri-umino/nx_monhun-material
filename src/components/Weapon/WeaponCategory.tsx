@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import IconBlade from '../../assets/icon-blade.png'
+import IconGreatSword from '../../assets/icon-greatSword.png'
 import IconKatana from '../../assets/icon-katana.png'
 import IconSword from '../../assets/icon-sword.png'
 import IconDoubleSword from '../../assets/icon-doublesword.png'
@@ -16,8 +16,14 @@ import IconHeavyBowGun from '../../assets/icon-heavybowgun.png'
 import IconLightBowGun from '../../assets/icon-lightbowgun.png'
 import IconBow from '../../assets/icon-bow.png'
 
+import { WeaponType } from '../../utils/materialsTypes'
+interface WeaponCategoryProps {
+  weaponTypes: WeaponType[]
+  onWeaponClick: (weaponType: WeaponType) => void
+}
+
 const weaponIconList = [
-  IconBlade,
+  IconGreatSword,
   IconKatana,
   IconSword,
   IconDoubleSword,
@@ -33,14 +39,22 @@ const weaponIconList = [
   IconBow,
 ]
 
-const WeaponCategory = () => {
+const WeaponCategory: React.FC<WeaponCategoryProps> = ({
+  weaponTypes,
+  onWeaponClick,
+}) => {
   return (
     <>
       <CategorySection>
         <div className="section-border">
-          {weaponIconList.map((icon, index) => (
-            <Button key={index}>
-              <Image src={icon} alt="weapon-icon" width={100} height={100} />
+          {weaponTypes.map((weaponType, index) => (
+            <Button key={index} onClick={() => onWeaponClick(weaponType)}>
+              <Image
+                src={weaponIconList[index]}
+                alt=""
+                width={100}
+                height={100}
+              />
             </Button>
           ))}
         </div>
@@ -50,11 +64,6 @@ const WeaponCategory = () => {
 }
 
 const CategorySection = styled.div`
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 30px;
-  width: calc(100% - 40px);
-  margin-inline: auto;
   .section-border {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -65,8 +74,6 @@ const CategorySection = styled.div`
     border-bottom: 2px solid #f6dd94;
   }
   @media screen and (min-width: 576px) {
-    width: 80%;
-    padding: 50px;
     .section-border {
       grid-column-gap: 10px;
       grid-row-gap: 10px;
@@ -80,9 +87,6 @@ const CategorySection = styled.div`
       grid-row-gap: 20px;
       padding-bottom: 40px;
     }
-  }
-  @media screen and (min-width: 992px) {
-    padding: 90px;
   }
 `
 

@@ -1,4 +1,3 @@
-// src/types/materialsType.ts
 export type Material = {
   name: string
   quantity: number
