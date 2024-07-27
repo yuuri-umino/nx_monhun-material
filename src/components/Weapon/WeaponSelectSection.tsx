@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import WeaponCalculateResult from './WeaponCalculateResult'
 
 import { Weapon } from '../../utils/materialsTypes'
 interface SelectProps {
@@ -7,6 +8,41 @@ interface SelectProps {
 }
 
 const WeaponSelectSection: React.FC<SelectProps> = ({ weapons }) => {
+  const [selectedWeapons, setSelectedWeapons] = useState<Set<string>>(new Set())
+  const [calculatedMaterials, setCalculatedMaterials] = useState<{
+    [key: string]: number
+  }>({})
+
+  const handleCheckboxChange = (weaponName: string) => {
+    setSelectedWeapons((prevSelected) => {
+      const newSelected = new Set(prevSelected)
+      if (newSelected.has(weaponName)) {
+        newSelected.delete(weaponName)
+      } else {
+        newSelected.add(weaponName)
+      }
+      return newSelected
+    })
+  }
+
+  const calculateMaterials = () => {
+    const materialsMap: { [key: string]: number } = {}
+
+    weapons.forEach((weapon) => {
+      if (selectedWeapons.has(weapon.name)) {
+        weapon.materials.forEach((material) => {
+          if (materialsMap[material.name]) {
+            materialsMap[material.name] += material.quantity
+          } else {
+            materialsMap[material.name] = material.quantity
+          }
+        })
+      }
+    })
+
+    setCalculatedMaterials(materialsMap)
+  }
+
   return (
     <SelectSection>
       <div className="section-border">
@@ -16,18 +52,35 @@ const WeaponSelectSection: React.FC<SelectProps> = ({ weapons }) => {
               key={index}
               className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4"
               type="button"
+              onClick={() => handleCheckboxChange(weapon.name)}
             >
               <div className="checkbox-container">
-                <input type="checkbox" className="weapon-checkbox" readOnly />
+                <input
+                  type="checkbox"
+                  className="weapon-checkbox"
+                  checked={selectedWeapons.has(weapon.name)}
+                  readOnly
+                />
               </div>
               <p className="toppan mb-0 ms-1 ms-lg-4">{weapon.name}</p>
             </button>
           ))}
         </div>
+
+        <button
+          className="toppan calc-btn py-2"
+          type="button"
+          onClick={calculateMaterials}
+        >
+          Calculate!
+        </button>
+
+        <WeaponCalculateResult materials={calculatedMaterials} />
       </div>
     </SelectSection>
   )
 }
+
 const SelectSection = styled.div`
   margin-inline: auto;
   .section-border {
@@ -67,7 +120,7 @@ const SelectSection = styled.div`
     height: 1rem;
     appearance: none;
     &::before {
-      background: transparent;
+      background: #fff;
       border: 2px solid #d2a10e;
       border-radius: 3px;
       content: '';
@@ -97,6 +150,54 @@ const SelectSection = styled.div`
       opacity: 1;
     }
   }
+  .calc-btn {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    margin-top: 40px;
+    margin-inline: auto;
+    color: #d29204;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    &::before,
+    &::after {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-color: #d29204;
+      box-sizing: border-box;
+      border-style: solid;
+      display: block;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+    &:before {
+      top: -6px;
+      left: -6px;
+      border-width: 2px 0 0 2px;
+      z-index: 5;
+    }
+    &:after {
+      bottom: -6px;
+      right: -6px;
+      border-width: 0 2px 2px 0;
+    }
+    &:hover:before,
+    &:hover:after {
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      border-color: #d29204;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #d29204;
+      border-color: #d29204;
+    }
+  }
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
@@ -114,6 +215,9 @@ const SelectSection = styled.div`
   @media screen and (min-width: 768px) {
     .section-border {
       padding: 40px 0;
+    }
+    .calc-btn {
+      margin-top: 40px;
     }
   }
   @media screen and (min-width: 992px) {

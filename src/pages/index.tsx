@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NextPageWithLayout } from 'next'
 import styled from 'styled-components'
 import DefaultLayout from '@/components/layout/default-layout'
@@ -41,17 +41,25 @@ const weaponTypes: WeaponType[] = [
 ]
 
 const Home: NextPageWithLayout = () => {
-  const [selectedWeapon, setSelectedWeapon] = useState<WeaponType | null>(null)
+  const [selectedWeapon, setSelectedWeapon] = useState<WeaponType | null>(
+    greatSword
+  )
+  const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([])
+
+  useEffect(() => {
+    if (selectedWeapon) {
+      setSelectedWeapons(selectedWeapon.derivations[0]?.weapons || [])
+    }
+  }, [selectedWeapon])
 
   const handleWeaponClick = (weaponType: WeaponType) => {
     setSelectedWeapon(weaponType)
   }
 
-  const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([])
-
   const handleSelectDerivation = (weapons: Weapon[]) => {
     setSelectedWeapons(weapons)
   }
+
   return (
     <>
       <CustomHead title="TOP" description="" />
