@@ -7,7 +7,7 @@ import WeaponCategory from '@/components/Weapon/WeaponCategory'
 import WeaponDerivated from '@/components/Weapon/WeaponDerivated'
 import WeaponSelectSection from '@/components/Weapon/WeaponSelectSection'
 
-import { WeaponType } from '../utils/materialsTypes'
+import { WeaponType, Weapon } from '../utils/materialsTypes'
 import greatSword from '../utils/greatSword'
 import sword from '../utils/sword'
 import katana from '../utils/katana'
@@ -46,6 +46,12 @@ const Home: NextPageWithLayout = () => {
   const handleWeaponClick = (weaponType: WeaponType) => {
     setSelectedWeapon(weaponType)
   }
+
+  const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([])
+
+  const handleSelectDerivation = (weapons: Weapon[]) => {
+    setSelectedWeapons(weapons)
+  }
   return (
     <>
       <CustomHead title="TOP" description="" />
@@ -55,9 +61,12 @@ const Home: NextPageWithLayout = () => {
           onWeaponClick={handleWeaponClick}
         />
         {selectedWeapon && (
-          <WeaponDerivated derivations={selectedWeapon.derivations} />
+          <WeaponDerivated
+            derivations={selectedWeapon.derivations}
+            onSelectDerivation={handleSelectDerivation}
+          />
         )}
-        <WeaponSelectSection />
+        <WeaponSelectSection weapons={selectedWeapons} />
       </MainContents>
     </>
   )

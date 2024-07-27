@@ -6,28 +6,31 @@ import IconWeapon from '../../assets/icon-weapon.png'
 import { Derivation } from '../../utils/materialsTypes'
 interface WeaponDerivatedProps {
   derivations: Derivation[]
+  onSelectDerivation: (weapons: Derivation['weapons']) => void
 }
 
-const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({ derivations }) => {
+const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
+  derivations,
+  onSelectDerivation,
+}) => {
   return (
-    <>
-      <DerivatedSection>
-        <div className="section-border">
-          <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
-            {derivations.map((derivation, index) => (
-              <button
-                key={index}
-                className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2"
-                type="button"
-              >
-                <Image src={IconWeapon} alt="" className="weapon-icon" />
-                <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
-              </button>
-            ))}
-          </div>
+    <DerivatedSection>
+      <div className="section-border">
+        <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
+          {derivations.map((derivation, index) => (
+            <button
+              key={index}
+              className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2"
+              type="button"
+              onClick={() => onSelectDerivation(derivation.weapons)}
+            >
+              <Image src={IconWeapon} alt="" className="weapon-icon" />
+              <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
+            </button>
+          ))}
         </div>
-      </DerivatedSection>
-    </>
+      </div>
+    </DerivatedSection>
   )
 }
 
