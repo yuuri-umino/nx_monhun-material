@@ -1,17 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import WeaponCalculateResult from './WeaponCalculateResult'
 
 import { Weapon } from '../../utils/materialsTypes'
 interface SelectProps {
   weapons: Weapon[]
+  resetTrigger: boolean
 }
 
-const WeaponSelectSection: React.FC<SelectProps> = ({ weapons }) => {
+const WeaponSelectSection: React.FC<SelectProps> = ({
+  weapons,
+  resetTrigger,
+}) => {
   const [selectedWeapons, setSelectedWeapons] = useState<Set<string>>(new Set())
   const [calculatedMaterials, setCalculatedMaterials] = useState<{
     [key: string]: number
   }>({})
+
+  useEffect(() => {
+    setSelectedWeapons(new Set())
+  }, [resetTrigger])
 
   const handleCheckboxChange = (weaponName: string) => {
     setSelectedWeapons((prevSelected) => {
@@ -75,7 +83,10 @@ const WeaponSelectSection: React.FC<SelectProps> = ({ weapons }) => {
           Calculate!
         </button>
 
-        <WeaponCalculateResult materials={calculatedMaterials} />
+        <WeaponCalculateResult
+          materials={calculatedMaterials}
+          resetTrigger={resetTrigger}
+        />
       </div>
     </SelectSection>
   )

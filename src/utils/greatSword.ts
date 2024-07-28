@@ -32,6 +32,14 @@ const greatword: WeaponType = {
       name: '鉱石素材系',
       weapons: [
         {
+          name: 'バスターソードⅠ',
+          materials: [{ name: '鉄鉱石', quantity: 1 }],
+        },
+        {
+          name: 'バスターソードⅡ',
+          materials: [{ name: '鉄鉱石', quantity: 2 }],
+        },
+        {
           name: 'バスターソードⅢ',
           materials: [
             { name: '大地の結晶', quantity: 2 },

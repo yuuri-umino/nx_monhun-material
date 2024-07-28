@@ -1,13 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
+import IconOk from '../../assets/icon-ok.png'
 
 interface CalculateResultProps {
   materials: { [key: string]: number }
 }
 
-const WeaponCalculateResult: React.FC<CalculateResultProps> = ({
-  materials,
-}) => {
+const WeaponCalculateResult: React.FC<
+  CalculateResultProps & { resetTrigger: boolean }
+> = ({ materials, resetTrigger }) => {
+  const [ownedQuantities, setOwnedQuantities] = useState<{
+    [key: string]: number
+  }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
+
+  useEffect(() => {
+    setOwnedQuantities(
+      Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {})
+    )
+  }, [resetTrigger, materials])
+
+  const handleQuantityChange = (materialName: string, delta: number) => {
+    setOwnedQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [materialName]: Math.max(0, (prevQuantities[materialName] || 0) + delta),
+    }))
+  }
+
+  const handleInputChange = (materialName: string, value: string) => {
+    const numericValue = parseInt(value, 10)
+    if (!isNaN(numericValue)) {
+      setOwnedQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [materialName]: numericValue,
+      }))
+    }
+  }
+
   return (
     <>
       <CalculatedSection>
@@ -28,11 +57,35 @@ const WeaponCalculateResult: React.FC<CalculateResultProps> = ({
                   </div>
                   <div className="toppan input-number">
                     今持ってる数
-                    <div className="input-area">
-                      <button className="down"></button>
-                      <input type="text" className="p-2" />
-                      <button className="up"></button>
+                    <div>
+                      <div className="input-area">
+                        <button
+                          className="down"
+                          onClick={() => handleQuantityChange(materialName, -1)}
+                        >
+                          ➖
+                        </button>
+                        <input
+                          type="text"
+                          className="p-2"
+                          value={ownedQuantities[materialName]}
+                          onChange={(e) =>
+                            handleInputChange(materialName, e.target.value)
+                          }
+                        />
+                        <button
+                          className="up"
+                          onClick={() => handleQuantityChange(materialName, 1)}
+                        >
+                          ➕
+                        </button>
+                      </div>
                     </div>
+                    {ownedQuantities[materialName] >= quantity && (
+                      <div className="ok">
+                        <Image src={IconOk} alt="" className="w-100 h-100" />
+                      </div>
+                    )}
                   </div>
                 </li>
               ))}
@@ -128,7 +181,9 @@ const ResultSection = styled.div`
         }
       }
       .input-number {
+        position: relative;
         display: flex;
+        justify-content: start;
         align-items: center;
         padding: 10px 0;
         color: #6f6f6f;
@@ -142,7 +197,6 @@ const ResultSection = styled.div`
           margin-left: 10px;
           .up,
           .down {
-            position: relative;
             display: flex;
             justify-content: center;
             background-color: #fff;
@@ -153,30 +207,25 @@ const ResultSection = styled.div`
             border-radius: 6px;
             cursor: pointer;
           }
-          .up::before,
-          .down::before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 23%;
-            width: 10px;
-            height: 10px;
-            border-top: 3px solid #a77d00;
-            border-left: 3px solid #a77d00;
-          }
-          .up::before {
-            transform: rotate(45deg);
-            top: 30%;
-          }
-          .down::before {
-            top: 10%;
-            transform: rotate(-135deg);
-          }
+        }
+        .ok {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 50px;
+          height: 50px;
         }
       }
       @media screen and (min-width: 768px) {
-        width: 47%;
+        width: 48%;
         font-size: 16px;
+      }
+      @media screen and (min-width: 1400px) {
+        width: 31%;
+        &::after {
+          width: 31%;
+        }
       }
     }
   }

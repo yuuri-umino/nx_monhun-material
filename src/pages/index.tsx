@@ -45,6 +45,7 @@ const Home: NextPageWithLayout = () => {
     greatSword
   )
   const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([])
+  const [resetTrigger, setResetTrigger] = useState(false)
 
   useEffect(() => {
     if (selectedWeapon) {
@@ -58,6 +59,7 @@ const Home: NextPageWithLayout = () => {
 
   const handleSelectDerivation = (weapons: Weapon[]) => {
     setSelectedWeapons(weapons)
+    setResetTrigger((prev) => !prev)
   }
 
   return (
@@ -74,7 +76,10 @@ const Home: NextPageWithLayout = () => {
             onSelectDerivation={handleSelectDerivation}
           />
         )}
-        <WeaponSelectSection weapons={selectedWeapons} />
+        <WeaponSelectSection
+          weapons={selectedWeapons}
+          resetTrigger={resetTrigger}
+        />
       </MainContents>
     </>
   )
