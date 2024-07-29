@@ -1,6 +1,7 @@
 export type Material = {
   name: string
   quantity: number
+  drop?: string[]
 }
 
 export type Weapon = {
