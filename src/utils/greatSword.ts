@@ -1109,7 +1109,7 @@ const greatword: WeaponType = {
       ],
     },
     {
-      name: '龍骨系系',
+      name: '龍骨系',
       weapons: [
         {
           name: '龍骨大剣Ⅰ',

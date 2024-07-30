@@ -1228,7 +1228,7 @@ const greatsword: WeaponType = {
       ],
     },
     {
-      name: '龍骨系系',
+      name: '龍骨系',
       weapons: [
         {
           name: '龍骨大槌Ⅰ',

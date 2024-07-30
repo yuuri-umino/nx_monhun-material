@@ -323,519 +323,523 @@ export const materialsDrops = [
   },
   {
     materialName: '角竜の堅殻',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/上位素材'],
   },
   {
     materialName: '角竜の堅甲',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/上位素材'],
   },
   {
     materialName: '角竜の甲殻',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/下位素材'],
   },
   {
     materialName: '角竜の骨髄',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/下位素材'],
   },
   {
     materialName: '角竜の重殻',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/マスター素材'],
   },
   {
     materialName: '角竜の重甲',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/マスター素材'],
   },
   {
     materialName: '角竜の背甲',
-    drop: [''],
+    drop: ['ディアブロスを討伐・剥ぎ取り/下位素材'],
   },
   {
     materialName: '角竜の尾甲',
-    drop: [''],
+    drop: ['ディアブロスを討伐/下位・上位素材'],
   },
   {
     materialName: 'ガストドンの堅殻',
-    drop: [''],
+    drop: ['ガストドンから剥ぎ取り/上位素材'],
   },
   {
     materialName: 'ガストドンの重殻',
-    drop: [''],
+    drop: ['ガストドンから剥ぎ取り/マスター素材'],
   },
   {
     materialName: '火竜の鱗',
-    drop: [''],
+    drop: ['リオレウスを討伐/下位素材'],
   },
   {
     materialName: '火竜の延髄',
-    drop: [''],
+    drop: ['リオレウスを討伐・背中の部位破壊/上位素材'],
   },
   {
     materialName: '火竜の逆鱗',
-    drop: [''],
+    drop: ['調査特別報酬の金・銀で入手できる確率が高め'],
   },
   {
     materialName: '火竜の堅殻',
-    drop: [''],
+    drop: ['リオレウスを討伐/上位素材'],
   },
   {
     materialName: '火竜の煌液',
-    drop: [''],
+    drop: ['リオレウス希少種・リオレイア希少種'],
   },
   {
     materialName: '火竜の甲殻',
-    drop: [''],
+    drop: ['リオレウスを討伐/下位素材'],
   },
   {
     materialName: '火竜の紅玉',
-    drop: [''],
+    drop: ['リオレウス亜種の調査クエストを周回'],
   },
   {
     materialName: '火竜の剛翼',
-    drop: [''],
+    drop: ['リオレウスの翼を破壊/マスター素材'],
   },
   {
     materialName: '火竜の剛翼爪',
-    drop: [''],
+    drop: ['リオレウスの調査クエストを周回/マスター素材'],
   },
   {
     materialName: '火竜の厚鱗',
-    drop: [''],
+    drop: ['リオレウスを狩猟/マスター素材'],
   },
   {
     materialName: '火竜の骨髄',
-    drop: [''],
+    drop: ['リオレウスを討伐/下位素材'],
   },
   {
     materialName: '火竜の尻尾',
-    drop: [''],
+    drop: ['リオレウスの尻尾を切断/下位・上位素材'],
   },
   {
     materialName: '火竜の上鱗',
-    drop: [''],
+    drop: ['上位のリオレウスを狩猟'],
   },
   {
     materialName: '火竜の靭尾',
-    drop: [''],
+    drop: ['リオレウスの尻尾を切断/マスター素材'],
   },
   {
     materialName: '火竜の翼',
-    drop: [''],
+    drop: ['上位のリオレウスを討伐'],
   },
   {
     materialName: '火竜の天鱗',
-    drop: [''],
+    drop: [
+      'リオレウス、リオレウス亜種、リオレウス希少種の剥ぎ取り/マスター素材',
+    ],
   },
   {
     materialName: '火竜の翼爪',
-    drop: [''],
+    drop: ['リオレウスを討伐/下位素材'],
   },
   {
     materialName: '火竜の翼膜',
-    drop: [''],
+    drop: ['リオレウスを狩猟/下位素材'],
   },
   {
     materialName: '岩賊竜の顎',
-    drop: [''],
+    drop: ['ドドガマルの顎を部位破壊/上位素材'],
   },
   {
     materialName: '岩賊竜の大顎',
-    drop: [''],
+    drop: ['頭を部位破壊すると確定で入手/マスター素材'],
   },
   {
     materialName: '岩賊竜の剛爪',
-    drop: [''],
+    drop: ['前脚の部位破壊で確定入手/マスター素材'],
   },
   {
     materialName: '岩賊竜の厚皮',
-    drop: [''],
+    drop: ['ドドガマルを狩猟/マスター素材'],
   },
   {
     materialName: '岩賊竜の厚鱗',
-    drop: [''],
+    drop: ['ドドガマルを狩猟/マスター素材'],
   },
   {
     materialName: '岩賊竜の尻尾',
-    drop: [''],
+    drop: ['ドドガマルの尻尾を切断/上位素材'],
   },
   {
     materialName: '岩賊竜の上皮',
-    drop: [''],
+    drop: ['ドドガマルを討伐/上位素材'],
   },
   {
     materialName: '岩賊竜の上鱗',
-    drop: [''],
+    drop: ['ドドガマルを討伐/上位素材'],
   },
   {
     materialName: '岩賊竜の靭尾',
-    drop: [''],
+    drop: ['ドドガマルを討伐/マスター素材'],
   },
   {
     materialName: '岩賊竜の尖爪',
-    drop: [''],
+    drop: ['ドドガマルを討伐/上位素材'],
   },
   {
     materialName: 'カンタロスの頭',
-    drop: [''],
+    drop: ['カンタロスを討伐/下位素材'],
   },
   {
     materialName: 'カンタロスの薄羽',
-    drop: [''],
+    drop: ['カンタロスを討伐/上位素材'],
   },
   {
     materialName: 'カンタロスの斬羽',
-    drop: [''],
+    drop: ['カンタロスを討伐/マスター素材'],
   },
   {
     materialName: 'カンタロスの堅殻',
-    drop: [''],
+    drop: ['カンタロスを討伐/上位素材'],
   },
   {
     materialName: 'カンタロスの甲殻',
-    drop: [''],
+    drop: ['カンタロスを討伐/下位素材'],
   },
   {
     materialName: 'カンタロスの羽',
-    drop: [''],
+    drop: ['カンタロスを討伐/下位素材'],
   },
   {
     materialName: '傷痕の紫甲殻',
-    drop: [''],
+    drop: ['傷ついたイャンガルルガを狩猟/マスター素材'],
   },
   {
     materialName: '凝縮された爆腺液',
-    drop: [''],
+    drop: ['紅蓮滾るバゼルギウスの頭の部位破壊報酬で入手/マスター素材'],
   },
   {
     materialName: '強靭な爪',
-    drop: [''],
+    drop: ['ウルグから入手/マスター素材'],
   },
   {
     materialName: '兇爪竜の強硬筋',
-    drop: [''],
+    drop: ['オドガロン亜種の後ろ足を破壊/マスター素材'],
   },
   {
     materialName: '兇爪竜の剛爪',
-    drop: [''],
+    drop: ['オドガロン亜種の前足を破壊/マスター素材'],
   },
   {
     materialName: '兇爪竜の厚鱗',
-    drop: [''],
+    drop: ['オドガロン亜種の討伐/マスター素材'],
   },
   {
     materialName: '兇爪竜の重牙',
-    drop: [''],
+    drop: ['オドガロン亜種の頭部を破壊/マスター素材'],
   },
   {
     materialName: '兇爪竜の靭尾',
-    drop: [''],
+    drop: ['オドガロン亜種の尻尾を剥ぎ取りで高確率で入手/マスター素材'],
   },
   {
     materialName: '兇爪竜の天鱗',
-    drop: [''],
+    drop: ['オドガロン亜種、本体の剥ぎ取りと捕獲/マスター素材'],
   },
   {
     materialName: '恐暴竜の大牙',
-    drop: [''],
+    drop: ['イビルジョーの頭を破壊/上位素材'],
   },
   {
     materialName: '恐暴竜の鉤爪',
-    drop: [''],
+    drop: ['イビルジョーのクエスト周回/上位素材'],
   },
   {
     materialName: '恐暴竜の剛鉤爪',
-    drop: [''],
+    drop: ['怒り喰らうイビルジョーを狩猟/マスター素材'],
   },
   {
     materialName: '恐暴竜の厚黒皮',
-    drop: [''],
+    drop: ['怒り喰らうイビルジョーを狩猟/マスター素材'],
   },
   {
     materialName: '恐暴竜の厚黒鱗',
-    drop: [''],
+    drop: ['怒り喰らうイビルジョーを狩猟/マスター素材'],
   },
   {
     materialName: '恐暴竜の黒鱗',
-    drop: [''],
+    drop: ['イビルジョーのクエスト周回/上位素材'],
   },
   {
     materialName: '恐暴竜の唾液',
-    drop: [''],
+    drop: ['イビルジョーのクエスト周回/上位素材'],
   },
   {
     materialName: '恐暴竜の頭殻',
-    drop: [''],
+    drop: ['イビルジョーのクエスト周回/上位素材'],
   },
   {
     materialName: '恐暴竜の宝玉',
-    drop: [''],
+    drop: ['イビルジョーの調査クエストを周回/上位素材'],
   },
   {
     materialName: '恐暴竜の滅鱗',
-    drop: [''],
+    drop: ['怒り喰らうイビルジョーの調査クエストを周回/マスター素材'],
   },
   {
     materialName: '強力麻痺袋',
-    drop: [''],
+    drop: ['ドスギルオスの報酬/上位素材'],
   },
   {
     materialName: 'ギルオスの上鱗',
-    drop: [''],
+    drop: ['ドスギルオスの報酬/上位素材'],
   },
   {
     materialName: 'ギルオスの麻痺牙',
-    drop: [''],
+    drop: ['ドスギルオスの報酬/下位素材'],
   },
   {
     materialName: '銀火竜の厚鱗',
-    drop: [''],
+    drop: ['リオレウス希少種を狩猟/マスター素材'],
   },
   {
     materialName: '銀火竜の重殻',
-    drop: [''],
+    drop: ['リオレウス希少種の頭・背中部位破壊/マスター素材'],
   },
   {
     materialName: '銀火竜の靭尾',
-    drop: [''],
+    drop: ['リオレウス希少種の尻尾/マスター素材'],
   },
   {
     materialName: '金火竜の重殻',
-    drop: [''],
+    drop: ['リオレイア希少種を狩猟/マスター素材'],
   },
   {
     materialName: '金火竜の厚鱗',
-    drop: [''],
+    drop: ['リオレイア希少種を狩猟/マスター素材'],
   },
   {
     materialName: '金火竜の秘棘',
-    drop: [''],
+    drop: ['リオレイア希少種の狩猟、調査クエストの金枠や銀枠/マスター素材'],
   },
   {
     materialName: '金獅子の剛角',
-    drop: [''],
+    drop: ['ラージャンを狩猟/マスター素材'],
   },
   {
     materialName: '金獅子の剛爪',
-    drop: [''],
+    drop: ['ラージャンを狩猟/マスター素材'],
   },
   {
     materialName: '金獅子の黒荒毛',
-    drop: [''],
+    drop: ['ラージャンを狩猟/マスター素材'],
   },
   {
     materialName: '金獅子の尻尾',
-    drop: [''],
+    drop: ['ラージャンを狩猟/マスター素材'],
   },
   {
     materialName: '金獅子の重牙',
-    drop: [''],
+    drop: ['ラージャンを狩猟/マスター素材'],
   },
   {
     materialName: '金獅子の怒髪天',
-    drop: [''],
+    drop: ['激昂したラージャンを狩猟/マスター素材'],
   },
   {
     materialName: '劇烈毒袋',
-    drop: [''],
+    drop: ['プケプケの調査クエストを周回/マスター素材'],
   },
   {
     materialName: 'ケストドンの堅殻',
-    drop: [''],
+    drop: ['ケストドンを狩猟/上位素材'],
   },
   {
     materialName: 'ケストドンの甲殻',
-    drop: [''],
+    drop: ['ケストドンを狩猟/下位素材'],
   },
   {
     materialName: 'ケストドンの重殻',
-    drop: [''],
+    drop: ['ケストドンを狩猟/マスター素材'],
   },
   {
     materialName: '削られた硫晶片',
-    drop: [''],
+    drop: ['ディノバルド亜種の調査クエストを周回/マスター素材'],
   },
   {
     materialName: '幻獣の尾',
-    drop: [''],
+    drop: ['キリンを討伐/下位素材'],
   },
   {
     materialName: '幻獣の皮',
-    drop: [''],
+    drop: ['キリンを討伐/下位素材'],
   },
   {
     materialName: '幻獣の銀たてがみ',
-    drop: [''],
+    drop: ['キリンを討伐/マスター素材'],
   },
   {
     materialName: '幻獣の剛蒼角',
-    drop: [''],
+    drop: ['キリンを討伐/マスター素材'],
   },
   {
     materialName: '幻獣の上皮',
-    drop: [''],
+    drop: ['キリンを討伐/上位素材'],
   },
   {
     materialName: '幻獣の蒼角',
-    drop: [''],
+    drop: ['キリンを討伐/上位素材'],
   },
   {
     materialName: '幻獣のたてがみ',
-    drop: [''],
+    drop: ['キリンを討伐/下位素材'],
   },
   {
     materialName: '幻獣の特上皮',
-    drop: [''],
+    drop: ['キリンを討伐/マスター素材'],
   },
   {
     materialName: '幻獣の雷角',
-    drop: [''],
+    drop: ['キリンを討伐/下位素材'],
   },
   {
     materialName: '幻獣の雷尾',
-    drop: [''],
+    drop: ['キリンを討伐/上位素材'],
   },
   {
     materialName: '眩鳥の鱗',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/下位素材'],
   },
   {
     materialName: '眩鳥の輝光膜',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/マスター素材'],
   },
   {
     materialName: '眩鳥の剛爪',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/マスター素材'],
   },
   {
     materialName: '眩鳥の厚鱗',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/マスター素材'],
   },
   {
     materialName: '眩鳥の上鱗',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/上位素材'],
   },
   {
     materialName: '眩鳥の閃光膜',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/上位素材'],
   },
   {
     materialName: '眩鳥の尖爪',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/上位素材'],
   },
   {
     materialName: '眩鳥の爪',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/下位素材'],
   },
   {
     materialName: '眩鳥の発光膜',
-    drop: [''],
+    drop: ['ツィツィヤックを討伐/下位素材'],
   },
   {
     materialName: '幻鳥竜玉',
-    drop: [''],
+    drop: ['鳥竜種から入手可能/マスター素材'],
   },
   {
     materialName: '堅竜骨',
-    drop: [''],
+    drop: ['大型モンスターの討伐報酬で入手/上位素材'],
   },
   {
     materialName: '堅牢な黒巻き角',
-    drop: [''],
+    drop: [
+      'ディアブロス亜種の両方の角を破壊したらクエストから帰還/マスター素材',
+    ],
   },
   {
     materialName: '堅牢なねじれた角',
-    drop: [''],
+    drop: ['ディアブロスの両方の角を破壊したらクエストから帰還/マスター素材'],
   },
   {
     materialName: '業炎袋',
-    drop: [''],
+    drop: ['炎を使うモンスターを狩猟/マスター素材'],
   },
   {
     materialName: '咬魚の大ヒゲ',
-    drop: [''],
+    drop: ['ガライーバから入手/上位素材'],
   },
   {
     materialName: '咬魚の皮',
-    drop: [''],
+    drop: ['ガライーバから入手/下位素材'],
   },
   {
     materialName: '咬魚の上皮',
-    drop: [''],
+    drop: ['ガライーバから入手/上位素材'],
   },
   {
     materialName: '咬魚のヒゲ',
-    drop: [''],
+    drop: ['ガライーバから入手/上位素材'],
   },
   {
     materialName: '煌黒龍の凶爪',
-    drop: [''],
+    drop: ['アルバトリオンから入手可能/マスター素材'],
   },
   {
     materialName: '煌黒龍の邪翼',
-    drop: [''],
+    drop: ['アルバトリオンから入手可能/マスター素材'],
   },
   {
     materialName: '煌黒龍の天鱗',
-    drop: [''],
+    drop: ['アルバトリオンから入手可能/マスター素材'],
   },
   {
     materialName: '剛竜骨',
-    drop: [''],
+    drop: ['M★4以上の大型モンスターから入手/マスター素材'],
   },
   {
     materialName: '鋼龍の堅殻',
-    drop: [''],
+    drop: ['クシャルダオラを討伐/上位素材'],
   },
   {
     materialName: '鋼龍の剛角',
-    drop: [''],
+    drop: ['クシャルダオラを討伐/マスター素材'],
   },
   {
     materialName: '轟竜の剛爪',
-    drop: [''],
+    drop: ['ティガレックスの前脚の部位破壊報酬で入手可能/マスター素材'],
   },
   {
     materialName: '鋼龍の剛爪',
-    drop: [''],
+    drop: ['クシャルダオラの翼破壊/マスター素材'],
   },
   {
     materialName: '轟竜の厚鱗',
-    drop: [''],
+    drop: ['ティガレックスを狩猟/マスター素材'],
   },
   {
     materialName: '鋼龍の尻尾',
-    drop: [''],
+    drop: ['クシャルダオラの尻尾を切断/上位素材'],
   },
   {
     materialName: '轟竜の重牙',
-    drop: [''],
+    drop: ['ティガレックスの頭部を破壊/マスター素材'],
   },
   {
     materialName: '轟竜の重殻',
-    drop: [''],
+    drop: ['ティガレックスを狩猟/マスター素材'],
   },
   {
     materialName: '轟竜の靭尾',
-    drop: [''],
+    drop: ['ティガレックス・ティガレックス亜種を狩猟/マスター素材'],
   },
   {
     materialName: '鋼龍の尖角',
-    drop: [''],
+    drop: ['クシャルダオラの角を部位破壊/上位素材'],
   },
   {
     materialName: '鋼龍の尖爪',
-    drop: [''],
+    drop: ['クシャルダオラを討伐/上位素材'],
   },
   {
     materialName: '鋼龍の翼',
-    drop: [''],
+    drop: ['クシャルダオラの翼を部位破壊/上位素材'],
   },
   {
     materialName: '轟竜の天鱗',
-    drop: [''],
+    drop: ['ティガレックス・ティガレックス亜種を狩猟/マスター素材'],
   },
   {
     materialName: '鋼龍の宝玉',
-    drop: [''],
+    drop: ['クシャルダオラを討伐/上位素材'],
   },
   {
     materialName: '極悪な牙',
