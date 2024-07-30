@@ -1,4 +1,3 @@
-// utils.ts
 import { materialsDrops } from './materialsDrops'
 import { WeaponType } from './materialsTypes'
 
