@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import IconOk from '../../assets/icon-ok.png'
+import { materialsDrops } from '../../utils/materialsDrops'
 
 interface CalculateResultProps {
   materials: { [key: string]: number }
@@ -37,6 +38,13 @@ const WeaponCalculateResult: React.FC<
     }
   }
 
+  const getDropInfo = (materialName: string) => {
+    const material = materialsDrops.find(
+      (item) => item.materialName === materialName
+    )
+    return material ? material.drop.join(', ') : 'SORRY!THERE IS NO DATA...'
+  }
+
   return (
     <>
       <CalculatedSection>
@@ -50,7 +58,12 @@ const WeaponCalculateResult: React.FC<
                   className="toppan py-2 py-md-3 px-2 px-md-4"
                 >
                   <div className="result-border mb-3">
-                    <p className="mb-0">{materialName}</p>
+                    <div className="material-name position-relative">
+                      <p className="mb-0">{materialName}</p>
+                      <div className="material-drop dnp-normal">
+                        {getDropInfo(materialName)}
+                      </div>
+                    </div>
                     <div className="quantity-flame">
                       <span className="quantity">{quantity}</span>
                     </div>
@@ -99,14 +112,33 @@ const WeaponCalculateResult: React.FC<
 
 const CalculatedSection = styled.div`
   margin-top: 30px;
-  padding: 20px 0;
+  padding: 20px 0 0;
   border-top: 2px solid #f6dd94;
+  .material-name {
+    cursor: help;
+    .material-drop {
+      display: none;
+      position: absolute;
+      top: 50px;
+      width: 250px;
+      height: auto;
+      background-color: #fff;
+      color: #333;
+      padding: 10px;
+      z-index: 10;
+    }
+    &:hover {
+      .material-drop {
+        display: block;
+      }
+    }
+  }
   @media screen and (min-width: 576px) {
-    padding: 30px 0;
+    padding: 30px 0 0;
     border-top: 3px solid #f6dd94;
   }
   @media screen and (min-width: 768px) {
-    padding: 40px 0;
+    padding: 40px 0 0;
   }
 `
 
