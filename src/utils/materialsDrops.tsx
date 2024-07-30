@@ -319,7 +319,7 @@ export const materialsDrops = [
   },
   {
     materialName: '角竜の牙',
-    drop: ['ディアブロスを討伐/下位・上石素材'],
+    drop: ['ディアブロスを討伐/下位・上位素材'],
   },
   {
     materialName: '角竜の堅殻',
