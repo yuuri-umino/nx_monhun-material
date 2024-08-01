@@ -37,7 +37,7 @@ export const materialsDrops = [
   },
   {
     materialName: '深海の結晶',
-    drop: ['L・上位の陸珊瑚の台地でのみ入手'],
+    drop: ['下位・上位の陸珊瑚の台地でのみ入手'],
   },
   {
     materialName: '森林の結晶',
@@ -45,7 +45,7 @@ export const materialsDrops = [
   },
   {
     materialName: '大地の結晶',
-    drop: ['L・上位の大蟻塚の荒地でのみ入手'],
+    drop: ['下位・上位の大蟻塚の荒地でのみ入手'],
   },
   {
     materialName: '黄昏の結晶',
@@ -57,7 +57,7 @@ export const materialsDrops = [
   },
   {
     materialName: 'ドラグライト鉱石',
-    drop: ['L・上位の陸珊瑚の台地、瘴気の谷、上位の龍結晶の地で入手可能'],
+    drop: ['下位・上位の陸珊瑚の台地、瘴気の谷、上位の龍結晶の地で入手可能'],
   },
   {
     materialName: 'ノヴァクリスタル',
@@ -81,11 +81,11 @@ export const materialsDrops = [
   },
   {
     materialName: 'ライトクリスタル',
-    drop: ['L・上位の龍結晶の地以外の鉱脈より入手可能'],
+    drop: ['下位・上位の龍結晶の地以外の鉱脈より入手可能'],
   },
   {
     materialName: 'ライトクリスタル',
-    drop: ['L・上位の龍結晶の地以外の鉱脈より入手可能'],
+    drop: ['下位・上位の龍結晶の地以外の鉱脈より入手可能'],
   },
   {
     materialName: '龍脈の結晶',
@@ -113,7 +113,7 @@ export const materialsDrops = [
   },
   {
     materialName: 'いびつな狂骨',
-    drop: ['L・上位の瘴気の谷でのみ入手'],
+    drop: ['下位・上位の瘴気の谷でのみ入手'],
   },
   {
     materialName: '頑強な重骨',
@@ -125,7 +125,7 @@ export const materialsDrops = [
   },
   {
     materialName: 'サンゴの紅骨',
-    drop: ['L・上位の陸珊瑚の台地でのみ入手可能'],
+    drop: ['下位・上位の陸珊瑚の台地でのみ入手可能'],
   },
   {
     materialName: '上質な堅骨',
@@ -133,7 +133,7 @@ export const materialsDrops = [
   },
   {
     materialName: '太古の大骨',
-    drop: ['L・上位の古代樹の森でのみ入手可能'],
+    drop: ['下位・上位の古代樹の森でのみ入手可能'],
   },
   {
     materialName: '竜骨【小】',
@@ -183,11 +183,11 @@ export const materialsDrops = [
   },
   {
     materialName: 'ウルグの厚毛皮',
-    drop: ['MランクのウルグT'],
+    drop: ['Mランクのウルグ'],
   },
   {
     materialName: '鋭利な爪',
-    drop: ['小型の牙竜種のT/ジャグラスやシャムオス'],
+    drop: ['小型の牙竜種のジャグラスやシャムオス/T'],
   },
   {
     materialName: '炎王龍の大たてがみ',
@@ -319,7 +319,7 @@ export const materialsDrops = [
   },
   {
     materialName: '角竜の牙',
-    drop: ['ディアブロスを討伐/L・T'],
+    drop: ['ディアブロスを討伐/下位・T'],
   },
   {
     materialName: '角竜の堅殻',
@@ -351,7 +351,7 @@ export const materialsDrops = [
   },
   {
     materialName: '角竜の尾甲',
-    drop: ['ディアブロスを討伐/L・T'],
+    drop: ['ディアブロスを討伐/下位・T'],
   },
   {
     materialName: 'ガストドンの堅殻',
@@ -407,7 +407,7 @@ export const materialsDrops = [
   },
   {
     materialName: '火竜の尻尾',
-    drop: ['リオレウスの尻尾を切断/L・T'],
+    drop: ['リオレウスの尻尾を切断/下位・T'],
   },
   {
     materialName: '火竜の上鱗',
@@ -1083,7 +1083,7 @@ export const materialsDrops = [
   },
   {
     materialName: '惨爪竜の尻尾',
-    drop: ['オドガロンを討伐、尻尾を切断/L・T'],
+    drop: ['オドガロンを討伐、尻尾を切断/下位・T'],
   },
   {
     materialName: '惨爪竜の重牙',
@@ -1525,7 +1525,7 @@ export const materialsDrops = [
   },
   {
     materialName: '毒妖鳥の尻尾',
-    drop: ['プケプケを討伐、尻尾の剥ぎ取り/L・T'],
+    drop: ['プケプケを討伐、尻尾の剥ぎ取り/下位・T'],
   },
   {
     materialName: '毒妖鳥の上鱗',
@@ -1637,7 +1637,7 @@ export const materialsDrops = [
   },
   {
     materialName: 'ねじれた角',
-    drop: ['ディアブロスの角を部位破壊/L・T'],
+    drop: ['ディアブロスの角を部位破壊/下位・T'],
   },
   {
     materialName: '濃縮麻痺袋',
@@ -1749,7 +1749,7 @@ export const materialsDrops = [
   },
   {
     materialName: '蛮顎竜の逆鱗',
-    drop: ['アンジャナフを討伐、頭部の部位破壊/L・T'],
+    drop: ['アンジャナフを討伐、頭部の部位破壊/下位・T'],
   },
   {
     materialName: '蛮顎竜の厚毛皮',
@@ -1761,7 +1761,7 @@ export const materialsDrops = [
   },
   {
     materialName: '蛮顎竜の尻尾',
-    drop: ['アンジャナフを討伐、尻尾の剥ぎ取り/L・T・M'],
+    drop: ['アンジャナフを討伐、尻尾の剥ぎ取り/下位・T・M'],
   },
   {
     materialName: '蛮顎竜の重牙',
@@ -1981,7 +1981,7 @@ export const materialsDrops = [
   },
   {
     materialName: '風漂竜の逆鱗',
-    drop: ['レイギエナを討伐、頭・背中・尻尾の部位破壊/L・T'],
+    drop: ['レイギエナを討伐、頭・背中・尻尾の部位破壊/下位・T'],
   },
   {
     materialName: '風漂竜の剛爪',
@@ -2165,7 +2165,7 @@ export const materialsDrops = [
   },
   {
     materialName: '雌火竜の逆鱗',
-    drop: ['リオレイアを討伐、頭部や背中の部位破壊/L・T'],
+    drop: ['リオレイアを討伐、頭部や背中の部位破壊/下位・T'],
   },
   {
     materialName: '雌火竜の堅殻',
@@ -2405,7 +2405,7 @@ export const materialsDrops = [
   },
   {
     materialName: '竜骨塊',
-    drop: ['ラドバルキンを討伐、後脚・背中の部位破壊/L・T・M'],
+    drop: ['ラドバルキンを討伐、後脚・背中の部位破壊/下位・T・M'],
   },
   {
     materialName: '硫斬竜の剣山状殻',
