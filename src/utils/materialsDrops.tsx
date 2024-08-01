@@ -2093,35 +2093,35 @@ export const materialsDrops = [
   },
   {
     materialName: '魔獣の大角',
-    drop: [''],
+    drop: ['ベヒーモスの角を破壊/T'],
   },
   {
     materialName: '魔獣の堅骨',
-    drop: [''],
+    drop: ['ベヒーモスを討伐/T'],
   },
   {
     materialName: '魔獣の尻尾',
-    drop: [''],
+    drop: ['ベヒーモスの尻尾を切断/T'],
   },
   {
     materialName: '魔獣のたてがみ',
-    drop: [''],
+    drop: ['ベヒーモスを討伐/T'],
   },
   {
     materialName: '魔獣の裂爪',
-    drop: [''],
+    drop: ['ベヒーモスの前脚を破壊/T'],
   },
   {
     materialName: '麻痺袋',
-    drop: [''],
+    drop: ['ドスギルオスのクエスト報酬/L'],
   },
   {
     materialName: '水袋',
-    drop: [''],
+    drop: ['ジュラトドスのクエスト報酬/L'],
   },
   {
     materialName: '無窮の新生殻',
-    drop: [''],
+    drop: ['悉くを殲ぼすネルギガンテの討伐/M'],
   },
   {
     materialName: '冥灯龍の尻尾',
