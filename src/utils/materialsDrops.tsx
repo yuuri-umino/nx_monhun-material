@@ -2125,171 +2125,167 @@ export const materialsDrops = [
   },
   {
     materialName: '冥灯龍の尻尾',
-    drop: [''],
+    drop: ['ゼノ・ジーヴァの尻尾から高確率で入手/T'],
   },
   {
     materialName: '冥灯龍の白殻',
-    drop: [''],
+    drop: ['ゼノ・ジーヴァを討伐/T'],
   },
   {
     materialName: '冥灯龍の幽角',
-    drop: [''],
+    drop: ['ゼノ・ジーヴァの頭を部位破壊/T'],
   },
   {
     materialName: '冥灯龍の幽玉',
-    drop: [''],
+    drop: ['ゼノ・ジーヴァを討伐、頭の部位破壊/T'],
   },
   {
     materialName: '冥灯龍の幽爪',
-    drop: [''],
+    drop: ['ゼノ・ジーヴァの前脚を部位破壊/T'],
   },
   {
     materialName: '冥灯龍の幽幕',
-    drop: [''],
+    drop: ['ゼノ・ジーヴァの頭や翼の部位破壊/T'],
   },
   {
     materialName: '溟龍の幻曜ヒゲ',
-    drop: [''],
-  },
-  {
-    materialName: '溟龍の幻曜ヒゲ',
-    drop: [''],
+    drop: ['ネロミェールの頭の部位破壊'],
   },
   {
     materialName: '溟龍の靭尾',
-    drop: ['/M'],
+    drop: ['ネロミェールの尻尾を切断/M'],
   },
   {
-    materialName: '溟龍の特',
-    drop: [''],
+    materialName: '溟龍の特上皮',
+    drop: ['ネロミェールを狩猟/M'],
   },
   {
     materialName: '雌火竜の鱗',
-    drop: ['/L'],
+    drop: ['リオレイアを討伐、頭の部位破壊/L'],
   },
   {
     materialName: '雌火竜の逆鱗',
-    drop: [''],
+    drop: ['リオレイアを討伐、頭部や背中の部位破壊/L・T'],
   },
   {
     materialName: '雌火竜の堅殻',
-    drop: ['/T'],
+    drop: ['リオレイアを討伐、頭・背中の部位破壊/T'],
   },
   {
     materialName: '雌火竜の甲殻',
-    drop: ['/L'],
+    drop: ['リオレイアを討伐、頭・背中の部位破壊/L'],
   },
   {
     materialName: '雌火竜の紅玉',
-    drop: [''],
+    drop: ['リオレイア亜種の討伐/T'],
   },
   {
     materialName: '雌火竜の厚鱗',
-    drop: ['/M'],
+    drop: ['リオレイアを討伐、頭の部位破壊/M'],
   },
   {
     materialName: '雌火竜の重殻',
-    drop: ['/M'],
+    drop: ['リオレイアを討伐、頭・背中の部位破壊/M'],
   },
   {
     materialName: '雌火竜の上棘',
-    drop: ['/T'],
+    drop: ['リオレイアを討伐、背中の部位破壊、尻尾を切断/T'],
   },
   {
     materialName: '雌火竜の上鱗',
-    drop: ['/T'],
+    drop: ['リオレイアを討伐、頭の部位破壊/T'],
   },
   {
     materialName: '雌火竜の天鱗',
-    drop: ['/M'],
+    drop: ['リオレイア亜種の討伐、頭と背中の部位破壊/M'],
   },
   {
     materialName: '雌火竜の棘',
-    drop: [''],
+    drop: ['リオレイアの尻尾を切断/L'],
   },
   {
     materialName: '雌火竜の秘棘',
-    drop: [''],
+    drop: ['リオレイアの尻尾を切断/M'],
   },
   {
     materialName: '滅尽龍の大角',
-    drop: [''],
+    drop: ['ネルギガンテの角を部位破壊/T'],
   },
   {
     materialName: '滅尽龍の堅殻',
-    drop: ['/T'],
+    drop: ['ネルギガンテを討伐/T'],
   },
   {
     materialName: '滅尽龍の剛爪',
-    drop: ['/M'],
+    drop: ['悉くを殲ぼすネルギガンテの討伐、前脚の部位破壊/M'],
   },
   {
     materialName: '滅尽龍の再生殻',
-    drop: [''],
+    drop: ['ネルギガンテの討伐/T'],
   },
   {
     materialName: '滅尽龍の尻尾',
-    drop: [''],
+    drop: ['ネルギガンテの尻尾を切断/T'],
   },
   {
     materialName: '滅尽龍の尖爪',
-    drop: ['/T'],
+    drop: ['ネルギガンテを討伐/T'],
   },
   {
     materialName: '滅尽龍の宝玉',
-    drop: ['/T'],
+    drop: ['ネルギガンテを討伐、両角の部位破壊/T'],
   },
   {
     materialName: '猛牛竜の巨大な角',
-    drop: [''],
+    drop: ['バフバロの角を破壊/M'],
   },
   {
     materialName: '猛牛竜の重殻',
-    drop: ['/M'],
+    drop: ['バフバロを狩猟/M'],
   },
   {
     materialName: '猛牛竜の重甲',
-    drop: ['/M'],
+    drop: ['バフバロを狩猟/M'],
   },
   {
     materialName: '猛牛竜の靭尾',
-    drop: ['/M'],
+    drop: ['バフバロを狩猟/M'],
   },
   {
     materialName: '猛毒袋',
-    drop: ['/T'],
+    drop: ['プケプケのクエスト報酬/T'],
   },
   {
     materialName: 'モンスターの体液',
-    drop: ['/L'],
+    drop: ['カンタロスやランゴスタから剥ぎ取る/L'],
   },
   {
     materialName: 'モンスターの特濃',
-    drop: ['/T'],
+    drop: ['カンタロスやランゴスタから剥ぎ取る/M'],
   },
   {
     materialName: 'モンスターの濃汁',
-    drop: ['/M'],
+    drop: ['カンタロスやランゴスタから剥ぎ取る/T'],
   },
   {
     materialName: '闇を食む牙',
-    drop: ['闇を食む牙'],
+    drop: ['死を纏うヴァルハザクの討伐、頭の部位破壊/M'],
   },
   {
     materialName: '溶岩竜の鋭牙',
-    drop: ['/T'],
+    drop: ['ヴォルガノスの頭を部位破壊/T'],
   },
   {
     materialName: '溶岩竜の厚鱗',
-    drop: ['/M'],
+    drop: ['ヴォルガノスを討伐/M'],
   },
   {
     materialName: '溶岩竜の重牙',
-    drop: ['/M'],
+    drop: ['ヴォルガノスを討伐、頭の部位破壊/M'],
   },
   {
     materialName: '溶岩竜の上ヒレ',
-    drop: ['/T'],
+    drop: ['ヴォルガノスの背ビレを部位破壊/T'],
   },
   {
     materialName: '溶岩竜の上鱗',
@@ -2297,75 +2293,75 @@ export const materialsDrops = [
   },
   {
     materialName: '溶岩竜の特上ヒレ',
-    drop: ['/M'],
+    drop: ['ヴォルガノスの背中を部位破壊/M'],
   },
   {
     materialName: '熔山龍の岩殻',
-    drop: ['/T'],
+    drop: ['ゾラ・マグダラオスを討伐/T'],
   },
   {
     materialName: '熔山龍の胸殻',
-    drop: ['/T'],
+    drop: ['ゾラ・マグダラオスを討伐、胸殻の部位破壊/T'],
   },
   {
     materialName: '熔山龍の熱鱗',
-    drop: ['/T'],
+    drop: ['ゾラ・マグダラオスを討伐/T'],
   },
   {
     materialName: '熔山龍の背甲',
-    drop: ['/T'],
+    drop: ['ゾラ・マグダラオスを討伐/T'],
   },
   {
     materialName: '熔山龍の宝玉',
-    drop: ['/T'],
+    drop: ['ゾラ・マグダラオスを討伐/T'],
   },
   {
     materialName: '熔山龍のマグマ',
-    drop: ['/T'],
+    drop: ['ゾラ・マグダラオスを討伐、頭部の部位破壊/T'],
   },
   {
     materialName: 'ラージャンハート',
-    drop: ['/M'],
+    drop: ['激昂したラージャンを狩猟/M'],
   },
   {
     materialName: '雷顎竜の厚毛皮',
-    drop: ['/M'],
+    drop: ['アンジャナフ亜種の討伐/M'],
   },
   {
-    materialName: '雷顎竜の厚鱗',
-    drop: ['/M'],
+    materialName: '雷顎竜の厚鱗、脚の部位破壊',
+    drop: ['アンジャナフ亜種の討伐/M'],
   },
   {
     materialName: '雷顎竜の重牙',
-    drop: ['/M'],
+    drop: ['アンジャナフ亜種の討伐、頭の部位破壊/M'],
   },
   {
     materialName: '雷顎竜の重鼻骨',
-    drop: ['/M'],
+    drop: ['アンジャナフ亜種の討伐/M'],
   },
   {
     materialName: '雷顎竜の靭尾',
-    drop: ['/M'],
+    drop: ['アンジャナフ亜種の討伐、尻尾を切断/M'],
   },
   {
-    materialName: '雷顎竜の天鱗',
-    drop: ['/M'],
+    materialName: '雷顎竜の天鱗、頭の部位破壊',
+    drop: ['アンジャナフ亜種の討伐/M'],
   },
   {
     materialName: '雷電袋',
-    drop: ['トビカガチ/M'],
+    drop: ['トビカガチのクエスト報酬/M'],
   },
   {
     materialName: '雷狼竜の重殻',
-    drop: ['/M'],
+    drop: ['ジンオウガの討伐/M'],
   },
   {
     materialName: '雷狼竜の剛角',
-    drop: ['/M'],
+    drop: ['ジンオウガの討伐、頭の部位破壊/M'],
   },
   {
     materialName: '雷狼竜の剛爪',
-    drop: ['/M'],
+    drop: ['ジンオウガの討伐、前足の部位破壊/M'],
   },
   {
     materialName: '雷狼竜の天玉',
@@ -2373,111 +2369,111 @@ export const materialsDrops = [
   },
   {
     materialName: '雷狼竜の雷電殻',
-    drop: [''],
+    drop: ['ジンオウガの討伐、背中の部位破壊/M'],
   },
   {
     materialName: '雷狼竜の雷電毛',
-    drop: [''],
+    drop: ['ジンオウガの討伐/M'],
   },
   {
     materialName: '羅刹の金剛角',
-    drop: ['/M'],
+    drop: ['激昂したラージャンを狩猟/M'],
   },
   {
     materialName: 'ランゴスタの薄羽',
-    drop: [''],
+    drop: ['ランゴスタの討伐/T'],
   },
   {
     materialName: 'ランゴスタの堅殻',
-    drop: ['/T'],
+    drop: ['ランゴスタの討伐/T'],
   },
   {
     materialName: 'ランゴスタの甲殻',
-    drop: ['/L'],
+    drop: ['ランゴスタの討伐/L'],
   },
   {
     materialName: 'ランゴスタの斬羽',
-    drop: [''],
+    drop: ['ランゴスタの討伐/M'],
   },
   {
     materialName: 'ランゴスタの羽',
-    drop: [''],
+    drop: ['ランゴスタの討伐/L'],
   },
   {
     materialName: '竜玉',
-    drop: [''],
+    drop: ['ボルボロスやトビカガチ、ジュラトドスの周回/T'],
   },
   {
     materialName: '竜骨塊',
-    drop: [''],
+    drop: ['ラドバルキンを討伐、後脚・背中の部位破壊/L・T・M'],
   },
   {
     materialName: '硫斬竜の剣山状殻',
-    drop: [''],
+    drop: ['ディノバルド亜種の討伐、背中の部位破壊報酬/M'],
   },
   {
     materialName: '硫斬竜の厚鱗',
-    drop: ['/M'],
+    drop: ['ディノバルド亜種の討伐/M'],
   },
   {
     materialName: '硫斬竜の重牙',
-    drop: ['/M'],
+    drop: ['ディノバルド亜種の討伐、頭の部位破壊/M'],
   },
   {
     materialName: '硫斬竜の断剣尾',
-    drop: ['/M'],
+    drop: ['ディノバルド亜種の討伐/M'],
   },
   {
     materialName: '瑠璃色の龍神玉',
-    drop: [''],
+    drop: ['アルバトリオンから入手可能/M'],
   },
   {
     materialName: 'レーシェン討伐の証',
-    drop: [''],
+    drop: ['レーシェンの剥ぎ取りでのみ入手'],
   },
   {
     materialName: 'レーシェンの古呪角',
-    drop: [''],
+    drop: ['エンシェントレーシェンを角を破壊'],
   },
   {
     materialName: 'レーシェンの呪角',
-    drop: [''],
+    drop: ['レーシェンの角を破壊'],
   },
   {
     materialName: 'レーシェンの樹脂',
-    drop: [''],
+    drop: ['レーシェンの胴(＋足)を破壊'],
   },
   {
     materialName: 'レーシェンの樹爪',
-    drop: [''],
+    drop: ['エンシェントレーシェンを討伐'],
   },
   {
     materialName: '冷厳なる翼',
-    drop: [''],
+    drop: ['凍て刺すレイギエナの狩猟、翼の部位破壊/M'],
   },
   {
     materialName: '霊脈の剛竜骨',
-    drop: [''],
+    drop: ['導きの地の危険度2の歴戦個体から入手/M'],
   },
   {
     materialName: '霊脈の古龍骨',
-    drop: [''],
+    drop: ['導きの地の歴戦古龍から入手/M'],
   },
   {
     materialName: '歴戦の黒アギト',
-    drop: [''],
+    drop: ['導きの地の歴戦ティガレックス亜種から入手/M'],
   },
   {
     materialName: '歴戦の煌毛',
-    drop: [''],
+    drop: ['歴戦ラージャンからのみ入手/M'],
   },
   {
     materialName: '歴戦の滅龍殻',
-    drop: [''],
+    drop: ['導きの地歴戦ジンオウガ亜種からのみ入手/M'],
   },
   {
     materialName: '裂光の龍脈殻',
-    drop: [''],
+    drop: ['ムフェトジーヴァを討伐/M'],
   },
 ]
 
