@@ -38,6 +38,7 @@ const WeaponCalculateResult: React.FC<
     }
   }
 
+  // 素材のドロップ情報を取得
   const getDropInfo = (materialName: string) => {
     const material = materialsDrops.find(
       (item) => item.materialName === materialName

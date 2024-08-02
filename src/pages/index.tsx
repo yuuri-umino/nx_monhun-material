@@ -45,11 +45,15 @@ const Home: NextPageWithLayout = () => {
     greatSword
   )
   const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([])
+  const [selectedDerivationName, setSelectedDerivationName] = useState<
+    string | null
+  >(null)
   const [resetTrigger, setResetTrigger] = useState(false)
 
   useEffect(() => {
     if (selectedWeapon) {
       setSelectedWeapons(selectedWeapon.derivations[0]?.weapons || [])
+      setSelectedDerivationName(selectedWeapon.derivations[0]?.name || null)
     }
   }, [selectedWeapon])
 
@@ -57,8 +61,12 @@ const Home: NextPageWithLayout = () => {
     setSelectedWeapon(weaponType)
   }
 
-  const handleSelectDerivation = (weapons: Weapon[]) => {
+  const handleSelectDerivation = (
+    weapons: Weapon[],
+    derivationName: string
+  ) => {
     setSelectedWeapons(weapons)
+    setSelectedDerivationName(derivationName)
     setResetTrigger((prev) => !prev)
   }
 
@@ -73,11 +81,18 @@ const Home: NextPageWithLayout = () => {
         {selectedWeapon && (
           <WeaponDerivated
             derivations={selectedWeapon.derivations}
-            onSelectDerivation={handleSelectDerivation}
+            onSelectDerivation={(weapons) =>
+              handleSelectDerivation(
+                weapons,
+                selectedWeapon.derivations.find((d) => d.weapons === weapons)
+                  ?.name || ''
+              )
+            }
           />
         )}
         <WeaponSelectSection
           weapons={selectedWeapons}
+          selectedDerivationName={selectedDerivationName}
           resetTrigger={resetTrigger}
         />
       </MainContents>

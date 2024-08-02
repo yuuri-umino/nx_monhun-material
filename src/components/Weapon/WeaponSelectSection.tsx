@@ -5,11 +5,13 @@ import WeaponCalculateResult from './WeaponCalculateResult'
 import { Weapon } from '../../utils/materialsTypes'
 interface SelectProps {
   weapons: Weapon[]
+  selectedDerivationName: string | null
   resetTrigger: boolean
 }
 
 const WeaponSelectSection: React.FC<SelectProps> = ({
   weapons,
+  selectedDerivationName,
   resetTrigger,
 }) => {
   const [selectedWeapons, setSelectedWeapons] = useState<Set<string>>(new Set())
@@ -53,7 +55,10 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
 
   return (
     <SelectSection>
-      <div className="section-border">
+      <section className="section-border">
+        <h2 className="vdl-shadow selected-derivation">
+          {selectedDerivationName}
+        </h2>
         <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
           {weapons.map((weapon, index) => (
             <button
@@ -87,7 +92,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
           materials={calculatedMaterials}
           resetTrigger={resetTrigger}
         />
-      </div>
+      </section>
     </SelectSection>
   )
 }
@@ -97,6 +102,10 @@ const SelectSection = styled.div`
   .section-border {
     padding: 20px 0;
     border-bottom: 2px solid #f6dd94;
+    .selected-derivation {
+      font-size: 18px;
+      text-align: center;
+    }
   }
   .weapon-name {
     &::after {
@@ -213,6 +222,9 @@ const SelectSection = styled.div`
     .section-border {
       padding: 30px 0;
       border-bottom: 3px solid #f6dd94;
+      .selected-derivation {
+        font-size: 24px;
+      }
     }
     .weapon-name {
       &::after {
