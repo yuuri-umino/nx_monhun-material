@@ -49,7 +49,7 @@ const WeaponCalculateResult: React.FC<
   return (
     <>
       <CalculatedSection>
-        {Object.keys(materials).length > 0 && (
+        {Object.keys(materials).length > 0 ? (
           <ResultSection>
             <h2 className="toppan">Result</h2>
             <ul>
@@ -77,7 +77,7 @@ const WeaponCalculateResult: React.FC<
                           className="down"
                           onClick={() => handleQuantityChange(materialName, -1)}
                         >
-                          ➖
+                          −
                         </button>
                         <input
                           type="text"
@@ -91,7 +91,7 @@ const WeaponCalculateResult: React.FC<
                           className="up"
                           onClick={() => handleQuantityChange(materialName, 1)}
                         >
-                          ➕
+                          ＋
                         </button>
                       </div>
                     </div>
@@ -105,6 +105,10 @@ const WeaponCalculateResult: React.FC<
               ))}
             </ul>
           </ResultSection>
+        ) : (
+          <p className="vdl-shadow text-center mb-0">
+            ここに結果が表示されるよ
+          </p>
         )}
       </CalculatedSection>
     </>
