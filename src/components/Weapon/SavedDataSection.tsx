@@ -23,7 +23,9 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
               {Object.entries(result.results).map(
                 ([materialName, quantity]) => (
                   <li className="mb-1" key={materialName}>
-                    {materialName}: {quantity}
+                    {materialName}: [自分が今持っている個数:{' '}
+                    {result.ownedQuantities[materialName]} / 必要個数:{' '}
+                    {quantity}]
                   </li>
                 )
               )}

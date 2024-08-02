@@ -25,7 +25,7 @@ const WeaponCalculateResult: React.FC<
   >([])
 
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [saveName, setSaveName] = useState('')
+  // const [saveName, setSaveName] = useState('')
 
   useEffect(() => {
     setOwnedQuantities(
@@ -74,7 +74,10 @@ const WeaponCalculateResult: React.FC<
   const saveResults = (name: string) => {
     setSavedResults((prevResults) => {
       // 新しい保存結果を追加
-      const newResults = [...prevResults, { name, results: materials }]
+      const newResults = [
+        ...prevResults,
+        { name, results: materials, ownedQuantities: { ...ownedQuantities } },
+      ]
 
       // 最大3つまで保持し、それを超えた場合は古い結果を削除
       if (newResults.length > 3) {
