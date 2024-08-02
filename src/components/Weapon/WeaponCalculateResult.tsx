@@ -69,6 +69,12 @@ const WeaponCalculateResult: React.FC<
               </button>
             </div>
 
+            <button className="result-save vdl-shadow mb-4 lh-18">
+              現在の計算結果を
+              <br className="d-block d-md-none" />
+              名前を付けて保存する
+            </button>
+
             <ul>
               {Object.entries(materials).map(([materialName, quantity]) => (
                 <li
@@ -121,6 +127,12 @@ const WeaponCalculateResult: React.FC<
                 </li>
               ))}
             </ul>
+
+            <button className="result-save vdl-shadow mb-4 lh-18">
+              現在の計算結果を
+              <br className="d-block d-md-none" />
+              名前を付けて保存する
+            </button>
 
             <div className="d-flex justify-content-end">
               <button
@@ -193,6 +205,54 @@ const ResultSection = styled.div`
       transform: translate(2px, 2px);
       border: 2px solid #d29204;
       box-shadow: none;
+    }
+  }
+
+  .result-save {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    margin-inline: auto;
+    color: #d29204;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    &::before,
+    &::after {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-color: #d29204;
+      box-sizing: border-box;
+      border-style: solid;
+      display: block;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+    &:before {
+      top: -6px;
+      left: -6px;
+      border-width: 2px 0 0 2px;
+      z-index: 5;
+    }
+    &:after {
+      bottom: -6px;
+      right: -6px;
+      border-width: 0 2px 2px 0;
+    }
+    &:hover:before,
+    &:hover:after {
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      border-color: #d29204;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #d29204;
+      border-color: #d29204;
     }
   }
 

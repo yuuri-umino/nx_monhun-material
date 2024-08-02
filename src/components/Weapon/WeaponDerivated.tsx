@@ -6,7 +6,10 @@ import IconWeapon from '../../assets/icon-weapon.png'
 import { Derivation } from '../../utils/materialsTypes'
 interface WeaponDerivatedProps {
   derivations: Derivation[]
-  onSelectDerivation: (weapons: Derivation['weapons']) => void
+  onSelectDerivation: (
+    weapons: Derivation['weapons'],
+    derivationName: string
+  ) => void
 }
 
 const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
@@ -22,7 +25,9 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
               key={index}
               className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2"
               type="button"
-              onClick={() => onSelectDerivation(derivation.weapons)}
+              onClick={() =>
+                onSelectDerivation(derivation.weapons, derivation.name)
+              }
             >
               <Image src={IconWeapon} alt="" className="weapon-icon" />
               <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>

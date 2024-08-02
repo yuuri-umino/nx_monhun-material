@@ -59,6 +59,7 @@ const Home: NextPageWithLayout = () => {
 
   const handleWeaponClick = (weaponType: WeaponType) => {
     setSelectedWeapon(weaponType)
+    setResetTrigger((prev) => !prev)
   }
 
   const handleSelectDerivation = (
@@ -81,13 +82,7 @@ const Home: NextPageWithLayout = () => {
         {selectedWeapon && (
           <WeaponDerivated
             derivations={selectedWeapon.derivations}
-            onSelectDerivation={(weapons) =>
-              handleSelectDerivation(
-                weapons,
-                selectedWeapon.derivations.find((d) => d.weapons === weapons)
-                  ?.name || ''
-              )
-            }
+            onSelectDerivation={handleSelectDerivation}
           />
         )}
         <WeaponSelectSection

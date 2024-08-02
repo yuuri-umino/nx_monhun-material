@@ -21,6 +21,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
 
   useEffect(() => {
     setSelectedWeapons(new Set())
+    setCalculatedMaterials({})
   }, [resetTrigger])
 
   const handleCheckboxChange = (weaponName: string) => {
