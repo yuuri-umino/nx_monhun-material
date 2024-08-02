@@ -17,8 +17,13 @@ const WeaponCalculateResult: React.FC<
     [key: string]: number
   }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
   const [savedResults, setSavedResults] = useState<
-    Array<{ name: string; results: { [key: string]: number } }>
+    Array<{
+      name: string
+      results: { [key: string]: number }
+      ownedQuantities: { [key: string]: number }
+    }>
   >([])
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [saveName, setSaveName] = useState('')
 

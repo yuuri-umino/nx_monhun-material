@@ -69,7 +69,6 @@ const Section = styled.section`
     padding-top: 40px;
     ul {
       justify-content: space-between;
-
       &::after {
         content: '';
         display: block;
@@ -78,9 +77,13 @@ const Section = styled.section`
       li {
         margin-bottom: 10px;
         width: 31%;
+        background-color: #fffbe8;
+        padding: 10px;
+        border-radius: 6px;
         ul {
           li {
             width: 100%;
+            padding: 0;
           }
         }
       }
