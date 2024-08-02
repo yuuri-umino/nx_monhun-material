@@ -199,33 +199,34 @@ const ResultSection = styled.div`
   ul {
     list-style-type: none;
     padding: 0;
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+
     li {
       margin-bottom: 20px;
       background-color: #fffbe8;
       color: #a77d00;
       border-radius: 6px;
       font-size: 14px;
+
       .result-border {
         display: flex;
         align-items: center;
         padding-bottom: 10px;
         border-bottom: 2px solid #a77d00;
+
         p {
           margin: 0 20px 0 0;
         }
+
         span {
           position: relative;
         }
+
         .quantity-flame {
           position: relative;
           z-index: 10;
           width: 35px;
           height: 28px;
+
           &::before,
           &::after {
             content: '';
@@ -234,6 +235,7 @@ const ResultSection = styled.div`
             background-color: #a77d00;
             z-index: -1;
           }
+
           &::before {
             left: 50%;
             transform: translateX(-50%);
@@ -242,6 +244,7 @@ const ResultSection = styled.div`
             padding: 0 15px;
             border-radius: 5px;
           }
+
           &::after {
             top: 50%;
             right: 34px;
@@ -250,6 +253,7 @@ const ResultSection = styled.div`
             height: 12px;
             clip-path: polygon(100% 0, 60% 50%, 100% 100%);
           }
+
           .quantity {
             display: flex;
             justify-content: center;
@@ -259,6 +263,7 @@ const ResultSection = styled.div`
           }
         }
       }
+
       .input-number {
         position: relative;
         display: flex;
@@ -266,14 +271,17 @@ const ResultSection = styled.div`
         align-items: center;
         padding: 10px 0;
         color: #6f6f6f;
+
         input {
           width: 50px;
           margin: 0 10px;
         }
+
         .input-area {
           display: flex;
           align-items: center;
           margin-left: 10px;
+
           .up,
           .down {
             display: flex;
@@ -287,6 +295,7 @@ const ResultSection = styled.div`
             cursor: pointer;
           }
         }
+
         .ok {
           position: absolute;
           top: 50%;
@@ -294,22 +303,44 @@ const ResultSection = styled.div`
           transform: translateY(-50%);
           width: 40px;
           height: 40px;
-          @media screen and (min-width: 768px) {
-            top: -70%;
-            width: 30px;
-            height: 30px;
-          }
         }
       }
-      @media screen and (min-width: 768px) {
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &::after {
+        content: '';
+        display: block;
+        width: 48%;
+      }
+      li {
         width: 48%;
         font-size: 16px;
-      }
-      @media screen and (min-width: 1400px) {
-        width: 31%;
-        &::after {
-          width: 31%;
+
+        .input-number .ok {
+          top: -70%;
+          width: 30px;
+          height: 30px;
         }
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    ul::after {
+      width: 31%;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    ul {
+      li {
+        width: 31%;
       }
     }
   }
