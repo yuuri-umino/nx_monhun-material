@@ -7,10 +7,12 @@ interface SavedDataSectionProps {
     results: { [key: string]: number }
     ownedQuantities: { [key: string]: number }
   }>
+  onDelete: (index: number) => void
 }
 
 const SavedDataSection: React.FC<SavedDataSectionProps> = ({
   savedResults,
+  onDelete,
 }) => {
   return (
     <Section>
@@ -18,7 +20,9 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
       <ul>
         {savedResults.map((result, index) => (
           <li key={index}>
-            <button className="delete-savedata">DELETE</button>
+            <button className="delete-savedata" onClick={() => onDelete(index)}>
+              DELETE
+            </button>
             <p className="vdl-shadow mb-1">{result.name}</p>
             <ul className="d-flex flex-column">
               {Object.entries(result.results).map(

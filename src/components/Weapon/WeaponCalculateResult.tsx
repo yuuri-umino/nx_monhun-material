@@ -73,20 +73,22 @@ const WeaponCalculateResult: React.FC<
 
   const saveResults = (name: string) => {
     setSavedResults((prevResults) => {
-      // 新しい保存結果を追加
       const newResults = [
         ...prevResults,
         { name, results: materials, ownedQuantities: { ...ownedQuantities } },
       ]
 
-      // 最大3つまで保持し、それを超えた場合は古い結果を削除
       if (newResults.length > 3) {
-        newResults.shift() // 最も古い結果を削除
+        newResults.shift()
       }
 
       return newResults
     })
     closeSaveModal()
+  }
+
+  const deleteResult = (index: number) => {
+    setSavedResults((prevResults) => prevResults.filter((_, i) => i !== index))
   }
 
   return (
@@ -198,7 +200,7 @@ const WeaponCalculateResult: React.FC<
         onSave={saveResults}
       />
 
-      <SavedDataSection savedResults={savedResults} />
+      <SavedDataSection savedResults={savedResults} onDelete={deleteResult} />
     </>
   )
 }
