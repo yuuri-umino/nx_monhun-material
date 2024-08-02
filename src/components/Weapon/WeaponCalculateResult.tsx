@@ -46,12 +46,29 @@ const WeaponCalculateResult: React.FC<
     return material ? material.drop.join(', ') : 'SORRY!THERE IS NO DATA...'
   }
 
+  // リセットボタン用
+  const handleReset = () => {
+    setOwnedQuantities(
+      Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {})
+    )
+  }
+
   return (
     <>
       <CalculatedSection>
         {Object.keys(materials).length > 0 ? (
           <ResultSection>
             <h2 className="toppan">Result</h2>
+
+            <div className="d-flex justify-content-end">
+              <button
+                className="reset-btn vdl-shadow mb-4"
+                onClick={handleReset}
+              >
+                RESET
+              </button>
+            </div>
+
             <ul>
               {Object.entries(materials).map(([materialName, quantity]) => (
                 <li
@@ -104,6 +121,15 @@ const WeaponCalculateResult: React.FC<
                 </li>
               ))}
             </ul>
+
+            <div className="d-flex justify-content-end">
+              <button
+                className="reset-btn vdl-shadow mb-4"
+                onClick={handleReset}
+              >
+                RESET
+              </button>
+            </div>
           </ResultSection>
         ) : (
           <p className="vdl-shadow text-center mb-0">
@@ -152,6 +178,22 @@ const ResultSection = styled.div`
     margin-bottom: 30px;
     color: #a77d00;
     text-align: center;
+  }
+
+  .reset-btn {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #d29204;
+    color: #d29204;
+    border-radius: 50px;
+    padding: 5px 20px;
+    box-shadow: 2px 2px 0 0 #d29204;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: translate(2px, 2px);
+      border: 2px solid #d29204;
+      box-shadow: none;
+    }
   }
 
   ul {
@@ -250,8 +292,13 @@ const ResultSection = styled.div`
           top: 50%;
           right: 0;
           transform: translateY(-50%);
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
+          @media screen and (min-width: 768px) {
+            top: -70%;
+            width: 30px;
+            height: 30px;
+          }
         }
       }
       @media screen and (min-width: 768px) {

@@ -2475,6 +2475,10 @@ export const materialsDrops = [
     materialName: '裂光の龍脈殻',
     drop: ['ムフェトジーヴァを討伐/M'],
   },
+  {
+    materialName: '勇気の証',
+    drop: ['ゾラ・マグダラオスのクエストから入手'],
+  },
 ]
 
 export default materialsDrops
