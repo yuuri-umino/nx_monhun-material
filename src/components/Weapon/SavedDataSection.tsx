@@ -69,6 +69,12 @@ const Section = styled.section`
     padding-top: 40px;
     ul {
       justify-content: space-between;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 31%;
+      }
       li {
         margin-bottom: 10px;
         width: 31%;
