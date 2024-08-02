@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import IconOk from '../../assets/icon-ok.png'
 import { materialsDrops } from '../../utils/materialsDrops'
+import SaveModal from './SaveModal'
+import SavedDataSection from './SavedDataSection'
 
 interface CalculateResultProps {
   materials: { [key: string]: number }
@@ -14,6 +16,11 @@ const WeaponCalculateResult: React.FC<
   const [ownedQuantities, setOwnedQuantities] = useState<{
     [key: string]: number
   }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
+  const [savedResults, setSavedResults] = useState<
+    Array<{ name: string; results: { [key: string]: number } }>
+  >([])
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [saveName, setSaveName] = useState('')
 
   useEffect(() => {
     setOwnedQuantities(
@@ -38,7 +45,6 @@ const WeaponCalculateResult: React.FC<
     }
   }
 
-  // 素材のドロップ情報を取得
   const getDropInfo = (materialName: string) => {
     const material = materialsDrops.find(
       (item) => item.materialName === materialName
@@ -46,11 +52,33 @@ const WeaponCalculateResult: React.FC<
     return material ? material.drop.join(', ') : 'SORRY!THERE IS NO DATA...'
   }
 
-  // リセットボタン用
   const handleReset = () => {
     setOwnedQuantities(
       Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {})
     )
+  }
+
+  const openSaveModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeSaveModal = () => {
+    setIsModalOpen(false)
+  }
+
+  const saveResults = (name: string) => {
+    setSavedResults((prevResults) => {
+      // 新しい保存結果を追加
+      const newResults = [...prevResults, { name, results: materials }]
+
+      // 最大3つまで保持し、それを超えた場合は古い結果を削除
+      if (newResults.length > 3) {
+        newResults.shift() // 最も古い結果を削除
+      }
+
+      return newResults
+    })
+    closeSaveModal()
   }
 
   return (
@@ -69,7 +97,10 @@ const WeaponCalculateResult: React.FC<
               </button>
             </div>
 
-            <button className="result-save vdl-shadow mb-4 lh-18">
+            <button
+              className="result-save vdl-shadow mb-4 lh-18"
+              onClick={openSaveModal}
+            >
               現在の計算結果を
               <br className="d-block d-md-none" />
               名前を付けて保存する
@@ -128,7 +159,10 @@ const WeaponCalculateResult: React.FC<
               ))}
             </ul>
 
-            <button className="result-save vdl-shadow mb-4 lh-18">
+            <button
+              className="result-save vdl-shadow mb-4 lh-18"
+              onClick={openSaveModal}
+            >
               現在の計算結果を
               <br className="d-block d-md-none" />
               名前を付けて保存する
@@ -149,6 +183,14 @@ const WeaponCalculateResult: React.FC<
           </p>
         )}
       </CalculatedSection>
+
+      <SaveModal
+        isOpen={isModalOpen}
+        onClose={closeSaveModal}
+        onSave={saveResults}
+      />
+
+      <SavedDataSection savedResults={savedResults} />
     </>
   )
 }
