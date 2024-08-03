@@ -90,6 +90,10 @@ const Section = styled.section`
   ul {
     margin: 0;
     padding: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #d29204;
+    padding: 10px;
     list-style: none;
     li {
       position: relative;
