@@ -46,7 +46,7 @@ const NavContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+    padding: 10px 5px;
   }
 `
 
@@ -54,7 +54,7 @@ const NavButton = styled.button`
   background-color: #a77d00;
   color: #fff;
   border: none;
-  padding: 10px 5px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   &:hover {
