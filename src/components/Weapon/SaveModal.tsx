@@ -20,19 +20,19 @@ const SaveModal: React.FC<SaveModalProps> = ({ isOpen, onClose, onSave }) => {
   return (
     <ModalOverlay isOpen={isOpen}>
       <ModalContent>
-        <h2 className="vdl-shadow">保存名を入力してください</h2>
+        <h2 className="toppan">Enter save name</h2>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="名前いれてね"
+          placeholder="ANY NAME"
         />
-        <div className="datasave-btn">
+        <div className="datasave-btn toppan">
           <button className="save" onClick={handleSave}>
-            保存
+            save!
           </button>
           <button className="cancel" onClick={onClose}>
-            やーめた
+            cancel
           </button>
         </div>
       </ModalContent>

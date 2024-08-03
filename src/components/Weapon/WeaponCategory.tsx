@@ -46,6 +46,7 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
   return (
     <>
       <CategorySection>
+        <h2 className="toppan">1.武器種を選択する</h2>
         <div className="section-border">
           {weaponTypes.map((weaponType, index) => (
             <Button key={index} onClick={() => onWeaponClick(weaponType)}>
@@ -64,6 +65,11 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
 }
 
 const CategorySection = styled.div`
+  h2 {
+    margin-bottom: 30px;
+    color: #a77d00;
+    text-align: center;
+  }
   .section-border {
     display: grid;
     grid-template-columns: repeat(7, 1fr);

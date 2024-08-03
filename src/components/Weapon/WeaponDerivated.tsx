@@ -19,11 +19,12 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
   return (
     <DerivatedSection>
       <div className="section-border">
+        <h2 className="toppan">2.派生先を選択する</h2>
         <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
           {derivations.map((derivation, index) => (
             <button
               key={index}
-              className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2"
+              className="toppan weapon-item d-flex align-items-center my-2 py-1 px-2"
               type="button"
               onClick={() =>
                 onSelectDerivation(derivation.weapons, derivation.name)
@@ -41,11 +42,20 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
 
 const DerivatedSection = styled.div`
   margin-inline: auto;
+  h2 {
+    margin-bottom: 30px;
+    color: #a77d00;
+    text-align: center;
+  }
   .section-border {
     padding: 20px 0;
     border-bottom: 2px solid #f6dd94;
   }
   .weapon-derivated-list {
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #d29204;
+    padding: 10px;
     &::after {
       content: '';
       display: block;
@@ -58,12 +68,16 @@ const DerivatedSection = styled.div`
     border-radius: 6px;
     color: #a77d00;
     width: 100%;
+    transition: all 0.3s ease-in-out;
     p {
       font-size: 14px;
     }
     .weapon-icon {
       width: 25px;
       height: auto;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   @media screen and (min-width: 576px) {
@@ -72,6 +86,9 @@ const DerivatedSection = styled.div`
       border-bottom: 3px solid #f6dd94;
     }
     .weapon-derivated-list {
+      height: auto;
+      border: none;
+      padding: 0;
       &::after {
         width: 45%;
       }

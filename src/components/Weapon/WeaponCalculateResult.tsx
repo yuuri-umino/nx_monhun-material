@@ -78,7 +78,7 @@ const WeaponCalculateResult: React.FC<
         { name, results: materials, ownedQuantities: { ...ownedQuantities } },
       ]
 
-      if (newResults.length > 3) {
+      if (newResults.length > 5) {
         newResults.shift()
       }
 
@@ -96,7 +96,7 @@ const WeaponCalculateResult: React.FC<
       <CalculatedSection>
         {Object.keys(materials).length > 0 ? (
           <ResultSection>
-            <h2 className="toppan">Result</h2>
+            <h2 className="toppan">4.結果はこちら</h2>
 
             <div className="d-flex justify-content-end">
               <button
@@ -108,15 +108,13 @@ const WeaponCalculateResult: React.FC<
             </div>
 
             <button
-              className="result-save vdl-shadow mb-4 lh-18"
+              className="result-save toppan mb-4 lh-18"
               onClick={openSaveModal}
             >
-              現在の計算結果を
-              <br className="d-block d-md-none" />
-              名前を付けて保存する
+              Save as
             </button>
 
-            <ul>
+            <ul className="result-list">
               {Object.entries(materials).map(([materialName, quantity]) => (
                 <li
                   key={materialName}
@@ -170,12 +168,10 @@ const WeaponCalculateResult: React.FC<
             </ul>
 
             <button
-              className="result-save vdl-shadow mb-4 lh-18"
+              className="result-save toppan mb-4 lh-18"
               onClick={openSaveModal}
             >
-              現在の計算結果を
-              <br className="d-block d-md-none" />
-              名前を付けて保存する
+              Save as
             </button>
 
             <div className="d-flex justify-content-end">
@@ -188,8 +184,8 @@ const WeaponCalculateResult: React.FC<
             </div>
           </ResultSection>
         ) : (
-          <p className="vdl-shadow text-center mb-0">
-            ここに結果が表示されるよ
+          <p className="toppan text-center mb-0">
+            ここに必要素材数が表示されます
           </p>
         )}
       </CalculatedSection>
@@ -308,10 +304,14 @@ const ResultSection = styled.div`
     }
   }
 
-  ul {
+  .result-list {
     list-style-type: none;
+    margin-bottom: 30px;
     padding: 0;
-
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #d29204;
+    padding: 10px;
     li {
       margin-bottom: 20px;
       background-color: #fffbe8;

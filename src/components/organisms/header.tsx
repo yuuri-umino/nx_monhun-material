@@ -8,8 +8,11 @@ const Header: FC = () => {
     <>
       <HeaderWrap id="header">
         <div className="header-inner">
-          <h1></h1>
-
+          <h1 className="toppan lh-18">
+            モンハン アイスボーン
+            <br className="d-block d-md-none" />
+            武器素材検索ツール
+          </h1>
           <nav></nav>
         </div>
       </HeaderWrap>
@@ -18,21 +21,22 @@ const Header: FC = () => {
 }
 
 const HeaderWrap = styled.header`
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 40px;
   z-index: 1000;
   .header-inner {
-    .header-title {
-      position: relative;
-      color: #383838;
-      margin: 0;
-      padding: 5px 0;
-      font-size: 20px;
-      transition: all 0.5s;
-      &.active {
-        color: #fff;
+    h1 {
+      color: #a77d00;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .header-inner {
+      h1 {
+        font-size: 30px;
       }
     }
   }

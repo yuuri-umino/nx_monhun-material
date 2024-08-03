@@ -57,9 +57,8 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
   return (
     <SelectSection>
       <section className="section-border">
-        <h2 className="vdl-shadow selected-derivation">
-          {selectedDerivationName}
-        </h2>
+        <h2 className="toppan">3.武器を選択する</h2>
+        <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
           {weapons.map((weapon, index) => (
             <button
@@ -103,12 +102,21 @@ const SelectSection = styled.div`
   .section-border {
     padding: 20px 0;
     border-bottom: 2px solid #f6dd94;
+    h2 {
+      margin-bottom: 30px;
+      color: #a77d00;
+      text-align: center;
+    }
     .selected-derivation {
       font-size: 18px;
       text-align: center;
     }
   }
   .weapon-name {
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #d29204;
+    padding: 10px;
     &::after {
       content: '';
       display: block;
@@ -122,12 +130,16 @@ const SelectSection = styled.div`
     color: #a77d00;
     width: 100%;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
     p {
       font-size: 14px;
     }
     .weapon-icon {
       width: 25px;
       height: auto;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   .checkbox-container {
