@@ -110,6 +110,7 @@ const Section = styled.section`
       border: 1px solid #a77d00;
       border-radius: 20px;
       background-color: #fff;
+      color: #a77d00;
       font-size: 14px;
       font-weight: bold;
     }
