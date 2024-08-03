@@ -28,7 +28,7 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
               {Object.entries(result.results).map(
                 ([materialName, quantity]) => (
                   <li className="mb-1" key={materialName}>
-                    <span className="toppan">{materialName}</span>　
+                    <span className="toppan">{materialName}</span>&emsp;
                     <br className="d-block d-md-none" />
                     所持数: {result.ownedQuantities[materialName]} / 必要個数:{' '}
                     {quantity}
