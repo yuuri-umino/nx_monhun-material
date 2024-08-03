@@ -130,6 +130,11 @@ const WeaponCalculateResult: React.FC<
                     <div className="quantity-flame">
                       <span className="quantity">{quantity}</span>
                     </div>
+                    {ownedQuantities[materialName] >= quantity && (
+                      <div className="ok">
+                        <Image src={IconOk} alt="" className="w-100 h-100" />
+                      </div>
+                    )}
                   </div>
                   <div className="toppan input-number">
                     今持ってる数
@@ -157,11 +162,6 @@ const WeaponCalculateResult: React.FC<
                         </button>
                       </div>
                     </div>
-                    {ownedQuantities[materialName] >= quantity && (
-                      <div className="ok">
-                        <Image src={IconOk} alt="" className="w-100 h-100" />
-                      </div>
-                    )}
                   </div>
                 </li>
               ))}
@@ -313,32 +313,28 @@ const ResultSection = styled.div`
     border: 1px solid #d29204;
     padding: 10px;
     li {
+      position: relative;
       margin-bottom: 20px;
       background-color: #fffbe8;
       color: #a77d00;
       border-radius: 6px;
       font-size: 14px;
-
       .result-border {
         display: flex;
         align-items: center;
         padding-bottom: 10px;
         border-bottom: 2px solid #a77d00;
-
         p {
           margin: 0 20px 0 0;
         }
-
         span {
           position: relative;
         }
-
         .quantity-flame {
           position: relative;
           z-index: 10;
           width: 35px;
           height: 28px;
-
           &::before,
           &::after {
             content: '';
@@ -347,7 +343,6 @@ const ResultSection = styled.div`
             background-color: #a77d00;
             z-index: -1;
           }
-
           &::before {
             left: 50%;
             transform: translateX(-50%);
@@ -356,7 +351,6 @@ const ResultSection = styled.div`
             padding: 0 15px;
             border-radius: 5px;
           }
-
           &::after {
             top: 50%;
             right: 34px;
@@ -365,7 +359,6 @@ const ResultSection = styled.div`
             height: 12px;
             clip-path: polygon(100% 0, 60% 50%, 100% 100%);
           }
-
           .quantity {
             display: flex;
             justify-content: center;
@@ -374,8 +367,13 @@ const ResultSection = styled.div`
             color: #fff;
           }
         }
+        .ok {
+          position: absolute;
+          right: 6%;
+          width: 30px;
+          height: 30px;
+        }
       }
-
       .input-number {
         position: relative;
         display: flex;
@@ -383,17 +381,14 @@ const ResultSection = styled.div`
         align-items: center;
         padding: 10px 0;
         color: #6f6f6f;
-
         input {
           width: 50px;
           margin: 0 10px;
         }
-
         .input-area {
           display: flex;
           align-items: center;
           margin-left: 10px;
-
           .up,
           .down {
             display: flex;
@@ -407,21 +402,12 @@ const ResultSection = styled.div`
             cursor: pointer;
           }
         }
-
-        .ok {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-        }
       }
     }
   }
 
   @media screen and (min-width: 768px) {
-    ul {
+    .result-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -433,7 +419,6 @@ const ResultSection = styled.div`
       li {
         width: 48%;
         font-size: 16px;
-
         .input-number .ok {
           top: -70%;
           width: 30px;
@@ -444,13 +429,13 @@ const ResultSection = styled.div`
   }
 
   @media screen and (min-width: 992px) {
-    ul::after {
+    .result-list::after {
       width: 31%;
     }
   }
 
   @media screen and (min-width: 1400px) {
-    ul {
+    .result-list {
       li {
         width: 31%;
       }
