@@ -55,7 +55,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
   }
 
   return (
-    <SelectSection>
+    <SelectSection id="select-weapon">
       <section className="section-border">
         <h2 className="toppan">3.武器を選択する</h2>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>

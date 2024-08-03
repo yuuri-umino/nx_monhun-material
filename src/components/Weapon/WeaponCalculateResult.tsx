@@ -93,7 +93,7 @@ const WeaponCalculateResult: React.FC<
 
   return (
     <>
-      <CalculatedSection>
+      <CalculatedSection id="result">
         {Object.keys(materials).length > 0 ? (
           <ResultSection>
             <h2 className="toppan">4.結果はこちら</h2>

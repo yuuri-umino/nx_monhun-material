@@ -45,7 +45,7 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
 }) => {
   return (
     <>
-      <CategorySection>
+      <CategorySection id="category">
         <h2 className="toppan">1.武器種を選択する</h2>
         <div className="section-border">
           {weaponTypes.map((weaponType, index) => (

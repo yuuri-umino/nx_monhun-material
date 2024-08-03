@@ -10,7 +10,7 @@ const HowToUse: React.FC = () => {
   }
 
   return (
-    <HowToUseContainer>
+    <HowToUseContainer id="how-to-use">
       <h2 className="toppan">このツールの使い方</h2>
       <button onClick={toggleOpen} className="toggle-button">
         {isOpen ? '閉じる' : '開く'}

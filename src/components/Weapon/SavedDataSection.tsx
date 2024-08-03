@@ -17,7 +17,7 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <Section>
+    <Section id="saved">
       <h2 className="toppan">5.保存した計算結果</h2>
       <p className="save-caution">
         ※結果は5件まで保存できます。

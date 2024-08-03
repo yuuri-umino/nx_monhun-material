@@ -17,7 +17,7 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
   onSelectDerivation,
 }) => {
   return (
-    <DerivatedSection>
+    <DerivatedSection id="derivated">
       <div className="section-border">
         <h2 className="toppan">2.派生先を選択する</h2>
         <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">

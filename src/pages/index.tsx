@@ -7,6 +7,7 @@ import WeaponCategory from '@/components/Weapon/WeaponCategory'
 import WeaponDerivated from '@/components/Weapon/WeaponDerivated'
 import WeaponSelectSection from '@/components/Weapon/WeaponSelectSection'
 import HowToUse from '@/components/Weapon/HowToUse'
+import SideButtonNav from '@/components/Weapon/SideButtonNav'
 
 import { WeaponType, Weapon } from '../utils/materialsTypes'
 import greatSword from '../utils/greatSword'
@@ -75,6 +76,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <CustomHead title="TOP" description="" />
+      <SideButtonNav />
       <HowToUse />
       <MainContents>
         <WeaponCategory
