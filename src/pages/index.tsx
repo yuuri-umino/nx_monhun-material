@@ -6,6 +6,7 @@ import CustomHead from '@/components/organisms/head'
 import WeaponCategory from '@/components/Weapon/WeaponCategory'
 import WeaponDerivated from '@/components/Weapon/WeaponDerivated'
 import WeaponSelectSection from '@/components/Weapon/WeaponSelectSection'
+import HowToUse from '@/components/Weapon/HowToUse'
 
 import { WeaponType, Weapon } from '../utils/materialsTypes'
 import greatSword from '../utils/greatSword'
@@ -74,6 +75,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <CustomHead title="TOP" description="" />
+      <HowToUse />
       <MainContents>
         <WeaponCategory
           weaponTypes={weaponTypes}
