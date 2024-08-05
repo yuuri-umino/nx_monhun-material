@@ -66,7 +66,7 @@ const ModalContent = styled.div`
   text-align: center;
   input {
     width: 300px;
-    border: px solid #a77d00;
+    border: 1px solid #a77d00;
   }
   .datasave-btn {
     gap: 10px;

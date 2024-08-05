@@ -76,9 +76,9 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
           <div className="mt-5">
             <p className="toppan mb-2 save-name">
               {savedResults[activeIndex]?.name}
-              <div>
+              <div className="d-flex flex-column flex-md-row justify-content-end">
                 <button
-                  className="delete-savedata me-2"
+                  className="delete-savedata me-md-2 mb-2 mb-md-0"
                   onClick={() => handleDelete(activeIndex)}
                 >
                   DELETE
@@ -148,6 +148,7 @@ const Section = styled.section`
   .save-name {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 20px;
     color: #a77d00;
     .delete-savedata,

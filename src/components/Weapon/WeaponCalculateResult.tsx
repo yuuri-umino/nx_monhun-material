@@ -16,7 +16,6 @@ interface CalculateResultProps {
 const WeaponCalculateResult: React.FC<
   CalculateResultProps & { resetTrigger: boolean }
 > = ({ materials, resetTrigger, setCalculatedMaterials }) => {
-  // Add setCalculatedMaterials here
   const [ownedQuantities, setOwnedQuantities] = useState<{
     [key: string]: number
   }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
