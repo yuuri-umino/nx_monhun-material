@@ -11,7 +11,7 @@ const Header: FC = () => {
           <h1 className="toppan lh-18">
             モンハン アイスボーン
             <br className="d-block d-md-none" />
-            武器素材検索ツール
+            武器素材計算ツール
           </h1>
         </div>
       </HeaderWrap>
