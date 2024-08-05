@@ -8,11 +8,15 @@ import SavedDataSection from './SavedDataSection'
 
 interface CalculateResultProps {
   materials: { [key: string]: number }
+  setCalculatedMaterials: React.Dispatch<
+    React.SetStateAction<{ [key: string]: number }>
+  > // Add this line
 }
 
 const WeaponCalculateResult: React.FC<
   CalculateResultProps & { resetTrigger: boolean }
-> = ({ materials, resetTrigger }) => {
+> = ({ materials, resetTrigger, setCalculatedMaterials }) => {
+  // Add setCalculatedMaterials here
   const [ownedQuantities, setOwnedQuantities] = useState<{
     [key: string]: number
   }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
@@ -25,7 +29,6 @@ const WeaponCalculateResult: React.FC<
   >([])
 
   const [isModalOpen, setIsModalOpen] = useState(false)
-  // const [saveName, setSaveName] = useState('')
 
   useEffect(() => {
     setOwnedQuantities(
@@ -89,6 +92,12 @@ const WeaponCalculateResult: React.FC<
 
   const deleteResult = (index: number) => {
     setSavedResults((prevResults) => prevResults.filter((_, i) => i !== index))
+  }
+
+  const restoreResult = (index: number) => {
+    const resultToRestore = savedResults[index]
+    setOwnedQuantities(resultToRestore.ownedQuantities)
+    setCalculatedMaterials(resultToRestore.results)
   }
 
   return (
@@ -196,7 +205,11 @@ const WeaponCalculateResult: React.FC<
         onSave={saveResults}
       />
 
-      <SavedDataSection savedResults={savedResults} onDelete={deleteResult} />
+      <SavedDataSection
+        savedResults={savedResults}
+        onDelete={deleteResult}
+        onRestore={restoreResult}
+      />
     </>
   )
 }

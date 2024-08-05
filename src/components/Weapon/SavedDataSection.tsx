@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 interface SavedDataSectionProps {
@@ -8,13 +8,45 @@ interface SavedDataSectionProps {
     ownedQuantities: { [key: string]: number }
   }>
   onDelete: (index: number) => void
+  onRestore: (index: number) => void
 }
 
 const SavedDataSection: React.FC<SavedDataSectionProps> = ({
   savedResults,
   onDelete,
+  onRestore,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    if (activeIndex >= savedResults.length) {
+      setActiveIndex(0)
+    }
+  }, [savedResults.length, activeIndex])
+
+  useEffect(() => {
+    if (savedResults.length === 0) {
+      setActiveIndex(0)
+    }
+  }, [savedResults.length])
+
+  const handleDelete = (index: number) => {
+    onDelete(index)
+    if (index === activeIndex && savedResults.length > 1) {
+      setActiveIndex(0)
+    } else if (index < activeIndex) {
+      setActiveIndex((prev) => prev - 1)
+    }
+  }
+
+  const handleRestore = (index: number) => {
+    onRestore(index)
+    // スクロール処理を追加
+    const resultSection = document.getElementById('result')
+    if (resultSection) {
+      resultSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <Section id="saved">
@@ -43,16 +75,24 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
           </Tabs>
           <div className="mt-5">
             <p className="toppan mb-2 save-name">
-              {savedResults[activeIndex].name}
-              <button
-                className="delete-savedata"
-                onClick={() => onDelete(activeIndex)}
-              >
-                DELETE
-              </button>
+              {savedResults[activeIndex]?.name}
+              <div>
+                <button
+                  className="delete-savedata me-2"
+                  onClick={() => handleDelete(activeIndex)}
+                >
+                  DELETE
+                </button>
+                <button
+                  className="restore-savedata"
+                  onClick={() => handleRestore(activeIndex)}
+                >
+                  RESTORE
+                </button>
+              </div>
             </p>
             <ul className="d-flex flex-column">
-              {Object.entries(savedResults[activeIndex].results).map(
+              {Object.entries(savedResults[activeIndex]?.results || {}).map(
                 ([materialName, quantity]) => (
                   <li className="mb-1" key={materialName}>
                     <span className="material-name toppan m-0">
@@ -60,8 +100,9 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
                     </span>
                     <br className="d-block d-md-none" />
                     所持数:{' '}
-                    {savedResults[activeIndex].ownedQuantities[materialName]} /
-                    必要個数: {quantity}
+                    {savedResults[activeIndex]?.ownedQuantities[materialName] ??
+                      0}{' '}
+                    / 必要個数: {quantity}
                   </li>
                 )
               )}
@@ -109,7 +150,8 @@ const Section = styled.section`
     justify-content: space-between;
     font-size: 20px;
     color: #a77d00;
-    .delete-savedata {
+    .delete-savedata,
+    .restore-savedata {
       padding: 0 10px;
       border: 1px solid #a77d00;
       border-radius: 20px;

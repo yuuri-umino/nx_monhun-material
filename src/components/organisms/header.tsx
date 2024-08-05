@@ -13,7 +13,6 @@ const Header: FC = () => {
             <br className="d-block d-md-none" />
             武器素材検索ツール
           </h1>
-          <nav></nav>
         </div>
       </HeaderWrap>
     </>

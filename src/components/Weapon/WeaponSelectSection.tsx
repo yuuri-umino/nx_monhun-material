@@ -91,6 +91,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
         <WeaponCalculateResult
           materials={calculatedMaterials}
           resetTrigger={resetTrigger}
+          setCalculatedMaterials={setCalculatedMaterials}
         />
       </section>
     </SelectSection>
