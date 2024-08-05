@@ -13,6 +13,9 @@ const Header: FC = () => {
             <br className="d-block d-md-none" />
             武器素材計算ツール
           </h1>
+          <p className="caution">
+            ※強化素材のみです。生産の場合は加味していません。ごめんなさい。
+          </p>
         </div>
       </HeaderWrap>
     </>
@@ -29,6 +32,11 @@ const HeaderWrap = styled.header`
     h1 {
       color: #a77d00;
       font-size: 18px;
+      text-align: center;
+    }
+    .caution {
+      font-size: 12px;
+      color: #494949;
       text-align: center;
     }
   }
