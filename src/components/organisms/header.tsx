@@ -14,7 +14,9 @@ const Header: FC = () => {
             武器素材計算ツール
           </h1>
           <p className="caution">
-            ※強化素材のみです。生産の場合は加味していません。ごめんなさい。
+            ※強化素材のみです。生産の場合は加味していません。
+            <br className="d-block d-md-none" />
+            'ごめんなさい。
           </p>
         </div>
       </HeaderWrap>
