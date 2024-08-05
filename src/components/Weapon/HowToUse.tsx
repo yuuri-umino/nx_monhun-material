@@ -41,6 +41,15 @@ const HowToUse: React.FC = () => {
               任意で削除することも可能です。
             </span>
           </li>
+          <li>
+            ⑦保存した結果を戻す
+            <br />
+            <span className="d-dlock">
+              一度保存したデータを再度計算結果に戻すことが出来ます。
+              <br />
+              戻したい保存データのタブを選択し表示した状態でRESTOREボタンをクリックしてください。
+            </span>
+          </li>
         </ul>
       )}
     </HowToUseContainer>
