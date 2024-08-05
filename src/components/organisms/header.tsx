@@ -16,7 +16,7 @@ const Header: FC = () => {
           <p className="caution">
             ※強化素材のみです。生産の場合は加味していません。
             <br className="d-block d-md-none" />
-            'ごめんなさい。
+            ごめんなさい。
           </p>
         </div>
       </HeaderWrap>
