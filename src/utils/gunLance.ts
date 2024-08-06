@@ -1,6 +1,6 @@
 import { WeaponType } from './materialsTypes'
 
-const greatsword: WeaponType = {
+const gunLance: WeaponType = {
   type: 'ガンランス',
   derivations: [
     {
@@ -1603,4 +1603,4 @@ const greatsword: WeaponType = {
   ],
 }
 
-export default greatsword
+export default gunLance

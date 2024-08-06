@@ -17,10 +17,12 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
   derivations,
   onSelectDerivation,
 }) => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [selectedDerivation, setSelectedDerivation] = useState<string | null>(
+    null
+  )
 
-  const handleButtonClick = (index: number, derivation: Derivation) => {
-    setSelectedIndex(index)
+  const handleSelect = (derivation: Derivation) => {
+    setSelectedDerivation(derivation.name)
     onSelectDerivation(derivation.weapons, derivation.name)
   }
 
@@ -33,10 +35,10 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
             <button
               key={index}
               className={`toppan weapon-item d-flex align-items-center my-2 py-1 px-2 ${
-                selectedIndex === index ? 'selected' : ''
+                selectedDerivation === derivation.name ? 'selected' : ''
               }`}
               type="button"
-              onClick={() => handleButtonClick(index, derivation)}
+              onClick={() => handleSelect(derivation)}
             >
               <Image src={IconWeapon} alt="" className="weapon-icon" />
               <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
@@ -98,7 +100,6 @@ const DerivatedSection = styled.div`
     }
     .weapon-derivated-list {
       height: auto;
-      border: none;
       padding: 0;
       &::after {
         width: 45%;
@@ -111,6 +112,11 @@ const DerivatedSection = styled.div`
   @media screen and (min-width: 768px) {
     .section-border {
       padding: 40px 0;
+    }
+    .weapon-derivated-list {
+      max-height: none;
+      overflow-y: auto;
+      border: none;
     }
   }
   @media screen and (min-width: 992px) {

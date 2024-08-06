@@ -1,7 +1,6 @@
 import { WeaponType } from './materialsTypes'
-import { addDropInfoToMaterials } from './addDropInfoToMaterials'
 
-const greatsword: WeaponType = {
+const bow: WeaponType = {
   type: '弓',
   derivations: [
     {
@@ -1534,5 +1533,4 @@ const greatsword: WeaponType = {
   ],
 }
 
-const greatSwordWithDropInfo = addDropInfoToMaterials(greatsword)
-export default greatSwordWithDropInfo
+export default bow

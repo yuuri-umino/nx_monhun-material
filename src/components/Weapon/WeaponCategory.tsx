@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import IconGreatSword from '../../assets/icon-greatSword.png'
-import IconKatana from '../../assets/icon-katana.png'
+import Iconlongsword from '../../assets/icon-longsword.png'
 import IconSword from '../../assets/icon-sword.png'
 import IconDoubleSword from '../../assets/icon-doublesword.png'
 import IconLance from '../../assets/icon-lance.png'
@@ -11,7 +11,7 @@ import IconHummer from '../../assets/icon-hummer.png'
 import IconHorn from '../../assets/icon-horn.png'
 import IconSlashAx from '../../assets/icon-slashax.png'
 import IconChargeAx from '../../assets/icon-chargeax.png'
-import IconInsectStick from '../../assets/icon-insectstick.png'
+import IconInsectStick from '../../assets/icon-insect.png'
 import IconHeavyBowGun from '../../assets/icon-heavybowgun.png'
 import IconLightBowGun from '../../assets/icon-lightbowgun.png'
 import IconBow from '../../assets/icon-bow.png'
@@ -24,7 +24,7 @@ interface WeaponCategoryProps {
 
 const weaponIconList = [
   IconGreatSword,
-  IconKatana,
+  Iconlongsword,
   IconSword,
   IconDoubleSword,
   IconLance,
@@ -43,13 +43,27 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
   weaponTypes,
   onWeaponClick,
 }) => {
+  const [selectedWeaponType, setSelectedWeaponType] = useState<string | null>(
+    null
+  )
+
+  const handleClick = (weaponType: WeaponType) => {
+    setSelectedWeaponType(weaponType.type)
+    onWeaponClick(weaponType)
+  }
   return (
     <>
       <CategorySection id="category">
         <h2 className="toppan">1.武器種を選択する</h2>
         <div className="section-border">
           {weaponTypes.map((weaponType, index) => (
-            <Button key={index} onClick={() => onWeaponClick(weaponType)}>
+            <Button
+              key={index}
+              onClick={() => handleClick(weaponType)}
+              className={
+                selectedWeaponType === weaponType.type ? 'selected' : ''
+              }
+            >
               <Image
                 src={weaponIconList[index]}
                 alt=""
@@ -98,8 +112,9 @@ const CategorySection = styled.div`
 
 const Button = styled.button`
   padding: 0;
-  background-color: transparent;
-  border: none;
+  background-color: #fff9db;
+  border: 1px solid #d2a10e;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover {
@@ -108,8 +123,18 @@ const Button = styled.button`
   img {
     width: 100%;
     height: 100%;
+    padding: 2px;
+  }
+  &.selected {
+    background-color: #fee66c;
+  }
+  @media screen and (min-width: 576px) {
+    border: 2px solid #d2a10e;
   }
   @media screen and (min-width: 768px) {
+    img {
+      padding: 5px;
+    }
   }
   @media screen and (min-width: 992px) {
   }
