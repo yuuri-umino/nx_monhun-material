@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import IconGreatSword from '../../assets/icon-greatSword.png'
@@ -43,13 +43,27 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
   weaponTypes,
   onWeaponClick,
 }) => {
+  const [selectedWeaponType, setSelectedWeaponType] = useState<string | null>(
+    null
+  )
+
+  const handleClick = (weaponType: WeaponType) => {
+    setSelectedWeaponType(weaponType.type)
+    onWeaponClick(weaponType)
+  }
   return (
     <>
       <CategorySection id="category">
         <h2 className="toppan">1.武器種を選択する</h2>
         <div className="section-border">
           {weaponTypes.map((weaponType, index) => (
-            <Button key={index} onClick={() => onWeaponClick(weaponType)}>
+            <Button
+              key={index}
+              onClick={() => handleClick(weaponType)}
+              className={
+                selectedWeaponType === weaponType.type ? 'selected' : ''
+              }
+            >
               <Image
                 src={weaponIconList[index]}
                 alt=""
@@ -109,6 +123,9 @@ const Button = styled.button`
   img {
     width: 100%;
     padding: 2px;
+  }
+  &.selected {
+    background-color: #fee66c;
   }
   @media screen and (min-width: 576px) {
     border: 2px solid #d2a10e;
