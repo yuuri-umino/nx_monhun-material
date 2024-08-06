@@ -1,14 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 interface SaveModalProps {
   isOpen: boolean
   onClose: () => void
   onSave: (name: string) => void
+  currentSaveName: string
 }
 
-const SaveModal: React.FC<SaveModalProps> = ({ isOpen, onClose, onSave }) => {
+const SaveModal: React.FC<SaveModalProps> = ({
+  isOpen,
+  onClose,
+  onSave,
+  currentSaveName,
+}) => {
   const [inputValue, setInputValue] = useState('')
+
+  useEffect(() => {
+    if (currentSaveName) {
+      setInputValue(currentSaveName)
+    }
+  }, [currentSaveName])
 
   const handleSave = () => {
     if (inputValue.trim()) {
@@ -17,22 +29,29 @@ const SaveModal: React.FC<SaveModalProps> = ({ isOpen, onClose, onSave }) => {
     }
   }
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleSave()
+    }
+  }
+
   return (
     <ModalOverlay isOpen={isOpen}>
       <ModalContent>
-        <h2 className="toppan">Enter save name</h2>
+        <h2 className="toppan">名前を入力してください</h2>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="ANY NAME"
         />
         <div className="datasave-btn toppan">
           <button className="save" onClick={handleSave}>
-            save!
+            SAVE
           </button>
           <button className="cancel" onClick={onClose}>
-            cancel
+            CANCEL
           </button>
         </div>
       </ModalContent>

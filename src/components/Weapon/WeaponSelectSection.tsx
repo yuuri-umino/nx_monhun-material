@@ -111,6 +111,7 @@ const SelectSection = styled.div`
     .selected-derivation {
       font-size: 18px;
       text-align: center;
+      color: #333;
     }
   }
   .weapon-name {

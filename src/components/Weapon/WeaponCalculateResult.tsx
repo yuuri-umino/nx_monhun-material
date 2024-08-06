@@ -10,7 +10,7 @@ interface CalculateResultProps {
   materials: { [key: string]: number }
   setCalculatedMaterials: React.Dispatch<
     React.SetStateAction<{ [key: string]: number }>
-  > // Add this line
+  >
 }
 
 const WeaponCalculateResult: React.FC<
@@ -26,8 +26,8 @@ const WeaponCalculateResult: React.FC<
       ownedQuantities: { [key: string]: number }
     }>
   >([])
-
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [currentSaveName, setCurrentSaveName] = useState('')
 
   useEffect(() => {
     setOwnedQuantities(
@@ -63,6 +63,7 @@ const WeaponCalculateResult: React.FC<
     setOwnedQuantities(
       Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {})
     )
+    setCurrentSaveName('') // Clear the current save name on reset
   }
 
   const openSaveModal = () => {
@@ -86,6 +87,7 @@ const WeaponCalculateResult: React.FC<
 
       return newResults
     })
+    setCurrentSaveName(name) // Set the current save name after saving
     closeSaveModal()
   }
 
@@ -97,6 +99,7 @@ const WeaponCalculateResult: React.FC<
     const resultToRestore = savedResults[index]
     setOwnedQuantities(resultToRestore.ownedQuantities)
     setCalculatedMaterials(resultToRestore.results)
+    setCurrentSaveName(resultToRestore.name) // Set the current save name when restoring
   }
 
   return (
@@ -106,7 +109,13 @@ const WeaponCalculateResult: React.FC<
           <ResultSection>
             <h2 className="toppan">4.結果はこちら</h2>
 
-            <div className="d-flex justify-content-end">
+            <div className="d-flex justify-content-center gap-3">
+              <button
+                className="result-save vdl-shadow mb-4 lh-18"
+                onClick={openSaveModal}
+              >
+                SAVE
+              </button>
               <button
                 className="reset-btn vdl-shadow mb-4"
                 onClick={handleReset}
@@ -115,12 +124,11 @@ const WeaponCalculateResult: React.FC<
               </button>
             </div>
 
-            <button
-              className="result-save toppan mb-4 lh-18"
-              onClick={openSaveModal}
-            >
-              Save as
-            </button>
+            {currentSaveName && (
+              <h3 className="saved-name mb-2 toppan">
+                保存名: {currentSaveName}
+              </h3>
+            )}
 
             <ul className="result-list">
               {Object.entries(materials).map(([materialName, quantity]) => (
@@ -175,14 +183,13 @@ const WeaponCalculateResult: React.FC<
               ))}
             </ul>
 
-            <button
-              className="result-save toppan mb-4 lh-18"
-              onClick={openSaveModal}
-            >
-              Save as
-            </button>
-
-            <div className="d-flex justify-content-end">
+            <div className="d-flex justify-content-center gap-3">
+              <button
+                className="result-save vdl-shadow mb-4 lh-18"
+                onClick={openSaveModal}
+              >
+                SAVE
+              </button>
               <button
                 className="reset-btn vdl-shadow mb-4"
                 onClick={handleReset}
@@ -202,6 +209,7 @@ const WeaponCalculateResult: React.FC<
         isOpen={isModalOpen}
         onClose={closeSaveModal}
         onSave={saveResults}
+        currentSaveName={currentSaveName} // Pass the current save name
       />
 
       <SavedDataSection
@@ -252,11 +260,13 @@ const ResultSection = styled.div`
     text-align: center;
   }
 
-  .reset-btn {
+  .reset-btn,
+  .result-save {
     position: relative;
     background-color: #fff;
     border: 2px solid #d29204;
     color: #d29204;
+    font-size: 14px;
     border-radius: 50px;
     padding: 5px 20px;
     box-shadow: 2px 2px 0 0 #d29204;
@@ -268,7 +278,7 @@ const ResultSection = styled.div`
     }
   }
 
-  .result-save {
+  /* .result-save {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -314,6 +324,12 @@ const ResultSection = styled.div`
       background-color: #d29204;
       border-color: #d29204;
     }
+  } */
+
+  .saved-name {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
   }
 
   .result-list {
@@ -419,6 +435,13 @@ const ResultSection = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    .reset-btn,
+    .result-save {
+      font-size: 16px;
+    }
+    .saved-name {
+      font-size: 20px;
+    }
     .result-list {
       display: flex;
       flex-wrap: wrap;
