@@ -12,22 +12,22 @@ import SideButtonNav from '@/components/Weapon/SideButtonNav'
 import { WeaponType, Weapon } from '../utils/materialsTypes'
 import greatSword from '../utils/greatSword'
 import sword from '../utils/sword'
-import katana from '../utils/katana'
+import longSword from '../utils/longSword'
 import doubleSword from '../utils/doubleSword'
 import lance from '../utils/lance'
 import gunLance from '../utils/gunLance'
 import hummer from '../utils/hummer'
-import horn from '../utils/greatSword'
+import horn from '../utils/horn'
 import slashAx from '../utils/slashAx'
 import chargeAx from '../utils/chargeAx'
-import insectStick from '../utils/insectStick'
+import insect from '../utils/insect'
 import heavyBowGun from '../utils/heavyBowGun'
 import lightBowGun from '../utils/lightBowGun'
 import bow from '../utils/bow'
 
 const weaponTypes: WeaponType[] = [
   greatSword,
-  katana,
+  longSword,
   sword,
   doubleSword,
   lance,
@@ -36,7 +36,7 @@ const weaponTypes: WeaponType[] = [
   horn,
   slashAx,
   chargeAx,
-  insectStick,
+  insect,
   heavyBowGun,
   lightBowGun,
   bow,
