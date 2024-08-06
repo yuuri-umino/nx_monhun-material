@@ -9,40 +9,35 @@ import ArmorSelectSection from '@/components/Armor/ArmorSelectSection'
 import HowToUse from '@/components/Armor/HowToUse'
 import SideButtonNav from '@/components/Armor/SideButtonNav'
 
-import { WeaponType, Weapon } from '../../utils/weapon/materialsTypes'
-import greatSword from '../../utils/weapon/greatSword'
-import sword from '../../utils/weapon/sword'
-import longSword from '../../utils/weapon/longSword'
+import { ArmorType, Armor } from '../../utils/armor/materialsTypes'
+import lower from '../../utils/armor/lower'
+import topper from '../../utils/armor/topper'
+import ex from '../../utils/armor/ex'
 
-const weaponTypes: WeaponType[] = [greatSword, longSword, sword]
+const armorTypes: ArmorType[] = [lower, topper, ex]
 
 const Home: NextPageWithLayout = () => {
-  const [selectedWeapon, setSelectedWeapon] = useState<WeaponType | null>(
-    greatSword
-  )
-  const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([])
+  const [selectedArmor, setSelectedArmor] = useState<ArmorType | null>(lower)
+  const [selectedArmors, setSelectedArmors] = useState<Armor[]>([])
   const [selectedDerivationName, setSelectedDerivationName] = useState<
     string | null
   >(null)
   const [resetTrigger, setResetTrigger] = useState(false)
 
   useEffect(() => {
-    if (selectedWeapon) {
-      setSelectedWeapons(selectedWeapon.derivations[0]?.weapons || [])
-      setSelectedDerivationName(selectedWeapon.derivations[0]?.name || null)
+    if (selectedArmor) {
+      setSelectedArmors(selectedArmor.derivations[0]?.armors || [])
+      setSelectedDerivationName(selectedArmor.derivations[0]?.name || null)
     }
-  }, [selectedWeapon])
+  }, [selectedArmor])
 
-  const handleWeaponClick = (weaponType: WeaponType) => {
-    setSelectedWeapon(weaponType)
+  const handleArmorClick = (armorType: ArmorType) => {
+    setSelectedArmor(armorType)
     setResetTrigger((prev) => !prev)
   }
 
-  const handleSelectDerivation = (
-    weapons: Weapon[],
-    derivationName: string
-  ) => {
-    setSelectedWeapons(weapons)
+  const handleSelectDerivation = (armors: Armor[], derivationName: string) => {
+    setSelectedArmors(armors)
     setSelectedDerivationName(derivationName)
     setResetTrigger((prev) => !prev)
   }
@@ -54,17 +49,17 @@ const Home: NextPageWithLayout = () => {
       <HowToUse />
       <MainContents>
         <ArmorCategory
-          weaponTypes={weaponTypes}
-          onWeaponClick={handleWeaponClick}
+          armorTypes={armorTypes}
+          onArmorClick={handleArmorClick}
         />
-        {selectedWeapon && (
+        {selectedArmor && (
           <ArmorDerivated
-            derivations={selectedWeapon.derivations}
+            derivations={selectedArmor.derivations}
             onSelectDerivation={handleSelectDerivation}
           />
         )}
         <ArmorSelectSection
-          weapons={selectedWeapons}
+          armors={selectedArmors}
           selectedDerivationName={selectedDerivationName}
           resetTrigger={resetTrigger}
         />

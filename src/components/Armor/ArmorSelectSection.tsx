@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import WeaponCalculateResult from './ArmorCalculateResult'
+import ArmorCalculateResult from './ArmorCalculateResult'
 
-import { Weapon } from '../../utils/weapon/materialsTypes'
+import { Armor } from '../../utils/armor/materialsTypes'
 interface SelectProps {
-  weapons: Weapon[]
+  armors: Armor[]
   selectedDerivationName: string | null
   resetTrigger: boolean
 }
 
-const WeaponSelectSection: React.FC<SelectProps> = ({
-  weapons,
+const ArmorSelectSection: React.FC<SelectProps> = ({
+  armors,
   selectedDerivationName,
   resetTrigger,
 }) => {
-  const [selectedWeapons, setSelectedWeapons] = useState<Set<string>>(new Set())
+  const [selectedArmors, setSelectedArmors] = useState<Set<string>>(new Set())
   const [calculatedMaterials, setCalculatedMaterials] = useState<{
     [key: string]: number
   }>({})
 
   useEffect(() => {
-    setSelectedWeapons(new Set())
+    setSelectedArmors(new Set())
     setCalculatedMaterials({})
   }, [resetTrigger])
 
-  const handleCheckboxChange = (weaponName: string) => {
-    setSelectedWeapons((prevSelected) => {
+  const handleCheckboxChange = (armorName: string) => {
+    setSelectedArmors((prevSelected) => {
       const newSelected = new Set(prevSelected)
-      if (newSelected.has(weaponName)) {
-        newSelected.delete(weaponName)
+      if (newSelected.has(armorName)) {
+        newSelected.delete(armorName)
       } else {
-        newSelected.add(weaponName)
+        newSelected.add(armorName)
       }
       return newSelected
     })
@@ -39,9 +39,9 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
 
-    weapons.forEach((weapon) => {
-      if (selectedWeapons.has(weapon.name)) {
-        weapon.materials.forEach((material) => {
+    armors.forEach((armor) => {
+      if (selectedArmors.has(armor.name)) {
+        armor.materials.forEach((material) => {
           if (materialsMap[material.name]) {
             materialsMap[material.name] += material.quantity
           } else {
@@ -60,24 +60,24 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
         <h2 className="toppan">3.武器を選択する</h2>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
-          {weapons.map((weapon, index) => (
+          {armors.map((armor, index) => (
             <button
               key={index}
               className={`vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
-                selectedWeapons.has(weapon.name) ? 'selected' : ''
+                selectedArmors.has(armor.name) ? 'selected' : ''
               }`}
               type="button"
-              onClick={() => handleCheckboxChange(weapon.name)}
+              onClick={() => handleCheckboxChange(armor.name)}
             >
               <div className="checkbox-container">
                 <input
                   type="checkbox"
                   className="weapon-checkbox"
-                  checked={selectedWeapons.has(weapon.name)}
+                  checked={selectedArmors.has(armor.name)}
                   readOnly
                 />
               </div>
-              <p className="toppan mb-0 ms-1 ms-lg-4">{weapon.name}</p>
+              <p className="toppan mb-0 ms-1 ms-lg-4">{armor.name}</p>
             </button>
           ))}
         </div>
@@ -90,7 +90,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
           Calculate!
         </button>
 
-        <WeaponCalculateResult
+        <ArmorCalculateResult
           materials={calculatedMaterials}
           resetTrigger={resetTrigger}
           setCalculatedMaterials={setCalculatedMaterials}
@@ -272,4 +272,4 @@ const SelectSection = styled.div`
   }
 `
 
-export default WeaponSelectSection
+export default ArmorSelectSection

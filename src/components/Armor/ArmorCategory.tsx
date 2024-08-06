@@ -1,42 +1,40 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { WeaponType } from '@/utils/weapon/materialsTypes'
+import { ArmorType } from '@/utils/armor/materialsTypes'
 
-interface WeaponCategoryProps {
-  weaponTypes: WeaponType[]
-  onWeaponClick: (weaponType: WeaponType) => void
+interface ArmorCategoryProps {
+  armorTypes: ArmorType[]
+  onArmorClick: (armorType: ArmorType) => void
 }
 
-const weaponRankList = ['上位', 'マスター', 'EX']
+const armorRankList = ['下位', '上位', 'EX']
 
-const WeaponCategory: React.FC<WeaponCategoryProps> = ({
-  weaponTypes,
-  onWeaponClick,
+const ArmorCategory: React.FC<ArmorCategoryProps> = ({
+  armorTypes,
+  onArmorClick,
 }) => {
-  const [selectedWeaponType, setSelectedWeaponType] = useState<string | null>(
+  const [selectedArmorType, setSelectedArmorType] = useState<string | null>(
     null
   )
 
-  const handleClick = (weaponType: WeaponType) => {
-    setSelectedWeaponType(weaponType.type)
-    onWeaponClick(weaponType)
+  const handleClick = (armorType: ArmorType) => {
+    setSelectedArmorType(armorType.type)
+    onArmorClick(armorType)
   }
 
   return (
     <>
       <CategorySection id="category">
         <h2 className="toppan">1.ランクを選択する</h2>
-        <div className="section-border lank-list">
-          {weaponTypes.map((weaponType, index) => (
+        <div className="section-border lank-list toppan">
+          {armorTypes.map((armorType, index) => (
             <Button
               key={index}
-              onClick={() => handleClick(weaponType)}
-              className={
-                selectedWeaponType === weaponType.type ? 'selected' : ''
-              }
+              onClick={() => handleClick(armorType)}
+              className={selectedArmorType === armorType.type ? 'selected' : ''}
             >
-              {weaponRankList[index]}
+              {armorRankList[index]}
             </Button>
           ))}
         </div>
@@ -53,16 +51,22 @@ const CategorySection = styled.div`
   }
   .lank-list {
     display: flex;
+    justify-content: center;
+    gap: 10px;
     padding-bottom: 20px;
     border-bottom: 2px solid #f6874f;
     button {
-      width: fit-content;
+      width: 100px;
+      font-size: 18px;
     }
   }
   @media screen and (min-width: 576px) {
     .lank-list {
       padding-bottom: 30px;
       border-bottom: 3px solid #f6874f;
+      button {
+        font-size: 20px;
+      }
     }
   }
   @media screen and (min-width: 768px) {
@@ -101,4 +105,4 @@ const Button = styled.button`
   }
 `
 
-export default WeaponCategory
+export default ArmorCategory
