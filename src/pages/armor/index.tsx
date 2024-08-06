@@ -13,34 +13,8 @@ import { WeaponType, Weapon } from '../../utils/weapon/materialsTypes'
 import greatSword from '../../utils/weapon/greatSword'
 import sword from '../../utils/weapon/sword'
 import longSword from '../../utils/weapon/longSword'
-import doubleSword from '../../utils/weapon/doubleSword'
-import lance from '../../utils/weapon/lance'
-import gunLance from '../../utils/weapon/gunLance'
-import hummer from '../../utils/weapon/hummer'
-import horn from '../../utils/weapon/horn'
-import slashAx from '../../utils/weapon/slashAx'
-import chargeAx from '../../utils/weapon/chargeAx'
-import insect from '../../utils/weapon/insect'
-import heavyBowGun from '../../utils/weapon/heavyBowGun'
-import lightBowGun from '../../utils/weapon/lightBowGun'
-import bow from '../../utils/weapon/bow'
 
-const weaponTypes: WeaponType[] = [
-  greatSword,
-  longSword,
-  sword,
-  doubleSword,
-  lance,
-  gunLance,
-  hummer,
-  horn,
-  slashAx,
-  chargeAx,
-  insect,
-  heavyBowGun,
-  lightBowGun,
-  bow,
-]
+const weaponTypes: WeaponType[] = [greatSword, longSword, sword]
 
 const Home: NextPageWithLayout = () => {
   const [selectedWeapon, setSelectedWeapon] = useState<WeaponType | null>(
