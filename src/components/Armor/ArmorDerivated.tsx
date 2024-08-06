@@ -3,17 +3,17 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import IconArmor from '@/assets/icon-armor.png'
 
-import { Derivation } from '@/utils/weapon/materialsTypes'
+import { Derivation } from '@/utils/armor/materialsTypes'
 
-interface WeaponDerivatedProps {
+interface ArmorDerivatedProps {
   derivations: Derivation[]
   onSelectDerivation: (
-    weapons: Derivation['weapons'],
+    armors: Derivation['armors'],
     derivationName: string
   ) => void
 }
 
-const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
+const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
   derivations,
   onSelectDerivation,
 }) => {
@@ -23,7 +23,7 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
 
   const handleSelect = (derivation: Derivation) => {
     setSelectedDerivation(derivation.name)
-    onSelectDerivation(derivation.weapons, derivation.name)
+    onSelectDerivation(derivation.armors, derivation.name)
   }
 
   return (

@@ -57,7 +57,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
   return (
     <SelectSection id="select-weapon">
       <section className="section-border">
-        <h2 className="toppan">3.武器を選択する</h2>
+        <h2 className="toppan">3.防具を選択する</h2>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
           {armors.map((armor, index) => (

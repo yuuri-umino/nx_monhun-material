@@ -13,10 +13,10 @@ const SideButtonNav: React.FC = () => {
   return (
     <NavContainer className="toppan">
       <NavButton onClick={() => scrollToSection('how-to-use')}>？</NavButton>
-      <NavButton onClick={() => scrollToSection('category')}>武器種</NavButton>
+      <NavButton onClick={() => scrollToSection('category')}>ランク</NavButton>
       <NavButton onClick={() => scrollToSection('derivated')}>派生</NavButton>
       <NavButton onClick={() => scrollToSection('select-weapon')}>
-        武器
+        防具
       </NavButton>
       <NavButton onClick={() => scrollToSection('result')}>結果</NavButton>
       <NavButton onClick={() => scrollToSection('saved')}>保存</NavButton>

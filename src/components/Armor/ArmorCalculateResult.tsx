@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import IconOk from '@/assets/icon-ok.png'
-import { materialsDrops } from '@/utils/weapon/materialsDrops'
+import { materialsDrops } from '../../utils/armor/materialsDrops'
 import SaveModal from './SaveModal'
 import SavedDataSection from './SavedDataSection'
 
@@ -13,7 +13,7 @@ interface CalculateResultProps {
   >
 }
 
-const WeaponCalculateResult: React.FC<
+const ArmorCalculateResult: React.FC<
   CalculateResultProps & { resetTrigger: boolean }
 > = ({ materials, resetTrigger, setCalculatedMaterials }) => {
   const [ownedQuantities, setOwnedQuantities] = useState<{
@@ -430,4 +430,4 @@ const ResultSection = styled.div`
   }
 `
 
-export default WeaponCalculateResult
+export default ArmorCalculateResult
