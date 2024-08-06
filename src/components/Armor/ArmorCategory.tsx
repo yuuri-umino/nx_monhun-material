@@ -16,7 +16,7 @@ import IconHeavyBowGun from '../../assets/icon-heavybowgun.png'
 import IconLightBowGun from '../../assets/icon-lightbowgun.png'
 import IconBow from '../../assets/icon-bow.png'
 
-import { WeaponType } from '../../utils/weapon/materialsTypes'
+import { WeaponType } from '@/utils/weapon/materialsTypes'
 interface WeaponCategoryProps {
   weaponTypes: WeaponType[]
   onWeaponClick: (weaponType: WeaponType) => void
@@ -81,7 +81,7 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
 const CategorySection = styled.div`
   h2 {
     margin-bottom: 30px;
-    color: #a77d00;
+    color: #c8551b;
     text-align: center;
   }
   .section-border {
@@ -91,14 +91,14 @@ const CategorySection = styled.div`
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #f6dd94;
+    border-bottom: 2px solid #f6874f;
   }
   @media screen and (min-width: 576px) {
     .section-border {
       grid-column-gap: 10px;
       grid-row-gap: 10px;
       padding-bottom: 30px;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 3px solid #f6874f;
     }
   }
   @media screen and (min-width: 768px) {
@@ -112,8 +112,8 @@ const CategorySection = styled.div`
 
 const Button = styled.button`
   padding: 0;
-  background-color: #fff9db;
-  border: 1px solid #d2a10e;
+  background-color: #fff3ed;
+  border: 1px solid #ffb792;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -125,10 +125,10 @@ const Button = styled.button`
     padding: 2px;
   }
   &.selected {
-    background-color: #fee66c;
+    background-color: #ffd1ba;
   }
   @media screen and (min-width: 576px) {
-    border: 2px solid #d2a10e;
+    border: 2px solid #ffb792;
   }
   @media screen and (min-width: 768px) {
     img {

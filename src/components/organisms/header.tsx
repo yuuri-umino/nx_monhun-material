@@ -1,17 +1,32 @@
 import { FC } from 'react'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
-// import Link from 'next/link'
-// import Image from 'next/image'
 
 const Header: FC = () => {
+  const router = useRouter()
+  const isWeaponPage = router.pathname.includes('/weapon')
+  const isArmorPage = router.pathname.includes('/armor')
+
   return (
     <>
       <HeaderWrap id="header">
         <div className="header-inner">
-          <h1 className="toppan lh-18">
+          {isWeaponPage && (
+            <a href="/armor" className="link-change-btn toppan armor-btn">
+              防具ver
+            </a>
+          )}
+          {isArmorPage && (
+            <a href="/weapon" className="link-change-btn toppan weapon-btn">
+              武器ver
+            </a>
+          )}
+          <h1
+            className={`toppan lh-18 ${isWeaponPage ? 'weapon-color' : 'armor-color'}`}
+          >
             モンハン アイスボーン
             <br className="d-block d-md-none" />
-            武器素材計算ツール
+            {isWeaponPage ? '武器素材計算ツール' : '防具素材計算ツール'}
           </h1>
           <p className="caution">
             ※強化素材のみです。生産の場合は加味していません。
@@ -31,10 +46,30 @@ const HeaderWrap = styled.header`
   padding: 40px;
   z-index: 1000;
   .header-inner {
+    .link-change-btn {
+      display: block;
+      width: fit-content;
+      margin-inline: auto;
+      margin-bottom: 10px;
+      padding: 5px 20px;
+      color: #fff !important;
+      border-radius: 6px;
+    }
+    .armor-btn {
+      background-color: #c8551b;
+    }
+    .weapon-btn {
+      background-color: #a77d00;
+    }
     h1 {
-      color: #a77d00;
       font-size: 18px;
       text-align: center;
+    }
+    .weapon-color {
+      color: #a77d00;
+    }
+    .armor-color {
+      color: #c8551b;
     }
     .caution {
       font-size: 12px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import WeaponCalculateResult from './WeaponCalculateResult'
+import WeaponCalculateResult from './ArmorCalculateResult'
 
 import { Weapon } from '../../utils/weapon/materialsTypes'
 interface SelectProps {
@@ -104,10 +104,10 @@ const SelectSection = styled.div`
   margin-inline: auto;
   .section-border {
     padding: 20px 0;
-    border-bottom: 2px solid #f6dd94;
+    border-bottom: 2px solid #f6874f;
     h2 {
       margin-bottom: 30px;
-      color: #a77d00;
+      color: #c8551b;
       text-align: center;
     }
     .selected-derivation {
@@ -119,7 +119,7 @@ const SelectSection = styled.div`
   .weapon-name {
     max-height: 400px;
     overflow-y: scroll;
-    border: 1px solid #d29204;
+    border: 1px solid #f6874f;
     padding: 10px;
     &::after {
       content: '';
@@ -128,10 +128,10 @@ const SelectSection = styled.div`
     }
   }
   .weapon-item {
-    background-color: #fff9db;
+    background-color: #fff3ed;
     border: none;
     border-radius: 6px;
-    color: #a77d00;
+    color: #c8551b;
     width: 100%;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -146,7 +146,7 @@ const SelectSection = styled.div`
       opacity: 0.8;
     }
     &.selected {
-      background-color: #fee66c;
+      background-color: #ffd1ba;
     }
   }
   .checkbox-container {
@@ -161,7 +161,7 @@ const SelectSection = styled.div`
     appearance: none;
     &::before {
       background: #fff;
-      border: 2px solid #d2a10e;
+      border: 2px solid #f6874f;
       border-radius: 3px;
       content: '';
       display: block;
@@ -173,8 +173,8 @@ const SelectSection = styled.div`
       width: 16px;
     }
     &::after {
-      border-right: 3px solid #81630a;
-      border-bottom: 3px solid #81630a;
+      border-right: 3px solid #f6874f;
+      border-bottom: 3px solid #f6874f;
       content: '';
       display: block;
       height: 11px;
@@ -198,7 +198,7 @@ const SelectSection = styled.div`
     width: 180px;
     margin-top: 40px;
     margin-inline: auto;
-    color: #d29204;
+    color: #f6874f;
     transition: 0.3s ease-in-out;
     text-align: center;
     background-color: transparent;
@@ -208,7 +208,7 @@ const SelectSection = styled.div`
       content: '';
       width: 18px;
       height: 18px;
-      border-color: #d29204;
+      border-color: #f6874f;
       box-sizing: border-box;
       border-style: solid;
       display: block;
@@ -230,18 +230,18 @@ const SelectSection = styled.div`
     &:hover:after {
       width: calc(100% + 12px);
       height: calc(100% + 12px);
-      border-color: #d29204;
+      border-color: #f6874f;
     }
     &:hover {
       color: #fff;
-      background-color: #d29204;
-      border-color: #d29204;
+      background-color: #f6874f;
+      border-color: #f6874f;
     }
   }
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 3px solid #f6874f;
       .selected-derivation {
         font-size: 24px;
       }
