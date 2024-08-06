@@ -17,9 +17,9 @@ const HowToUse: React.FC = () => {
       </button>
       {isOpen && (
         <ul>
-          <li>①武器の種類を選択</li>
+          <li>①防具のランクを選択</li>
           <li>②派生先を選択</li>
-          <li>③素材を計算したい武器を選択(複数選択可)</li>
+          <li>③素材を計算したい防具を選択(複数選択可)</li>
           <li>④Let’s Calculate!</li>
           <li>
             ⑤各素材の所持数を入力する
