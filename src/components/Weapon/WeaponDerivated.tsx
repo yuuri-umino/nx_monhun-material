@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import IconWeapon from '../../assets/icon-weapon.png'
 
 import { Derivation } from '../../utils/materialsTypes'
+
 interface WeaponDerivatedProps {
   derivations: Derivation[]
   onSelectDerivation: (
@@ -16,6 +17,13 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
   derivations,
   onSelectDerivation,
 }) => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+
+  const handleButtonClick = (index: number, derivation: Derivation) => {
+    setSelectedIndex(index)
+    onSelectDerivation(derivation.weapons, derivation.name)
+  }
+
   return (
     <DerivatedSection id="derivated">
       <div className="section-border">
@@ -24,11 +32,11 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
           {derivations.map((derivation, index) => (
             <button
               key={index}
-              className="toppan weapon-item d-flex align-items-center my-2 py-1 px-2"
+              className={`toppan weapon-item d-flex align-items-center my-2 py-1 px-2 ${
+                selectedIndex === index ? 'selected' : ''
+              }`}
               type="button"
-              onClick={() =>
-                onSelectDerivation(derivation.weapons, derivation.name)
-              }
+              onClick={() => handleButtonClick(index, derivation)}
             >
               <Image src={IconWeapon} alt="" className="weapon-icon" />
               <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
@@ -78,6 +86,9 @@ const DerivatedSection = styled.div`
     }
     &:hover {
       opacity: 0.8;
+    }
+    &.selected {
+      background-color: #fee66c;
     }
   }
   @media screen and (min-width: 576px) {

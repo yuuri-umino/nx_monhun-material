@@ -63,7 +63,9 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
           {weapons.map((weapon, index) => (
             <button
               key={index}
-              className="vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4"
+              className={`vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
+                selectedWeapons.has(weapon.name) ? 'selected' : ''
+              }`}
               type="button"
               onClick={() => handleCheckboxChange(weapon.name)}
             >
@@ -142,6 +144,9 @@ const SelectSection = styled.div`
     }
     &:hover {
       opacity: 0.8;
+    }
+    &.selected {
+      background-color: #fee66c;
     }
   }
   .checkbox-container {
