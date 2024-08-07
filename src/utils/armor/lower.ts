@@ -9,22 +9,27 @@ const longSword: ArmorType = {
         {
           name: 'レザーヘッド',
           materials: [{ name: '鉄鉱石', quantity: 2 }],
+          skill: '腹減り耐性+1',
         },
         {
           name: 'レザーベスト',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
         {
           name: 'レザーグラブ',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
         {
           name: 'レザーベルト',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
         {
           name: 'レザーパンツ',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
       ],
     },
@@ -34,22 +39,27 @@ const longSword: ArmorType = {
         {
           name: 'チェーンヘッド',
           materials: [{ name: '鉄鉱石', quantity: 2 }],
+          skill: '',
         },
         {
           name: '	チェーンベスト',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
         {
           name: 'チェーングラブ',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
         {
           name: 'チェーンベルト',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
         {
           name: 'チェーンパンツ',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
+          skill: '',
         },
       ],
     },

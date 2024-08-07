@@ -7,6 +7,7 @@ export type Material = {
 export type Armor = {
   name: string
   materials: Material[]
+  skill: string
 }
 
 export type Derivation = {
