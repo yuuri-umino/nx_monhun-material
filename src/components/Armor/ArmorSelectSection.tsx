@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import WeaponCalculateResult from './WeaponCalculateResult'
+import ArmorCalculateResult from './ArmorCalculateResult'
 
-import { Weapon } from '../../utils/weapon/materialsTypes'
+import { Armor } from '../../utils/armor/materialsTypes'
 interface SelectProps {
-  weapons: Weapon[]
+  armors: Armor[]
   selectedDerivationName: string | null
   resetTrigger: boolean
 }
 
-const WeaponSelectSection: React.FC<SelectProps> = ({
-  weapons,
+const ArmorSelectSection: React.FC<SelectProps> = ({
+  armors,
   selectedDerivationName,
   resetTrigger,
 }) => {
-  const [selectedWeapons, setSelectedWeapons] = useState<Set<string>>(new Set())
+  const [selectedArmors, setSelectedArmors] = useState<Set<string>>(new Set())
   const [calculatedMaterials, setCalculatedMaterials] = useState<{
     [key: string]: number
   }>({})
 
   useEffect(() => {
-    setSelectedWeapons(new Set())
+    setSelectedArmors(new Set())
     setCalculatedMaterials({})
   }, [resetTrigger])
 
-  const handleCheckboxChange = (weaponName: string) => {
-    setSelectedWeapons((prevSelected) => {
+  const handleCheckboxChange = (armorName: string) => {
+    setSelectedArmors((prevSelected) => {
       const newSelected = new Set(prevSelected)
-      if (newSelected.has(weaponName)) {
-        newSelected.delete(weaponName)
+      if (newSelected.has(armorName)) {
+        newSelected.delete(armorName)
       } else {
-        newSelected.add(weaponName)
+        newSelected.add(armorName)
       }
       return newSelected
     })
@@ -39,9 +39,9 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
 
-    weapons.forEach((weapon) => {
-      if (selectedWeapons.has(weapon.name)) {
-        weapon.materials.forEach((material) => {
+    armors.forEach((armor) => {
+      if (selectedArmors.has(armor.name)) {
+        armor.materials.forEach((material) => {
           if (materialsMap[material.name]) {
             materialsMap[material.name] += material.quantity
           } else {
@@ -57,27 +57,28 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
   return (
     <SelectSection id="select-weapon">
       <section className="section-border">
-        <h2 className="toppan">3.武器を選択する</h2>
+        <h2 className="toppan mb-2">3.防具を選択する</h2>
+        <p className="caution">シリーズを変更して選択できます。</p>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
-          {weapons.map((weapon, index) => (
+          {armors.map((armor, index) => (
             <button
               key={index}
               className={`vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
-                selectedWeapons.has(weapon.name) ? 'selected' : ''
+                selectedArmors.has(armor.name) ? 'selected' : ''
               }`}
               type="button"
-              onClick={() => handleCheckboxChange(weapon.name)}
+              onClick={() => handleCheckboxChange(armor.name)}
             >
               <div className="checkbox-container">
                 <input
                   type="checkbox"
                   className="weapon-checkbox"
-                  checked={selectedWeapons.has(weapon.name)}
+                  checked={selectedArmors.has(armor.name)}
                   readOnly
                 />
               </div>
-              <p className="toppan mb-0 ms-1 ms-lg-4">{weapon.name}</p>
+              <p className="toppan mb-0 ms-1 ms-lg-4">{armor.name}</p>
             </button>
           ))}
         </div>
@@ -90,7 +91,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
           Calculate!
         </button>
 
-        <WeaponCalculateResult
+        <ArmorCalculateResult
           materials={calculatedMaterials}
           resetTrigger={resetTrigger}
           setCalculatedMaterials={setCalculatedMaterials}
@@ -104,10 +105,15 @@ const SelectSection = styled.div`
   margin-inline: auto;
   .section-border {
     padding: 20px 0;
-    border-bottom: 2px solid #f6dd94;
+    border-bottom: 2px solid #f6874f;
     h2 {
       margin-bottom: 30px;
-      color: #a77d00;
+      color: #c8551b;
+      text-align: center;
+    }
+    .caution {
+      font-size: 12px;
+      color: #494949;
       text-align: center;
     }
     .selected-derivation {
@@ -119,7 +125,7 @@ const SelectSection = styled.div`
   .weapon-name {
     max-height: 400px;
     overflow-y: scroll;
-    border: 1px solid #d29204;
+    border: 1px solid #f6874f;
     padding: 10px;
     &::after {
       content: '';
@@ -128,10 +134,10 @@ const SelectSection = styled.div`
     }
   }
   .weapon-item {
-    background-color: #fff9db;
+    background-color: #fff3ed;
     border: none;
     border-radius: 6px;
-    color: #a77d00;
+    color: #c8551b;
     width: 100%;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -146,7 +152,7 @@ const SelectSection = styled.div`
       opacity: 0.8;
     }
     &.selected {
-      background-color: #fee66c;
+      background-color: #ffd1ba;
     }
   }
   .checkbox-container {
@@ -161,7 +167,7 @@ const SelectSection = styled.div`
     appearance: none;
     &::before {
       background: #fff;
-      border: 2px solid #d2a10e;
+      border: 2px solid #f6874f;
       border-radius: 3px;
       content: '';
       display: block;
@@ -173,8 +179,8 @@ const SelectSection = styled.div`
       width: 16px;
     }
     &::after {
-      border-right: 3px solid #81630a;
-      border-bottom: 3px solid #81630a;
+      border-right: 3px solid #f6874f;
+      border-bottom: 3px solid #f6874f;
       content: '';
       display: block;
       height: 11px;
@@ -198,7 +204,7 @@ const SelectSection = styled.div`
     width: 180px;
     margin-top: 40px;
     margin-inline: auto;
-    color: #d29204;
+    color: #f6874f;
     transition: 0.3s ease-in-out;
     text-align: center;
     background-color: transparent;
@@ -208,7 +214,7 @@ const SelectSection = styled.div`
       content: '';
       width: 18px;
       height: 18px;
-      border-color: #d29204;
+      border-color: #f6874f;
       box-sizing: border-box;
       border-style: solid;
       display: block;
@@ -230,18 +236,18 @@ const SelectSection = styled.div`
     &:hover:after {
       width: calc(100% + 12px);
       height: calc(100% + 12px);
-      border-color: #d29204;
+      border-color: #f6874f;
     }
     &:hover {
       color: #fff;
-      background-color: #d29204;
-      border-color: #d29204;
+      background-color: #f6874f;
+      border-color: #f6874f;
     }
   }
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 3px solid #f6874f;
       .selected-derivation {
         font-size: 24px;
       }
@@ -272,4 +278,4 @@ const SelectSection = styled.div`
   }
 `
 
-export default WeaponSelectSection
+export default ArmorSelectSection

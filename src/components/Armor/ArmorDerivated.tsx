@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
-import IconWeapon from '../../assets/icon-weapon.png'
+import IconArmor from '@/assets/icon-armor.png'
 
-import { Derivation } from '../../utils/weapon/materialsTypes'
+import { Derivation } from '@/utils/armor/materialsTypes'
 
-interface WeaponDerivatedProps {
+interface ArmorDerivatedProps {
   derivations: Derivation[]
   onSelectDerivation: (
-    weapons: Derivation['weapons'],
+    armors: Derivation['armors'],
     derivationName: string
   ) => void
 }
 
-const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
+const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
   derivations,
   onSelectDerivation,
 }) => {
@@ -23,13 +23,13 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
 
   const handleSelect = (derivation: Derivation) => {
     setSelectedDerivation(derivation.name)
-    onSelectDerivation(derivation.weapons, derivation.name)
+    onSelectDerivation(derivation.armors, derivation.name)
   }
 
   return (
     <DerivatedSection id="derivated">
       <div className="section-border">
-        <h2 className="toppan">2.派生先を選択する</h2>
+        <h2 className="toppan">2.シリーズを選択する</h2>
         <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
           {derivations.map((derivation, index) => (
             <button
@@ -40,7 +40,7 @@ const DerivatedCategory: React.FC<WeaponDerivatedProps> = ({
               type="button"
               onClick={() => handleSelect(derivation)}
             >
-              <Image src={IconWeapon} alt="" className="weapon-icon" />
+              <Image src={IconArmor} alt="" className="weapon-icon" />
               <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
             </button>
           ))}
@@ -54,17 +54,17 @@ const DerivatedSection = styled.div`
   margin-inline: auto;
   h2 {
     margin-bottom: 30px;
-    color: #a77d00;
+    color: #c8551b;
     text-align: center;
   }
   .section-border {
     padding: 20px 0;
-    border-bottom: 2px solid #f6dd94;
+    border-bottom: 2px solid #f6874f;
   }
   .weapon-derivated-list {
     max-height: 400px;
     overflow-y: scroll;
-    border: 1px solid #d29204;
+    border: 1px solid #f6874f;
     padding: 10px;
     &::after {
       content: '';
@@ -73,10 +73,10 @@ const DerivatedSection = styled.div`
     }
   }
   .weapon-item {
-    background-color: #fff9db;
+    background-color: #fff3ed;
     border: none;
     border-radius: 6px;
-    color: #a77d00;
+    color: #c8551b;
     width: 100%;
     transition: all 0.3s ease-in-out;
     p {
@@ -90,13 +90,13 @@ const DerivatedSection = styled.div`
       opacity: 0.8;
     }
     &.selected {
-      background-color: #fee66c;
+      background-color: #ffd1ba;
     }
   }
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 3px solid #f6874f;
     }
     .weapon-derivated-list {
       height: auto;
