@@ -99,8 +99,7 @@ const DerivatedSection = styled.div`
       border-bottom: 3px solid #f6874f;
     }
     .weapon-derivated-list {
-      height: auto;
-      padding: 0;
+      padding: 20px;
       &::after {
         width: 45%;
       }
@@ -114,9 +113,6 @@ const DerivatedSection = styled.div`
       padding: 40px 0;
     }
     .weapon-derivated-list {
-      max-height: none;
-      overflow-y: auto;
-      border: none;
     }
   }
   @media screen and (min-width: 992px) {
@@ -130,6 +126,16 @@ const DerivatedSection = styled.div`
       p {
         font-size: 16px;
       }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .weapon-derivated-list {
+      &::after {
+        width: 49%;
+      }
+    }
+    .weapon-item {
+      width: 23%;
     }
   }
 `
