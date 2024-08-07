@@ -29,7 +29,7 @@ const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
   return (
     <DerivatedSection id="derivated">
       <div className="section-border">
-        <h2 className="toppan">2.派生先を選択する</h2>
+        <h2 className="toppan">2.シリーズを選択する</h2>
         <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
           {derivations.map((derivation, index) => (
             <button

@@ -57,7 +57,8 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
   return (
     <SelectSection id="select-weapon">
       <section className="section-border">
-        <h2 className="toppan">3.防具を選択する</h2>
+        <h2 className="toppan mb-2">3.防具を選択する</h2>
+        <p className="caution">シリーズを変更して選択できます。</p>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
           {armors.map((armor, index) => (
@@ -108,6 +109,11 @@ const SelectSection = styled.div`
     h2 {
       margin-bottom: 30px;
       color: #c8551b;
+      text-align: center;
+    }
+    .caution {
+      font-size: 12px;
+      color: #494949;
       text-align: center;
     }
     .selected-derivation {

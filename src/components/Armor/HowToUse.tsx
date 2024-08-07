@@ -18,13 +18,17 @@ const HowToUse: React.FC = () => {
       {isOpen && (
         <ul>
           <li>①防具のランクを選択</li>
-          <li>②派生先を選択</li>
-          <li>③素材を計算したい防具を選択(複数選択可)</li>
+          <li>②シリーズを選択</li>
+          <li>
+            ③素材を計算したい防具を選択
+            <br />
+            <span>シリーズをまたいで複数選択可</span>
+          </li>
           <li>④Let’s Calculate!</li>
           <li>
             ⑤各素材の所持数を入力する
-            <br className="d-block d-sm-none" />
-            <span className="d-block">
+            <br />
+            <span>
               必要個数に達したら⭕️が表示されます。
               <br />
               入力した内容はRESETボタンでリセットができます。
@@ -33,7 +37,7 @@ const HowToUse: React.FC = () => {
           <li>
             ⑥結果を保存する
             <br />
-            <span className="d-dlock">
+            <span>
               検索した結果は各素材に入力した所持個数と一緒に名前をつけて保存できます。
               <br />
               結果は5件まで保存でき、6件以上登録すると古い順から削除されます。
@@ -44,7 +48,7 @@ const HowToUse: React.FC = () => {
           <li>
             ⑦保存した結果を戻す
             <br />
-            <span className="d-dlock">
+            <span>
               一度保存したデータを再度計算結果に戻すことが出来ます。
               <br />
               戻したい保存データのタブを選択し表示した状態でRESTOREボタンをクリックしてください。

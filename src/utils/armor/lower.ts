@@ -1,10 +1,10 @@
 import { ArmorType } from './materialsTypes'
 
-const longSword: ArmorType = {
+const lower: ArmorType = {
   type: '下位',
   derivations: [
     {
-      name: 'レザーシリーズ',
+      name: 'レザー',
       armors: [
         {
           name: 'レザーヘッド',
@@ -37,7 +37,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'チェーンシリーズ',
+      name: 'チェーン',
       armors: [
         {
           name: 'チェーンヘッド',
@@ -67,7 +67,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ハンターシリーズ',
+      name: 'ハンター',
       armors: [
         {
           name: 'ハンターヘルム',
@@ -112,7 +112,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ボーンシリーズ',
+      name: 'ボーン',
       armors: [
         {
           name: 'ボーンヘルム',
@@ -157,7 +157,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ランゴシリーズ',
+      name: 'ランゴ',
       armors: [
         {
           name: 'ランゴヘルム',
@@ -228,7 +228,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ジャグラスシリーズ',
+      name: 'ジャグラス',
       armors: [
         {
           name: 'ジャグラスヘルム',
@@ -253,7 +253,7 @@ const longSword: ArmorType = {
         {
           name: 'ジャグラスアーム',
           materials: [
-            { name: '賊竜の皮', quantity: 2 },
+            { name: '賊竜の鱗', quantity: 2 },
             { name: '賊竜の皮', quantity: 1 },
             { name: 'ジャグラスの皮', quantity: 3 },
           ],
@@ -282,7 +282,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'クルルシリーズ',
+      name: 'クルル',
       armors: [
         {
           name: 'クルルヘルム',
@@ -301,7 +301,7 @@ const longSword: ArmorType = {
             { name: '掻鳥のクチバシ', quantity: 1 },
             { name: 'マカライト鉱石', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: 'スタミナ休息回復', level: 1 }],
         },
         {
           name: 'クルルアーム',
@@ -310,7 +310,7 @@ const longSword: ArmorType = {
             { name: '掻鳥の皮', quantity: 1 },
             { name: '鉄鉱石', quantity: 3 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '運搬の達人', level: 1 }],
         },
         {
           name: '	クルルコイル',
@@ -319,7 +319,7 @@ const longSword: ArmorType = {
             { name: '掻鳥のクチバシ', quantity: 1 },
             { name: '翼竜の皮', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: 'アイテム使用強化', level: 1 }],
         },
         {
           name: 'クルルグリーヴ',
@@ -328,12 +328,12 @@ const longSword: ArmorType = {
             { name: '掻鳥の鱗', quantity: 3 },
             { name: '翼竜の皮', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '見切り', level: 1 }],
         },
       ],
     },
     {
-      name: 'アロイシリーズ',
+      name: 'アロイ',
       armors: [
         {
           name: 'アロイヘルム',
@@ -342,7 +342,7 @@ const longSword: ArmorType = {
             { name: '鉄鉱石', quantity: 4 },
             { name: '大地の結晶', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '風圧耐性', level: 1 }],
         },
         {
           name: '	アロイメイル',
@@ -351,7 +351,7 @@ const longSword: ArmorType = {
             { name: '鉄鉱石', quantity: 6 },
             { name: '大地の結晶', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '水耐性', level: 1 }],
         },
         {
           name: 'アロイアーム',
@@ -360,7 +360,7 @@ const longSword: ArmorType = {
             { name: '鉄鉱石', quantity: 6 },
             { name: '大地の結晶', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '防御', level: 1 }],
         },
         {
           name: '	アロイコイル',
@@ -369,7 +369,7 @@ const longSword: ArmorType = {
             { name: '鉄鉱石', quantity: 4 },
             { name: '大地の結晶', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '毒耐性', level: 1 }],
         },
         {
           name: 'アロイグリーヴ',
@@ -378,12 +378,12 @@ const longSword: ArmorType = {
             { name: '鉄鉱石', quantity: 6 },
             { name: '大地の結晶', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '砥石使用高速化', level: 1 }],
         },
       ],
     },
     {
-      name: 'プケプケシリーズ',
+      name: 'プケプケ',
       armors: [
         {
           name: 'プケプケヘルム',
@@ -393,7 +393,7 @@ const longSword: ArmorType = {
             { name: '毒妖鳥の羽根', quantity: 2 },
             { name: 'マカライト鉱石', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '綿胞子草の知識', level: 1 }],
         },
         {
           name: '	プケプケメイル',
@@ -402,7 +402,7 @@ const longSword: ArmorType = {
             { name: '毒妖鳥の甲殻', quantity: 1 },
             { name: '鉄鉱石', quantity: 3 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: 'アイテム使用強化', level: 1 }],
         },
         {
           name: 'プケプケアーム',
@@ -411,7 +411,7 @@ const longSword: ArmorType = {
             { name: '毒妖鳥の甲殻', quantity: 1 },
             { name: '毒袋', quantity: 3 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '毒耐性', level: 1 }],
         },
         {
           name: '	プケプケコイル',
@@ -421,7 +421,7 @@ const longSword: ArmorType = {
             { name: '毒妖鳥の喉袋', quantity: 1 },
             { name: '毒袋', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '毒属性強化', level: 1 }],
         },
         {
           name: 'プケプケグリーヴ',
@@ -431,12 +431,12 @@ const longSword: ArmorType = {
             { name: '毒妖鳥の鱗', quantity: 2 },
             { name: '竜骨【中】', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '植生学', level: 1 }],
         },
       ],
     },
     {
-      name: 'ボロスシリーズ',
+      name: 'ボロス',
       armors: [
         {
           name: 'ボロスヘルム',
@@ -446,7 +446,7 @@ const longSword: ArmorType = {
             { name: '土砂竜の爪', quantity: 2 },
             { name: 'ケストドンの甲殻', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: 'ガード性能', level: 1 }],
         },
         {
           name: '	ボロスメイル',
@@ -456,7 +456,7 @@ const longSword: ArmorType = {
             { name: '土砂竜の爪', quantity: 1 },
             { name: '強固な岩骨', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: 'スタミナ奪取', level: 1 }],
         },
         {
           name: 'ボロスアーム',
@@ -466,7 +466,7 @@ const longSword: ArmorType = {
             { name: '土砂竜の頭殻', quantity: 1 },
             { name: 'ケストドンの甲殻', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: 'ランナー', level: 1 }],
         },
         {
           name: '	ボロスコイル',
@@ -475,7 +475,7 @@ const longSword: ArmorType = {
             { name: '土砂竜の背甲', quantity: 1 },
             { name: '肥沃なドロ', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '泥耐性', level: 1 }],
         },
         {
           name: 'ボロスグリーヴ',
@@ -485,12 +485,12 @@ const longSword: ArmorType = {
             { name: '土砂竜の甲殻', quantity: 1 },
             { name: '肥沃なドロ', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '気絶耐性', level: 1 }],
         },
       ],
     },
     {
-      name: 'ジュラシリーズ',
+      name: 'ジュラ',
       armors: [
         {
           name: 'ジュラヘルム',
@@ -500,7 +500,7 @@ const longSword: ArmorType = {
             { name: '泥魚竜のヒレ', quantity: 1 },
             { name: '咬魚の皮', quantity: 3 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '水場適応', level: 1 }],
         },
         {
           name: '	ジュラメイル',
@@ -510,7 +510,7 @@ const longSword: ArmorType = {
             { name: '泥魚竜の牙', quantity: 1 },
             { name: '水袋', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '泥耐性', level: 1 }],
         },
         {
           name: 'ジュラアーム',
@@ -519,7 +519,7 @@ const longSword: ArmorType = {
             { name: '泥魚竜の牙', quantity: 1 },
             { name: '咬魚のヒゲ', quantity: 2 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '水属性攻撃強化', level: 1 }],
         },
         {
           name: '	ジュラコイル',
@@ -528,7 +528,7 @@ const longSword: ArmorType = {
             { name: '泥魚竜の甲殻', quantity: 1 },
             { name: '水袋', quantity: 1 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '氷耐性', level: 1 }],
         },
         {
           name: 'ジュラグリーヴ',
@@ -538,12 +538,12 @@ const longSword: ArmorType = {
             { name: '泥魚竜のヒレ', quantity: 2 },
             { name: '大地の結晶', quantity: 3 },
           ],
-          skill: [{ name: '採集の達人', level: 1 }],
+          skill: [{ name: '集中', level: 1 }],
         },
       ],
     },
     {
-      name: 'カガチシリーズ',
+      name: 'カガチ',
       armors: [
         {
           name: 'カガチヘルム',
@@ -561,7 +561,7 @@ const longSword: ArmorType = {
             { name: '飛雷竜の毛皮', quantity: 2 },
             { name: '飛雷竜の電極針', quantity: 1 },
             { name: '飛雷竜の皮膜', quantity: 2 },
-            { name: '翼竜の皮', quantity: 21 },
+            { name: '翼竜の皮', quantity: 2 },
           ],
           skill: [{ name: 'ジャンプ鉄人', level: 1 }],
         },
@@ -596,7 +596,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ハイメタシリーズ',
+      name: 'ハイメタ',
       armors: [
         {
           name: 'ハイメタヘルム',
@@ -648,7 +648,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'オウビートシリーズ',
+      name: 'オウビート',
       armors: [
         {
           name: 'オウビートテスタ',
@@ -684,7 +684,7 @@ const longSword: ArmorType = {
           name: '	オウビートアンカ',
           materials: [
             { name: 'オオツノアゲハ', quantity: 1 },
-            { name: '大地の結晶', quantity: 21 },
+            { name: '大地の結晶', quantity: 2 },
             { name: 'モンスターの体液', quantity: 1 },
             { name: '電気袋', quantity: 1 },
           ],
@@ -718,7 +718,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'タロスシリーズ',
+      name: 'タロス',
       armors: [
         {
           name: 'タロスヘルム',
@@ -773,7 +773,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ジャナフシリーズ',
+      name: 'ジャナフ',
       armors: [
         {
           name: 'ジャナフヘルム',
@@ -828,7 +828,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'レイアシリーズ',
+      name: 'レイア',
       armors: [
         {
           name: 'レイアヘルム',
@@ -883,7 +883,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ツィツィシリーズ',
+      name: 'ツィツィ',
       armors: [
         {
           name: 'ツィツィヘルム',
@@ -936,7 +936,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ウルムーシリーズ',
+      name: 'ウルムー',
       armors: [
         {
           name: 'ウルムーヘルム',
@@ -989,7 +989,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ギルオスシリーズ',
+      name: 'ギルオス',
       armors: [
         {
           name: 'ギルオスヘルム',
@@ -1043,7 +1043,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'バルキンシリーズ',
+      name: 'バルキン',
       armors: [
         {
           name: 'バルキンヘルム',
@@ -1098,7 +1098,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'インゴットシリーズ',
+      name: 'インゴット',
       armors: [
         {
           name: 'インゴットヘルム',
@@ -1153,7 +1153,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ブリゲイドシリーズ',
+      name: 'ブリゲイド',
       armors: [
         {
           name: 'ブリゲイドロポス',
@@ -1208,7 +1208,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ギエナシリーズ',
+      name: 'ギエナ',
       armors: [
         {
           name: 'ギエナヘルム',
@@ -1263,7 +1263,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ガロンシリーズ',
+      name: 'ガロン',
       armors: [
         {
           name: 'ガロンヘルム',
@@ -1318,7 +1318,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'レウスシリーズ',
+      name: 'レウス',
       armors: [
         {
           name: 'レウスヘルム',
@@ -1373,7 +1373,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'ディアブロシリーズ',
+      name: 'ディアブロ',
       armors: [
         {
           name: 'ディアブロヘルム',
@@ -1428,7 +1428,7 @@ const longSword: ArmorType = {
       ],
     },
     {
-      name: 'キリンシリーズ',
+      name: 'キリン',
       armors: [
         {
           name: 'キリンホーン',
@@ -1484,4 +1484,4 @@ const longSword: ArmorType = {
   ],
 }
 
-export default longSword
+export default lower
