@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import ArmorCalculateResult from './ArmorCalculateResult'
-
 import { Armor } from '../../utils/armor/materialsTypes'
+
 interface SelectProps {
   armors: Armor[]
   selectedDerivationName: string | null
@@ -20,8 +20,9 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
   }>({})
 
   useEffect(() => {
-    setSelectedArmors(new Set())
-    setCalculatedMaterials({})
+    if (resetTrigger) {
+      setCalculatedMaterials({})
+    }
   }, [resetTrigger])
 
   const handleCheckboxChange = (armorName: string) => {
@@ -34,6 +35,10 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
       }
       return newSelected
     })
+  }
+
+  const handleResetSelectedArmors = () => {
+    setSelectedArmors(new Set())
   }
 
   const calculateMaterials = () => {
@@ -82,6 +87,31 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
             </button>
           ))}
         </div>
+
+        <section className="selected-armors-list mt-3 mt-md-5">
+          <h4 className="toppan text-center">現在選択している防具</h4>
+          {selectedArmors.size === 0 && (
+            <p className="save-caution">ここに選択した防具が表示されます。</p>
+          )}
+
+          {selectedArmors.size > 0 && (
+            <button
+              className="reset-btn vdl-shadow mb-4 d-block mx-auto"
+              type="button"
+              onClick={handleResetSelectedArmors}
+            >
+              RESET
+            </button>
+          )}
+
+          <ul>
+            {Array.from(selectedArmors).map((armorName) => (
+              <li key={armorName} className="text-center mb-3 py-1 fw-bold">
+                {armorName}
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <button
           className="toppan calc-btn py-2"
@@ -244,6 +274,44 @@ const SelectSection = styled.div`
       border-color: #f6874f;
     }
   }
+  .selected-armors-list {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        background-color: #fff3ed;
+        border: none;
+        border-radius: 6px;
+        color: #c8551b;
+        width: 100%;
+      }
+    }
+  }
+  .reset-btn {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #f6874f;
+    color: #f6874f;
+    font-size: 14px;
+    border-radius: 50px;
+    padding: 5px 20px;
+    box-shadow: 2px 2px 0 0 #f6874f;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: translate(2px, 2px);
+      border: 2px solid #f6874f;
+      box-shadow: none;
+    }
+  }
+  .save-caution {
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
+  }
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
@@ -260,6 +328,9 @@ const SelectSection = styled.div`
     .weapon-item {
       width: 47%;
     }
+    .reset-btn {
+      font-size: 16px;
+    }
   }
   @media screen and (min-width: 768px) {
     .section-border {
@@ -267,6 +338,23 @@ const SelectSection = styled.div`
     }
     .calc-btn {
       margin-top: 40px;
+    }
+    .selected-armors-list {
+      ul {
+        &::after {
+          content: '';
+          display: block;
+          width: 32%;
+        }
+        li {
+          background-color: #fff3ed;
+          border: none;
+          border-radius: 6px;
+          color: #c8551b;
+          width: 32%;
+          transition: all 0.3s ease-in-out;
+        }
+      }
     }
   }
   @media screen and (min-width: 992px) {

@@ -94,10 +94,16 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
             <ul className="d-flex flex-column">
               {Object.entries(savedResults[activeIndex]?.results || {}).map(
                 ([materialName, quantity]) => (
-                  <li className="mb-1" key={materialName}>
-                    <span className="material-name toppan m-0">
+                  <li className="toppan mb-2" key={materialName}>
+                    <MaterialName
+                      isSufficient={
+                        (savedResults[activeIndex]?.ownedQuantities[
+                          materialName
+                        ] ?? 0) >= quantity
+                      }
+                    >
                       {materialName}
-                    </span>
+                    </MaterialName>
                     <br className="d-block d-md-none" />
                     所持数:{' '}
                     {savedResults[activeIndex]?.ownedQuantities[materialName] ??
@@ -162,15 +168,6 @@ const Section = styled.section`
       font-weight: bold;
     }
   }
-  .material-name {
-    display: inline-block;
-    background-color: #fff;
-    color: #6f6f6f;
-    padding: 2px 10px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-    margin-right: 10px;
-  }
   @media screen and (min-width: 576px) {
     padding-top: 30px;
     border-top: 3px solid #f6dd94;
@@ -214,6 +211,17 @@ const Tab = styled.button<{ active: boolean }>`
   @media screen and (min-width: 768px) {
     margin-top: 0;
   }
+`
+
+const MaterialName = styled.span<{ isSufficient: boolean }>`
+  display: inline-block;
+  background-color: ${({ isSufficient }) =>
+    isSufficient ? '#a77d00' : '#fff'};
+  color: ${({ isSufficient }) => (isSufficient ? '#fff' : '#6f6f6f')};
+  padding: 2px 10px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  margin-right: 10px;
 `
 
 export default SavedDataSection
