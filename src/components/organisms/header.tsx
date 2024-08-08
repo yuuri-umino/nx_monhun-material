@@ -13,9 +13,9 @@ const Header: FC = () => {
       <HeaderWrap id="header">
         <div className="header-inner">
           {isWeaponPage && (
-            <link href="/armor" className="link-change-btn toppan armor-btn">
+            <Link href="/armor" className="link-change-btn toppan armor-btn">
               防具ver
-            </link>
+            </Link>
           )}
           {isArmorPage && (
             <Link href="/weapon" className="link-change-btn toppan weapon-btn">
