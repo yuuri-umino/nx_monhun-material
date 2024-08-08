@@ -16,7 +16,7 @@ import IconHeavyBowGun from '../../assets/icon-heavybowgun.png'
 import IconLightBowGun from '../../assets/icon-lightbowgun.png'
 import IconBow from '../../assets/icon-bow.png'
 
-import { WeaponType } from '../../utils/materialsTypes'
+import { WeaponType } from '../../utils/weapon/materialsTypes'
 interface WeaponCategoryProps {
   weaponTypes: WeaponType[]
   onWeaponClick: (weaponType: WeaponType) => void
