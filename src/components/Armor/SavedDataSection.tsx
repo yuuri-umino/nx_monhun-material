@@ -123,10 +123,10 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
 const Section = styled.section`
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 2px solid #f6dd94;
+  border-top: 2px solid #f6874f;
   h2 {
     margin-bottom: 30px;
-    color: #a77d00;
+    color: #c8551b;
     text-align: center;
   }
   .save-caution {
@@ -139,13 +139,13 @@ const Section = styled.section`
     padding: 0;
     max-height: 400px;
     overflow-y: scroll;
-    border: 1px solid #d29204;
+    border: 1px solid #f6874f;
     padding: 10px;
     list-style: none;
     li {
       position: relative;
       margin-bottom: 10px;
-      background-color: #fffbe8;
+      background-color: #fff3ed;
       padding: 10px 20px;
       border-radius: 6px;
       color: #6f6f6f;
@@ -156,21 +156,21 @@ const Section = styled.section`
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    color: #a77d00;
+    color: #c8551b;
     .delete-savedata,
     .restore-savedata {
       padding: 0 10px;
-      border: 1px solid #a77d00;
+      border: 1px solid #c8551b;
       border-radius: 20px;
       background-color: #fff;
-      color: #a77d00;
+      color: #c8551b;
       font-size: 14px;
       font-weight: bold;
     }
   }
   @media screen and (min-width: 576px) {
     padding-top: 30px;
-    border-top: 3px solid #f6dd94;
+    border-top: 3px solid #f6874f;
   }
   @media screen and (min-width: 768px) {
     margin-top: 40px;
@@ -198,9 +198,9 @@ const Tab = styled.button<{ active: boolean }>`
   margin-top: 10px;
   padding: 10px 15px;
   border: none;
-  border-bottom: 2px solid #a77d00;
-  background: ${(props) => (props.active ? '#a77d00' : 'none')};
-  color: ${(props) => (props.active ? '#fff' : '#a77d00')};
+  border-bottom: 2px solid #c8551b;
+  background: ${(props) => (props.active ? '#C8551B' : 'none')};
+  color: ${(props) => (props.active ? '#fff' : '#C8551B')};
   font-weight: ${(props) => (props.active ? 'bold' : 'normal')};
   font-size: ${(props) => (props.active ? '16px' : '12px')};
   border-radius: 6px 6px 0 0;
@@ -216,7 +216,7 @@ const Tab = styled.button<{ active: boolean }>`
 const MaterialName = styled.span<{ isSufficient: boolean }>`
   display: inline-block;
   background-color: ${({ isSufficient }) =>
-    isSufficient ? '#a77d00' : '#fff'};
+    isSufficient ? '#c8551b' : '#fff'};
   color: ${({ isSufficient }) => (isSufficient ? '#fff' : '#6f6f6f')};
   padding: 2px 10px;
   border-radius: 6px;
