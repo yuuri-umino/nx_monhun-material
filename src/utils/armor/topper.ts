@@ -3978,10 +3978,10 @@ const topper: ArmorType = {
       ],
     },
     {
-      name: 'ディアネロα',
+      name: 'ディアネロβ',
       armors: [
         {
-          name: 'ディアネロヘルムα',
+          name: 'ディアネロヘルムβ',
           materials: [
             { name: '黒角竜の堅甲', quantity: 4 },
             { name: '上質なねじれた角', quantity: 4 },
@@ -3991,7 +3991,7 @@ const topper: ArmorType = {
           skill: [{ name: '集中', level: 1 }],
         },
         {
-          name: '	ディアネロメイルα',
+          name: '	ディアネロメイルβ',
           materials: [
             { name: '黒角竜の堅殻', quantity: 4 },
             { name: '黒角竜の堅甲', quantity: 2 },
@@ -4001,7 +4001,7 @@ const topper: ArmorType = {
           skill: [{ name: '逆恨み', level: 1 }],
         },
         {
-          name: 'ディアネロアームα',
+          name: 'ディアネロアームβ',
           materials: [
             { name: '黒角竜の堅甲', quantity: 4 },
             { name: '黒角竜の堅殻', quantity: 6 },
@@ -4011,7 +4011,7 @@ const topper: ArmorType = {
           skill: [{ name: '集中', level: 1 }],
         },
         {
-          name: '	ディアネロコイルα',
+          name: '	ディアネロコイルβ',
           materials: [
             { name: '黒角竜の堅殻', quantity: 4 },
             { name: '黒角竜の堅甲', quantity: 3 },
@@ -4021,7 +4021,7 @@ const topper: ArmorType = {
           skill: [{ name: '逆恨み', level: 1 }],
         },
         {
-          name: 'ディアネログリーヴα',
+          name: 'ディアネログリーヴβ',
           materials: [
             { name: '黒角竜の堅甲', quantity: 6 },
             { name: '黒角竜の堅殻', quantity: 4 },
@@ -4033,56 +4033,1519 @@ const topper: ArmorType = {
       ],
     },
     {
-      name: 'キリン',
+      name: 'ガンキンα',
       armors: [
         {
-          name: 'キリンホーン',
+          name: 'ガンキンヘルムα',
           materials: [
-            { name: '幻獣の皮', quantity: 2 },
-            { name: '幻獣の尾', quantity: 2 },
-            { name: '幻獣の雷角', quantity: 3 },
-            { name: 'ライトクリスタル', quantity: 1 },
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の堅殻', quantity: 2 },
+            { name: '溶岩塊', quantity: 3 },
+            { name: '獄炎石', quantity: 1 },
           ],
-          skill: [{ name: 'ランナー', level: 1 }],
+          skill: [{ name: '雷耐性', level: 2 }],
         },
         {
-          name: '	キリンベスト',
+          name: '	ガンキンメイルα',
           materials: [
-            { name: '幻獣の皮', quantity: 2 },
-            { name: '幻獣のたてがみ', quantity: 2 },
-            { name: '深海の結晶', quantity: 4 },
-            { name: 'サンゴの紅骨', quantity: 2 },
+            { name: '爆鎚竜の堅殻', quantity: 2 },
+            { name: '爆鎚竜の耐熱殻', quantity: 2 },
+            { name: '爆鎚竜の顎', quantity: 4 },
+            { name: '爆鎚竜の紅玉', quantity: 2 },
           ],
-          skill: [{ name: '精霊の加護', level: 1 }],
+          skill: [{ name: '破壊王', level: 2 }],
         },
         {
-          name: 'キリンアームロング',
+          name: 'ガンキンアームα',
           materials: [
-            { name: '幻獣の皮', quantity: 3 },
-            { name: '幻獣のたてがみ', quantity: 2 },
-            { name: 'ゴム質の甲殻', quantity: 2 },
-            { name: 'ライトクリスタル', quantity: 1 },
+            { name: '爆鎚竜の堅殻', quantity: 3 },
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の延髄', quantity: 2 },
+            { name: '溶岩塊', quantity: 1 },
+          ],
+          skill: [
+            { name: 'ガード性能', level: 1 },
+            { name: '防御', level: 1 },
+          ],
+        },
+        {
+          name: '	ガンキンコイルα',
+          materials: [
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の堅殻', quantity: 1 },
+            { name: 'ユニオン鉱石', quantity: 1 },
+            { name: '電気袋', quantity: 1 },
+          ],
+          skill: [
+            { name: '破壊王', level: 1 },
+            { name: '雷耐性', level: 1 },
+          ],
+        },
+        {
+          name: 'ガンキングリーブα',
+          materials: [
+            { name: '爆鎚竜の堅殻', quantity: 2 },
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の耐熱殻', quantity: 2 },
+            { name: 'ガストドンの堅殻', quantity: 2 },
+          ],
+          skill: [{ name: 'ガード性能', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'ガンキンβ',
+      armors: [
+        {
+          name: 'ガンキンヘルムβ',
+          materials: [
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の堅殻', quantity: 2 },
+            { name: '溶岩塊', quantity: 3 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '雷耐性', level: 1 }],
+        },
+        {
+          name: '	ガンキンメイルβ',
+          materials: [
+            { name: '爆鎚竜の堅殻', quantity: 2 },
+            { name: '爆鎚竜の耐熱殻', quantity: 2 },
+            { name: '爆鎚竜の顎', quantity: 4 },
+            { name: '爆鎚竜の紅玉', quantity: 2 },
+          ],
+          skill: [{ name: '破壊王', level: 1 }],
+        },
+        {
+          name: 'ガンキンアームβ',
+          materials: [
+            { name: '爆鎚竜の堅殻', quantity: 3 },
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の延髄', quantity: 2 },
+            { name: '溶岩塊', quantity: 1 },
+          ],
+          skill: [{ name: 'ガード性能', level: 1 }],
+        },
+        {
+          name: '	ガンキンコイルβ',
+          materials: [
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の堅殻', quantity: 1 },
+            { name: 'ユニオン鉱石', quantity: 1 },
+            { name: '電気袋', quantity: 1 },
+          ],
+          skill: [{ name: '破壊王', level: 1 }],
+        },
+        {
+          name: 'ガンキングリーブβ',
+          materials: [
+            { name: '爆鎚竜の堅殻', quantity: 2 },
+            { name: '爆鎚竜の上鱗', quantity: 2 },
+            { name: '爆鎚竜の耐熱殻', quantity: 2 },
+            { name: 'ガストドンの堅殻', quantity: 2 },
+          ],
+          skill: [{ name: 'ガード性能', level: 1 }],
+        },
+      ],
+    },
+    {
+      name: 'バゼルα',
+      armors: [
+        {
+          name: 'バゼルヘルムα',
+          materials: [
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の尖爪', quantity: 2 },
+            { name: '爆鱗竜の翼', quantity: 3 },
+            { name: '爆鱗竜の宝玉', quantity: 1 },
+          ],
+          skill: [
+            { name: '耳栓', level: 2 },
+            { name: '爆破属性強化', level: 1 },
+          ],
+        },
+        {
+          name: '	バゼルメイルα',
+          materials: [
+            { name: '爆鱗竜の上鱗', quantity: 2 },
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の爆腺', quantity: 4 },
+            { name: '爆鱗竜の耐熱殻', quantity: 2 },
+          ],
+          skill: [
+            { name: 'ガード性能', level: 2 },
+            { name: '爆破やられ耐性', level: 2 },
+          ],
+        },
+        {
+          name: 'バゼルアームα',
+          materials: [
+            { name: '爆鱗竜の堅殻', quantity: 3 },
+            { name: '爆鱗竜の尖爪', quantity: 2 },
+            { name: '爆鱗竜の尻尾', quantity: 2 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [
+            { name: '耳栓', level: 1 },
+            { name: '抜刀術【技】', level: 2 },
+          ],
+        },
+        {
+          name: '	バゼルコイルα',
+          materials: [
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の上鱗', quantity: 1 },
+            { name: '爆鱗竜の爆腺', quantity: 1 },
+            { name: '爆鱗竜の延髄', quantity: 1 },
+          ],
+          skill: [
+            { name: '耳栓', level: 2 },
+            { name: 'ジャンプ鉄人', level: 1 },
+          ],
+        },
+        {
+          name: 'バゼルグリーブα',
+          materials: [
+            { name: '爆鱗竜の上鱗', quantity: 2 },
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の尖爪', quantity: 2 },
+            { name: '岩賊竜の上皮', quantity: 2 },
+          ],
+          skill: [
+            { name: '抜刀術【技】', level: 1 },
+            { name: 'ボマー', level: 2 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'バゼルβ',
+      armors: [
+        {
+          name: 'バゼルヘルムβ',
+          materials: [
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の尖爪', quantity: 2 },
+            { name: '爆鱗竜の翼', quantity: 3 },
+            { name: '爆鱗竜の宝玉', quantity: 1 },
+          ],
+          skill: [{ name: '耳栓', level: 2 }],
+        },
+        {
+          name: '	バゼルメイルβ',
+          materials: [
+            { name: '爆鱗竜の上鱗', quantity: 2 },
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の爆腺', quantity: 4 },
+            { name: '爆鱗竜の耐熱殻', quantity: 2 },
+          ],
+          skill: [{ name: 'ガード性能', level: 2 }],
+        },
+        {
+          name: 'バゼルアームβ',
+          materials: [
+            { name: '爆鱗竜の堅殻', quantity: 3 },
+            { name: '爆鱗竜の尖爪', quantity: 2 },
+            { name: '爆鱗竜の尻尾', quantity: 2 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '抜刀術【技】', level: 2 }],
+        },
+        {
+          name: '	バゼルコイルβ',
+          materials: [
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の上鱗', quantity: 1 },
+            { name: '爆鱗竜の爆腺', quantity: 1 },
+            { name: '爆鱗竜の延髄', quantity: 1 },
+          ],
+          skill: [{ name: '耳栓', level: 2 }],
+        },
+        {
+          name: 'バゼルグリーブβ',
+          materials: [
+            { name: '爆鱗竜の上鱗', quantity: 2 },
+            { name: '爆鱗竜の堅殻', quantity: 2 },
+            { name: '爆鱗竜の尖爪', quantity: 2 },
+            { name: '岩賊竜の上皮', quantity: 2 },
+          ],
+          skill: [{ name: 'ボマー', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'ダマスクα',
+      armors: [
+        {
+          name: 'ダマスクヘルムα',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '痺賊竜の大頭巾', quantity: 3 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '防御', level: 2 },
+            { name: '砥石使用高速化', level: 1 },
+          ],
+        },
+        {
+          name: '	ダマスクメイルα',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '爆鎚竜の耐熱殻', quantity: 3 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [
+            { name: '防御', level: 2 },
+            { name: '集中', level: 2 },
+          ],
+        },
+        {
+          name: 'ダマスクアームα',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '黒角竜の堅甲', quantity: 5 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '砥石使用高速化', level: 1 },
+            { name: '匠', level: 1 },
+          ],
+        },
+        {
+          name: '	ダマスクコイルα',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '岩賊竜の顎', quantity: 3 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [
+            { name: '集中', level: 1 },
+            { name: '防御力DOWN耐性', level: 2 },
+          ],
+        },
+        {
+          name: 'ダマスクグリーブα',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '溶岩竜の堅殻', quantity: 5 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '防御', level: 2 },
+            { name: '防御力DOWN耐性', level: 1 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'ダマスクβ',
+      armors: [
+        {
+          name: 'ダマスクヘルムβ',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '痺賊竜の大頭巾', quantity: 3 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [{ name: '防御', level: 2 }],
+        },
+        {
+          name: '	ダマスクメイルβ',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '爆鎚竜の耐熱殻', quantity: 3 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '集中', level: 2 }],
+        },
+        {
+          name: 'ダマスクアームβ',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '黒角竜の堅甲', quantity: 5 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [{ name: '匠', level: 1 }],
+        },
+        {
+          name: '	ダマスクコイルβ',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '岩賊竜の顎', quantity: 3 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '集中', level: 1 }],
+        },
+        {
+          name: 'ダマスクグリーブβ',
+          materials: [
+            { name: '古龍の血', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 3 },
+            { name: '溶岩竜の堅殻', quantity: 5 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [{ name: '防御', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'ドーベルα',
+      armors: [
+        {
+          name: 'ドーベルヘルムα',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '爆鱗竜の爆膜', quantity: 1 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [
+            { name: '属性解放/装填拡張', level: 1 },
+            { name: '龍耐性', level: 1 },
+          ],
+        },
+        {
+          name: '	ドーベルメイルα',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '角竜の延髄', quantity: 1 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [
+            { name: '攻撃', level: 2 },
+            { name: 'キノコ大好き', level: 1 },
+          ],
+        },
+        {
+          name: 'ドーベルアームα',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '爆鎚竜の延髄', quantity: 1 },
+            { name: '荒々しい蛮骨', quantity: 3 },
+          ],
+          skill: [
+            { name: 'スタミナ急速回復', level: 2 },
+            { name: 'キノコ大好き', level: 1 },
+          ],
+        },
+        {
+          name: '	ドーベルコイルα',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '火竜の延髄', quantity: 1 },
+            { name: '荒々しい蛮骨', quantity: 3 },
+          ],
+          skill: [
+            { name: '龍耐性', level: 2 },
+            { name: '攻撃', level: 1 },
+          ],
+        },
+        {
+          name: 'ドーベルグリーブα',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '骨髄竜の延髄', quantity: 1 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [
+            { name: '攻撃', level: 2 },
+            { name: 'スタミナ急速回復', level: 1 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'ドーベルβ',
+      armors: [
+        {
+          name: 'ドーベルヘルムβ',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '爆鱗竜の爆膜', quantity: 1 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [{ name: '属性解放/装填拡張', level: 1 }],
+        },
+        {
+          name: '	ドーベルメイルβ',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '角竜の延髄', quantity: 1 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [{ name: '攻撃', level: 2 }],
+        },
+        {
+          name: 'ドーベルアームβ',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '爆鎚竜の延髄', quantity: 1 },
+            { name: '荒々しい蛮骨', quantity: 3 },
+          ],
+          skill: [
+            { name: 'スタミナ急速回復', level: 1 },
+            { name: 'キノコ大好き', level: 1 },
+          ],
+        },
+        {
+          name: '	ドーベルコイルβ',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '火竜の延髄', quantity: 1 },
+            { name: '荒々しい蛮骨', quantity: 3 },
+          ],
+          skill: [{ name: '龍耐性', level: 2 }],
+        },
+        {
+          name: 'ドーベルグリーブβ',
+          materials: [
+            { name: '古龍骨', quantity: 3 },
+            { name: '上質な堅骨', quantity: 3 },
+            { name: '骨髄竜の延髄', quantity: 1 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [{ name: '攻撃', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'デスギアα',
+      armors: [
+        {
+          name: 'デスギアゲヒルα',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '荒々しい蛮骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 1 },
+            { name: '鋭利な爪', quantity: 3 },
+          ],
+          skill: [
+            { name: '死中に活', level: 1 },
+            { name: '見切り', level: 1 },
+          ],
+        },
+        {
+          name: '	デスギアムスケルα',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '上質な堅骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 1 },
+            { name: 'モンスターの濃汁', quantity: 2 },
+          ],
+          skill: [
+            { name: '不屈', level: 1 },
+            { name: '属性解放/装填拡張', level: 1 },
+          ],
+        },
+        {
+          name: 'デスギアファオストα',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '荒々しい蛮骨', quantity: 2 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '集中', level: 2 },
+            { name: '龍属性攻撃強化', level: 1 },
+          ],
+        },
+        {
+          name: '	デスギアナーベルα',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '荒々しい蛮骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 1 },
+            { name: 'モンスターの濃汁', quantity: 2 },
+          ],
+          skill: [
+            { name: '集中', level: 1 },
+            { name: '龍属性攻撃強化', level: 2 },
+          ],
+        },
+        {
+          name: 'デスギアフェルゼα',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '攻撃', level: 2 },
+            { name: '匠', level: 2 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'デスギアβ',
+      armors: [
+        {
+          name: 'デスギアゲヒルβ',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '荒々しい蛮骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 1 },
+            { name: '鋭利な爪', quantity: 3 },
+          ],
+          skill: [{ name: '死中に活', level: 1 }],
+        },
+        {
+          name: '	デスギアムスケルβ',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '上質な堅骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 1 },
+            { name: 'モンスターの濃汁', quantity: 2 },
+          ],
+          skill: [{ name: '不屈', level: 1 }],
+        },
+        {
+          name: 'デスギアファオストβ',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '荒々しい蛮骨', quantity: 2 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [{ name: '集中', level: 2 }],
+        },
+        {
+          name: '	デスギアナーベルβ',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: '荒々しい蛮骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 1 },
+            { name: 'モンスターの濃汁', quantity: 2 },
+          ],
+          skill: [{ name: '龍属性攻撃強化', level: 2 }],
+        },
+        {
+          name: 'デスギアフェルゼβ',
+          materials: [
+            { name: '禍々しい布', quantity: 2 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [{ name: '匠', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'スカルフェイスα',
+      armors: [
+        {
+          name: 'スカルフェイスα',
+          materials: [
+            { name: 'なぞの頭骨', quantity: 1 },
+            { name: '荒々しい蛮骨', quantity: 2 },
+            { name: 'いびつな狂骨', quantity: 3 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [{ name: '匠', level: 1 }],
+        },
+      ],
+    },
+    {
+      name: 'オーグα',
+      armors: [
+        {
+          name: 'オーグヘルムα',
+          materials: [
+            { name: '滅尽龍の大角', quantity: 2 },
+            { name: '滅尽龍の堅殻', quantity: 6 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の宝玉', quantity: 1 },
+          ],
+          skill: [
+            { name: '渾身', level: 2 },
+            { name: '攻撃', level: 1 },
+          ],
+        },
+        {
+          name: '	オーグメイルα',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の尖爪', quantity: 2 },
+            { name: '古龍骨', quantity: 3 },
+          ],
+          skill: [
+            { name: '攻撃', level: 2 },
+            { name: 'スタミナ急速回復', level: 1 },
+          ],
+        },
+        {
+          name: 'オーグアームα',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '滅尽龍の大角', quantity: 1 },
+            { name: '滅尽龍の尻尾', quantity: 2 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [
+            { name: '攻撃', level: 1 },
+            { name: '挑戦者', level: 2 },
+          ],
+        },
+        {
+          name: '	オーグコイルα',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の再生殻', quantity: 4 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '攻撃', level: 2 },
+            { name: 'スタミナ急速回復', level: 1 },
+          ],
+        },
+        {
+          name: 'オーググリーブα',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の再生殻', quantity: 2 },
+            { name: '古龍の血', quantity: 2 },
+          ],
+          skill: [
+            { name: '渾身', level: 1 },
+            { name: '挑戦者', level: 1 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'オーグβ',
+      armors: [
+        {
+          name: 'オーグヘルムβ',
+          materials: [
+            { name: '滅尽龍の大角', quantity: 2 },
+            { name: '滅尽龍の堅殻', quantity: 6 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の宝玉', quantity: 1 },
+          ],
+          skill: [{ name: '渾身', level: 2 }],
+        },
+        {
+          name: '	オーグメイルβ',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の尖爪', quantity: 2 },
+            { name: '古龍骨', quantity: 3 },
+          ],
+          skill: [{ name: 'スタミナ急速回復', level: 2 }],
+        },
+        {
+          name: 'オーグアームβ',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '滅尽龍の大角', quantity: 1 },
+            { name: '滅尽龍の尻尾', quantity: 2 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '挑戦者', level: 2 }],
+        },
+        {
+          name: '	オーグコイルβ',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の再生殻', quantity: 4 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [{ name: '攻撃', level: 2 }],
+        },
+        {
+          name: 'オーググリーブβ',
+          materials: [
+            { name: '滅尽龍の堅殻', quantity: 4 },
+            { name: '不滅の龍鱗', quantity: 4 },
+            { name: '滅尽龍の再生殻', quantity: 2 },
+            { name: '古龍の血', quantity: 2 },
+          ],
+          skill: [{ name: '渾身', level: 1 }],
+        },
+      ],
+    },
+    {
+      name: 'カイザーα',
+      armors: [
+        {
+          name: 'カイザークラウンα',
+          materials: [
+            { name: '炎王龍の堅殻', quantity: 5 },
+            { name: '炎王龍の尖角', quantity: 2 },
+            { name: '炎王龍の尻尾', quantity: 2 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '力の解放', level: 2 }],
+        },
+        {
+          name: '	カイザーメイルα',
+          materials: [
+            { name: '炎王龍の堅殻', quantity: 5 },
+            { name: '獄炎の翼', quantity: 4 },
+            { name: '獄炎の塵粉', quantity: 4 },
+            { name: '火竜の逆鱗', quantity: 1 },
+          ],
+          skill: [
+            { name: '特殊射撃強化', level: 2 },
+            { name: '力の解放', level: 1 },
+          ],
+        },
+        {
+          name: 'カイザーアームα',
+          materials: [
+            { name: '獄炎の龍鱗', quantity: 4 },
+            { name: '炎王龍の堅殻', quantity: 4 },
+            { name: '炎龍の尖爪', quantity: 4 },
+            { name: '古龍骨', quantity: 4 },
+          ],
+          skill: [{ name: '弱点特効', level: 2 }],
+        },
+        {
+          name: '	カイザーコイルα',
+          materials: [
+            { name: '獄炎の龍鱗', quantity: 4 },
+            { name: '炎王龍の堅殻', quantity: 4 },
+            { name: '炎王龍のたてがみ', quantity: 1 },
+            { name: '古龍の血', quantity: 3 },
+          ],
+          skill: [
+            { name: '弱点特効', level: 1 },
+            { name: '爆破属性強化', level: 2 },
+          ],
+        },
+        {
+          name: 'カイザーグリーヴα',
+          materials: [
+            { name: '炎王龍の尖角', quantity: 3 },
+            { name: '獄炎の龍鱗', quantity: 6 },
+            { name: '炎王龍のたてがみ', quantity: 2 },
+            { name: '炎龍の宝玉', quantity: 1 },
+          ],
+          skill: [
+            { name: '力の解放', level: 2 },
+            { name: '爆破属性強化', level: 1 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'カイザーβ',
+      armors: [
+        {
+          name: 'カイザークラウンβ',
+          materials: [
+            { name: '炎王龍の堅殻', quantity: 5 },
+            { name: '炎王龍の尖角', quantity: 2 },
+            { name: '炎王龍の尻尾', quantity: 2 },
+            { name: '獄炎石', quantity: 1 },
+          ],
+          skill: [{ name: '力の解放', level: 1 }],
+        },
+        {
+          name: '	カイザーメイルβ',
+          materials: [
+            { name: '炎王龍の堅殻', quantity: 5 },
+            { name: '獄炎の翼', quantity: 4 },
+            { name: '獄炎の塵粉', quantity: 4 },
+            { name: '火竜の逆鱗', quantity: 1 },
+          ],
+          skill: [{ name: '特殊射撃強化', level: 2 }],
+        },
+        {
+          name: 'カイザーアームβ',
+          materials: [
+            { name: '獄炎の龍鱗', quantity: 4 },
+            { name: '炎王龍の堅殻', quantity: 4 },
+            { name: '炎龍の尖爪', quantity: 4 },
+            { name: '古龍骨', quantity: 4 },
+          ],
+          skill: [{ name: '弱点特効', level: 1 }],
+        },
+        {
+          name: '	カイザーコイルβ',
+          materials: [
+            { name: '獄炎の龍鱗', quantity: 4 },
+            { name: '炎王龍の堅殻', quantity: 4 },
+            { name: '炎王龍のたてがみ', quantity: 1 },
+            { name: '古龍の血', quantity: 3 },
+          ],
+          skill: [{ name: '爆破属性強化', level: 2 }],
+        },
+        {
+          name: 'カイザーグリーヴβ',
+          materials: [
+            { name: '炎王龍の尖角', quantity: 3 },
+            { name: '獄炎の龍鱗', quantity: 6 },
+            { name: '炎王龍のたてがみ', quantity: 2 },
+            { name: '炎龍の宝玉', quantity: 1 },
+          ],
+          skill: [{ name: '力の解放', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'クシャナα',
+      armors: [
+        {
+          name: 'クシャナアンクα',
+          materials: [
+            { name: '鋼の上龍鱗', quantity: 4 },
+            { name: '鋼龍の堅殻', quantity: 4 },
+            { name: '鋼龍の翼', quantity: 2 },
+            { name: '古龍骨', quantity: 4 },
+          ],
+          skill: [
+            { name: '氷属性攻撃強化', level: 2 },
+            { name: '匠', level: 1 },
+          ],
+        },
+        {
+          name: '	クシャナディールα',
+          materials: [
+            { name: '鋼龍の堅殻', quantity: 5 },
+            { name: '鋼龍の尖角', quantity: 3 },
+            { name: '鋼龍の尖爪', quantity: 2 },
+            { name: '鋼龍の宝玉', quantity: 1 },
+          ],
+          skill: [
+            { name: '匠', level: 2 },
+            { name: '集中', level: 1 },
+          ],
+        },
+        {
+          name: 'クシャナハトゥーα',
+          materials: [
+            { name: '鋼龍の堅殻', quantity: 5 },
+            { name: '鋼龍の尖角', quantity: 2 },
+            { name: '鋼龍の尻尾', quantity: 2 },
+            { name: '風漂龍の逆鱗', quantity: 1 },
+          ],
+          skill: [
+            { name: '匠', level: 1 },
+            { name: '回避性能', level: 2 },
+          ],
+        },
+        {
+          name: '	クシャナアンダα',
+          materials: [
+            { name: '鋼の上龍鱗', quantity: 4 },
+            { name: '鋼龍の堅殻', quantity: 4 },
+            { name: '鋼龍の尖角', quantity: 2 },
+            { name: 'カブレライト鉱石', quantity: 5 },
+          ],
+          skill: [
+            { name: '氷属性攻撃強化', level: 2 },
+            { name: '回避距離UP', level: 1 },
+          ],
+        },
+        {
+          name: 'クシャナペイルα',
+          materials: [
+            { name: '鋼龍の堅殻', quantity: 5 },
+            { name: '鋼の上龍鱗', quantity: 4 },
+            { name: '鋼龍の翼', quantity: 3 },
+            { name: '古龍の皿', quantity: 3 },
+          ],
+          skill: [
+            { name: '回避距離UP', level: 2 },
+            { name: '匠', level: 1 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'クシャナβ',
+      armors: [
+        {
+          name: 'クシャナアンクβ',
+          materials: [
+            { name: '鋼の上龍鱗', quantity: 4 },
+            { name: '鋼龍の堅殻', quantity: 4 },
+            { name: '鋼龍の翼', quantity: 2 },
+            { name: '古龍骨', quantity: 4 },
+          ],
+          skill: [{ name: '氷属性攻撃強化', level: 2 }],
+        },
+        {
+          name: '	クシャナディールβ',
+          materials: [
+            { name: '鋼龍の堅殻', quantity: 5 },
+            { name: '鋼龍の尖角', quantity: 3 },
+            { name: '鋼龍の尖爪', quantity: 2 },
+            { name: '鋼龍の宝玉', quantity: 1 },
+          ],
+          skill: [{ name: '匠', level: 2 }],
+        },
+        {
+          name: 'クシャナハトゥーβ',
+          materials: [
+            { name: '鋼龍の堅殻', quantity: 5 },
+            { name: '鋼龍の尖角', quantity: 2 },
+            { name: '鋼龍の尻尾', quantity: 2 },
+            { name: '風漂龍の逆鱗', quantity: 1 },
+          ],
+          skill: [{ name: '回避性能', level: 2 }],
+        },
+        {
+          name: '	クシャナアンダβ',
+          materials: [
+            { name: '鋼の上龍鱗', quantity: 4 },
+            { name: '鋼龍の堅殻', quantity: 4 },
+            { name: '鋼龍の尖角', quantity: 2 },
+            { name: 'カブレライト鉱石', quantity: 5 },
+          ],
+          skill: [{ name: '氷属性攻撃強化', level: 2 }],
+        },
+        {
+          name: 'クシャナペイルβ',
+          materials: [
+            { name: '鋼龍の堅殻', quantity: 5 },
+            { name: '鋼の上龍鱗', quantity: 4 },
+            { name: '鋼龍の翼', quantity: 3 },
+            { name: '古龍の皿', quantity: 3 },
+          ],
+          skill: [{ name: '回避距離UP', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'ウルズα',
+      armors: [
+        {
+          name: 'ウルズヘルムα',
+          materials: [
+            { name: '死屍の龍鱗', quantity: 5 },
+            { name: '屍套龍の堅殻', quantity: 4 },
+            { name: '屍套龍の尖爪', quantity: 4 },
+            { name: '古龍骨', quantity: 4 },
+          ],
+          skill: [
+            { name: 'フルチャージ', level: 1 },
+            { name: '龍属性攻撃強化', level: 2 },
+          ],
+        },
+        {
+          name: '	ウルズメイルα',
+          materials: [
+            { name: '屍套龍の堅殻', quantity: 5 },
+            { name: '屍套龍の鋭牙', quantity: 3 },
+            { name: '屍套龍の尻尾', quantity: 2 },
+            { name: '惨爪竜の逆鱗', quantity: 1 },
+          ],
+          skill: [
+            { name: '龍属性攻撃強化', level: 1 },
+            { name: '回復速度', level: 2 },
+          ],
+        },
+        {
+          name: 'ウルズアームα',
+          materials: [
+            { name: '屍套龍の鋭牙', quantity: 3 },
+            { name: '死屍の龍鱗', quantity: 6 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: '惨爪竜の宝玉', quantity: 1 },
+          ],
+          skill: [
+            { name: 'フルチャージ', level: 1 },
+            { name: '回復速度', level: 1 },
+          ],
+        },
+        {
+          name: '	ウルズコイルα',
+          materials: [
+            { name: '屍套龍の堅殻', quantity: 5 },
+            { name: '屍套龍の翼', quantity: 4 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: '古龍の血', quantity: 3 },
+          ],
+          skill: [
+            { name: 'フルチャージ', level: 1 },
+            { name: '瘴気耐性', level: 1 },
+          ],
+        },
+        {
+          name: 'ウルズグリーブα',
+          materials: [
+            { name: '死屍の龍鱗', quantity: 5 },
+            { name: '屍套龍の堅殻', quantity: 4 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: '龍脈の結晶', quantity: 6 },
+          ],
+          skill: [
+            { name: '龍属性攻撃強化', level: 1 },
+            { name: '瘴気耐性', level: 2 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'ウルズβ',
+      armors: [
+        {
+          name: 'ウルズヘルムβ',
+          materials: [
+            { name: '死屍の龍鱗', quantity: 5 },
+            { name: '屍套龍の堅殻', quantity: 4 },
+            { name: '屍套龍の尖爪', quantity: 4 },
+            { name: '古龍骨', quantity: 4 },
+          ],
+          skill: [{ name: 'フルチャージ', level: 1 }],
+        },
+        {
+          name: '	ウルズメイルβ',
+          materials: [
+            { name: '屍套龍の堅殻', quantity: 5 },
+            { name: '屍套龍の鋭牙', quantity: 3 },
+            { name: '屍套龍の尻尾', quantity: 2 },
+            { name: '惨爪竜の逆鱗', quantity: 1 },
+          ],
+          skill: [{ name: '回復速度', level: 2 }],
+        },
+        {
+          name: 'ウルズアームβ',
+          materials: [
+            { name: '屍套龍の鋭牙', quantity: 3 },
+            { name: '死屍の龍鱗', quantity: 6 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: '惨爪竜の宝玉', quantity: 1 },
+          ],
+          skill: [{ name: 'フルチャージ', level: 1 }],
+        },
+        {
+          name: '	ウルズコイルβ',
+          materials: [
+            { name: '屍套龍の堅殻', quantity: 5 },
+            { name: '屍套龍の翼', quantity: 4 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: '古龍の血', quantity: 3 },
+          ],
+          skill: [{ name: 'フルチャージ', level: 1 }],
+        },
+        {
+          name: 'ウルズグリーブβ',
+          materials: [
+            { name: '死屍の龍鱗', quantity: 5 },
+            { name: '屍套龍の堅殻', quantity: 4 },
+            { name: '屍套龍の被膜', quantity: 2 },
+            { name: '龍脈の結晶', quantity: 6 },
+          ],
+          skill: [{ name: '瘴気耐性', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'キリンα',
+      armors: [
+        {
+          name: 'キリンホーンα',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣の蒼角', quantity: 1 },
+            { name: 'シャムオスの上鱗', quantity: 2 },
+            { name: '電撃袋', quantity: 4 },
+          ],
+          skill: [
+            { name: 'ランナー', level: 2 },
+            { name: '精霊の加護', level: 1 },
+          ],
+        },
+        {
+          name: '	キリンベストα',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣の蒼角', quantity: 1 },
+            { name: '幻獣の雷尾', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 4 },
+          ],
+          skill: [
+            { name: '精霊の加護', level: 2 },
+            { name: '雷属性攻撃強化', level: 1 },
+          ],
+        },
+        {
+          name: 'キリンアームロングα',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣のたてがみ', quantity: 4 },
+            { name: 'ゴム質の堅殻', quantity: 3 },
+            { name: '龍脈の結晶', quantity: 6 },
+          ],
+          skill: [
+            { name: 'ランナー', level: 1 },
+            { name: '雷属性攻撃強化', level: 2 },
+          ],
+        },
+        {
+          name: '	キリンフープα',
+          materials: [
+            { name: '幻獣の上皮', quantity: 4 },
+            { name: '幻獣のたてがみ', quantity: 4 },
+            { name: '幻獣の蒼角', quantity: 3 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
+          ],
+          skill: [
+            { name: '属性やられ耐性', level: 1 },
+            { name: '雷属性攻撃強化', level: 1 },
+          ],
+        },
+        {
+          name: 'キリンレガースα',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣の雷尾', quantity: 3 },
+            { name: 'ゴム質の堅殻', quantity: 3 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [
+            { name: '属性解放/装填拡張', level: 2 },
+            { name: '雷耐性', level: 2 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'キリンβ',
+      armors: [
+        {
+          name: 'キリンホーンβ',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣の蒼角', quantity: 1 },
+            { name: 'シャムオスの上鱗', quantity: 2 },
+            { name: '電撃袋', quantity: 4 },
+          ],
+          skill: [{ name: 'ランナー', level: 2 }],
+        },
+        {
+          name: '	キリンベストβ',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣の蒼角', quantity: 1 },
+            { name: '幻獣の雷尾', quantity: 2 },
+            { name: 'ユニオン鉱石', quantity: 4 },
+          ],
+          skill: [{ name: '精霊の加護', level: 2 }],
+        },
+        {
+          name: 'キリンアームロングβ',
+          materials: [
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣のたてがみ', quantity: 4 },
+            { name: 'ゴム質の堅殻', quantity: 3 },
+            { name: '龍脈の結晶', quantity: 6 },
+          ],
+          skill: [{ name: '雷属性攻撃強化', level: 2 }],
+        },
+        {
+          name: '	キリンフープβ',
+          materials: [
+            { name: '幻獣の上皮', quantity: 4 },
+            { name: '幻獣のたてがみ', quantity: 4 },
+            { name: '幻獣の蒼角', quantity: 3 },
+            { name: 'ノヴァクリスタル', quantity: 1 },
           ],
           skill: [{ name: '属性やられ耐性', level: 1 }],
         },
         {
-          name: '	キリンフープ',
+          name: 'キリンレガースβ',
           materials: [
-            { name: '幻獣の皮', quantity: 2 },
-            { name: '幻獣の雷角', quantity: 1 },
-            { name: '幻獣の尾', quantity: 1 },
-            { name: '電気袋', quantity: 1 },
+            { name: '幻獣の上皮', quantity: 3 },
+            { name: '幻獣の雷尾', quantity: 3 },
+            { name: 'ゴム質の堅殻', quantity: 3 },
+            { name: 'いにしえの龍骨', quantity: 1 },
           ],
-          skill: [{ name: '雷属性攻撃強化', level: 1 }],
+          skill: [{ name: '属性解放/装填拡張', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'ゼノラーα',
+      armors: [
+        {
+          name: 'ゼノラージヘッドα',
+          materials: [
+            { name: '冥灯龍の幽鱗', quantity: 5 },
+            { name: '冥灯龍の白殻', quantity: 4 },
+            { name: '冥灯龍の幽角', quantity: 2 },
+            { name: '火竜の逆鱗', quantity: 1 },
+          ],
+          skill: [
+            { name: 'ひるみ軽減', level: 1 },
+            { name: '特殊射撃強化', level: 1 },
+          ],
         },
         {
-          name: 'キリンレガース',
+          name: '	ゼノラージハイドα',
           materials: [
-            { name: '幻獣の皮', quantity: 2 },
-            { name: '幻獣の雷角', quantity: 2 },
-            { name: 'ゴム質の甲殻', quantity: 2 },
+            { name: '冥灯龍の幽角', quantity: 3 },
+            { name: '冥灯龍の幽鱗', quantity: 6 },
+            { name: '冥灯龍の幽翼', quantity: 3 },
+            { name: '冥灯龍の幽玉', quantity: 1 },
           ],
-          skill: [{ name: '雷耐性', level: 1 }],
+          skill: [
+            { name: '強化持続', level: 1 },
+            { name: '属性やられ耐性', level: 1 },
+          ],
+        },
+        {
+          name: 'ゼノラージクロウα',
+          materials: [
+            { name: '冥灯龍の白殻', quantity: 4 },
+            { name: '冥灯龍の幽爪', quantity: 3 },
+            { name: '冥灯龍の幽幕', quantity: 2 },
+            { name: '竜玉', quantity: 1 },
+          ],
+          skill: [
+            { name: 'ひるみ軽減', level: 1 },
+            { name: '超会心', level: 1 },
+          ],
+        },
+        {
+          name: '	ゼノラージスパインα',
+          materials: [
+            { name: '冥灯龍の白殻', quantity: 4 },
+            { name: '冥灯龍の幽翼', quantity: 2 },
+            { name: '冥灯龍の尻尾', quantity: 2 },
+            { name: '惨爪竜の逆鱗', quantity: 1 },
+          ],
+          skill: [
+            { name: '特殊射撃強化', level: 1 },
+            { name: '属性やられ耐性', level: 2 },
+          ],
+        },
+        {
+          name: 'ゼノラージフットα',
+          materials: [
+            { name: 'ひるみ軽減', quantity: 4 },
+            { name: '冥灯龍の白殻', quantity: 2 },
+            { name: '冥灯龍の幽幕', quantity: 2 },
+            { name: '風漂竜の逆鱗', quantity: 1 },
+          ],
+          skill: [
+            { name: 'ひるみ軽減', level: 1 },
+            { name: '強化持続', level: 2 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'ゼノラーβ',
+      armors: [
+        {
+          name: 'ゼノラージヘッドβ',
+          materials: [
+            { name: '冥灯龍の幽鱗', quantity: 5 },
+            { name: '冥灯龍の白殻', quantity: 4 },
+            { name: '冥灯龍の幽角', quantity: 2 },
+            { name: '火竜の逆鱗', quantity: 1 },
+          ],
+          skill: [{ name: 'ひるみ軽減', level: 1 }],
+        },
+        {
+          name: '	ゼノラージハイドβ',
+          materials: [
+            { name: '冥灯龍の幽角', quantity: 3 },
+            { name: '冥灯龍の幽鱗', quantity: 6 },
+            { name: '冥灯龍の幽翼', quantity: 3 },
+            { name: '冥灯龍の幽玉', quantity: 1 },
+          ],
+          skill: [{ name: '強化持続', level: 2 }],
+        },
+        {
+          name: 'ゼノラージクロウβ',
+          materials: [
+            { name: '冥灯龍の白殻', quantity: 4 },
+            { name: '冥灯龍の幽爪', quantity: 3 },
+            { name: '冥灯龍の幽幕', quantity: 2 },
+            { name: '竜玉', quantity: 1 },
+          ],
+          skill: [{ name: 'ひるみ軽減', level: 1 }],
+        },
+        {
+          name: '	ゼノラージスパインβ',
+          materials: [
+            { name: '冥灯龍の白殻', quantity: 4 },
+            { name: '冥灯龍の幽翼', quantity: 2 },
+            { name: '冥灯龍の尻尾', quantity: 2 },
+            { name: '惨爪竜の逆鱗', quantity: 1 },
+          ],
+          skill: [{ name: '属性やられ耐性', level: 2 }],
+        },
+        {
+          name: 'ゼノラージフットβ',
+          materials: [
+            { name: 'ひるみ軽減', quantity: 4 },
+            { name: '冥灯龍の白殻', quantity: 2 },
+            { name: '冥灯龍の幽幕', quantity: 2 },
+            { name: '風漂竜の逆鱗', quantity: 1 },
+          ],
+          skill: [{ name: 'ひるみ軽減', level: 1 }],
+        },
+      ],
+    },
+    {
+      name: '竜王の隻眼α',
+      armors: [
+        {
+          name: '竜王の隻眼α',
+          materials: [
+            { name: '龍脈の結晶', quantity: 2 },
+            { name: '勇気の証G', quantity: 1 },
+            { name: '不滅の龍鱗', quantity: 6 },
+          ],
+          skill: [{ name: '弱点特効', level: 2 }],
+        },
+      ],
+    },
+    {
+      name: 'バンギスα',
+      armors: [
+        {
+          name: 'バンギスヘルムα',
+          materials: [
+            { name: '狂暴竜の黒皮', quantity: 5 },
+            { name: '狂暴竜の頭殻', quantity: 2 },
+            { name: '狂暴竜の鉤爪', quantity: 2 },
+            { name: '狂暴竜の宝玉', quantity: 1 },
+          ],
+          skill: [
+            { name: '破壊王', level: 1 },
+            { name: '匠', level: 1 },
+          ],
+        },
+        {
+          name: '	バンギスメイルα',
+          materials: [
+            { name: '狂暴竜の黒鱗', quantity: 3 },
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: '堅竜骨', quantity: 4 },
+          ],
+          skill: [
+            { name: '匠', level: 1 },
+            { name: '早食い', level: 1 },
+          ],
+        },
+        {
+          name: 'バンギスアームα',
+          materials: [
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の大牙', quantity: 2 },
+            { name: '狂暴竜の尻尾', quantity: 2 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [
+            { name: '破壊王', level: 1 },
+            { name: '力の解放', level: 2 },
+          ],
+        },
+        {
+          name: '	バンギスコイルα',
+          materials: [
+            { name: '狂暴竜の黒鱗', quantity: 3 },
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: 'ギルオスの上鱗', quantity: 3 },
+          ],
+          skill: [
+            { name: '匠', level: 1 },
+            { name: '力の解放', level: 1 },
+          ],
+        },
+        {
+          name: 'バンギスグリーブα',
+          materials: [
+            { name: '狂暴竜の黒鱗', quantity: 3 },
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の鉤爪', quantity: 2 },
+            { name: 'ギルオスの上皮', quantity: 4 },
+          ],
+          skill: [
+            { name: '破壊王', level: 1 },
+            { name: '早食い', level: 2 },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'バンギスβ',
+      armors: [
+        {
+          name: 'バンギスヘルムβ',
+          materials: [
+            { name: '狂暴竜の黒皮', quantity: 5 },
+            { name: '狂暴竜の頭殻', quantity: 2 },
+            { name: '狂暴竜の鉤爪', quantity: 2 },
+            { name: '狂暴竜の宝玉', quantity: 1 },
+          ],
+          skill: [{ name: '破壊王', level: 1 }],
+        },
+        {
+          name: '	バンギスメイルβ',
+          materials: [
+            { name: '狂暴竜の黒鱗', quantity: 3 },
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: '堅竜骨', quantity: 4 },
+          ],
+          skill: [{ name: '早食い', level: 1 }],
+        },
+        {
+          name: 'バンギスアームβ',
+          materials: [
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の大牙', quantity: 2 },
+            { name: '狂暴竜の尻尾', quantity: 2 },
+            { name: 'いにしえの龍骨', quantity: 1 },
+          ],
+          skill: [{ name: '力の解放', level: 2 }],
+        },
+        {
+          name: '	バンギスコイルβ',
+          materials: [
+            { name: '狂暴竜の黒鱗', quantity: 3 },
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: 'ギルオスの上鱗', quantity: 3 },
+          ],
+          skill: [{ name: '力の解放', level: 1 }],
+        },
+        {
+          name: 'バンギスグリーブβ',
+          materials: [
+            { name: '狂暴竜の黒鱗', quantity: 3 },
+            { name: '狂暴竜の黒皮', quantity: 4 },
+            { name: '狂暴竜の鉤爪', quantity: 2 },
+            { name: 'ギルオスの上皮', quantity: 4 },
+          ],
+          skill: [{ name: '早食い', level: 2 }],
         },
       ],
     },
