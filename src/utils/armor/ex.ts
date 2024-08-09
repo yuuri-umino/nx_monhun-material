@@ -393,9 +393,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダヘルムα',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 3 },
-            { name: '地啼龍の慈眼殻', quantity: 1 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 3 },
+            { name: '地啼竜の慈眼殻', quantity: 1 },
             { name: '雌火竜の天鱗', quantity: 1 },
           ],
           skill: [
@@ -406,9 +406,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダメイルα',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 3 },
-            { name: '地啼龍の慈爪', quantity: 3 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 3 },
+            { name: '地啼竜の慈爪', quantity: 3 },
             { name: '兇爪竜の天鱗', quantity: 1 },
           ],
           skill: [
@@ -419,10 +419,10 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダアームα',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈爪', quantity: 2 },
-            { name: '地啼龍の慈眼殻', quantity: 2 },
-            { name: '地啼龍の顕玉', quantity: 1 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈爪', quantity: 2 },
+            { name: '地啼竜の慈眼殻', quantity: 2 },
+            { name: '地啼竜の顕玉', quantity: 1 },
           ],
           skill: [
             { name: '超会心', level: 2 },
@@ -432,9 +432,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダコイルα',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 2 },
-            { name: '地啼龍の散華石', quantity: 3 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 2 },
+            { name: '地啼竜の散華石', quantity: 3 },
             { name: '大竜玉', quantity: 1 },
           ],
           skill: [
@@ -445,9 +445,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダグリーヴα',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 2 },
-            { name: '地啼龍の散華石', quantity: 3 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 2 },
+            { name: '地啼竜の散華石', quantity: 3 },
             { name: '幻鳥竜玉', quantity: 1 },
           ],
           skill: [
@@ -463,9 +463,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダヘルムβ',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 3 },
-            { name: '地啼龍の慈眼殻', quantity: 1 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 3 },
+            { name: '地啼竜の慈眼殻', quantity: 1 },
             { name: '雌火竜の天鱗', quantity: 1 },
           ],
           skill: [{ name: '体力回復量UP', level: 2 }],
@@ -473,9 +473,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダメイルβ',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 3 },
-            { name: '地啼龍の慈爪', quantity: 3 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 3 },
+            { name: '地啼竜の慈爪', quantity: 3 },
             { name: '兇爪竜の天鱗', quantity: 1 },
           ],
           skill: [{ name: '災禍転福', level: 2 }],
@@ -483,19 +483,19 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダアームβ',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈爪', quantity: 2 },
-            { name: '地啼龍の慈眼殻', quantity: 2 },
-            { name: '地啼龍の顕玉', quantity: 1 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈爪', quantity: 2 },
+            { name: '地啼竜の慈眼殻', quantity: 2 },
+            { name: '地啼竜の顕玉', quantity: 1 },
           ],
           skill: [{ name: '超会心', level: 2 }],
         },
         {
           name: 'EXアンガルダコイルβ',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 2 },
-            { name: '地啼龍の散華石', quantity: 3 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 2 },
+            { name: '地啼竜の散華石', quantity: 3 },
             { name: '大竜玉', quantity: 1 },
           ],
           skill: [{ name: '体力増強', level: 2 }],
@@ -503,9 +503,9 @@ const ex: ArmorType = {
         {
           name: 'EXアンガルダグリーヴβ',
           materials: [
-            { name: '地啼龍の厳岩殻', quantity: 4 },
-            { name: '地啼龍の慈鱗', quantity: 2 },
-            { name: '地啼龍の散華石', quantity: 3 },
+            { name: '地啼竜の巌岩殻', quantity: 4 },
+            { name: '地啼竜の慈鱗', quantity: 2 },
+            { name: '地啼竜の散華石', quantity: 3 },
             { name: '幻鳥竜玉', quantity: 1 },
           ],
           skill: [
@@ -3154,7 +3154,7 @@ const ex: ArmorType = {
           materials: [
             { name: '斬竜の重殻', quantity: 2 },
             { name: '斬竜の重牙', quantity: 1 },
-            { name: '赤熱した熔炉嚢', quantity: 2 },
+            { name: '赤熱した溶炉嚢', quantity: 2 },
             { name: '獄炎石', quantity: 2 },
           ],
           skill: [
@@ -3181,7 +3181,7 @@ const ex: ArmorType = {
             { name: '斬竜の重殻', quantity: 2 },
             { name: '斬竜の厚鱗', quantity: 2 },
             { name: '斬竜の重牙', quantity: 1 },
-            { name: '赤熱した熔炉嚢', quantity: 2 },
+            { name: '赤熱した溶炉嚢', quantity: 2 },
           ],
           skill: [
             { name: '渾身', level: 2 },
@@ -3194,7 +3194,7 @@ const ex: ArmorType = {
             { name: '斬竜の重殻', quantity: 2 },
             { name: '斬竜の厚鱗', quantity: 1 },
             { name: '斬竜の獄炎状殻', quantity: 2 },
-            { name: '赤熱した熔炉嚢', quantity: 2 },
+            { name: '赤熱した溶炉嚢', quantity: 2 },
           ],
           skill: [
             { name: '匠', level: 2 },
@@ -3224,7 +3224,7 @@ const ex: ArmorType = {
           materials: [
             { name: '斬竜の重殻', quantity: 2 },
             { name: '斬竜の重牙', quantity: 1 },
-            { name: '赤熱した熔炉嚢', quantity: 2 },
+            { name: '赤熱した溶炉嚢', quantity: 2 },
             { name: '獄炎石', quantity: 2 },
           ],
           skill: [
@@ -3251,7 +3251,7 @@ const ex: ArmorType = {
             { name: '斬竜の重殻', quantity: 2 },
             { name: '斬竜の厚鱗', quantity: 2 },
             { name: '斬竜の重牙', quantity: 1 },
-            { name: '赤熱した熔炉嚢', quantity: 2 },
+            { name: '赤熱した溶炉嚢', quantity: 2 },
           ],
           skill: [{ name: '渾身', level: 2 }],
         },
@@ -3261,7 +3261,7 @@ const ex: ArmorType = {
             { name: '斬竜の重殻', quantity: 2 },
             { name: '斬竜の厚鱗', quantity: 1 },
             { name: '斬竜の獄炎状殻', quantity: 2 },
-            { name: '赤熱した熔炉嚢', quantity: 2 },
+            { name: '赤熱した溶炉嚢', quantity: 2 },
           ],
           skill: [{ name: '匠', level: 2 }],
         },
@@ -7905,7 +7905,7 @@ const ex: ArmorType = {
             { name: '不壊の黒曜甲', quantity: 2 },
             { name: '砕竜の撃滅拳', quantity: 2 },
             { name: '臨界極まる粘菌', quantity: 3 },
-            { name: '地啼龍の顕玉', quantity: 1 },
+            { name: '地啼竜の顕玉', quantity: 1 },
           ],
           skill: [
             { name: '挑戦者', level: 2 },
@@ -7969,7 +7969,7 @@ const ex: ArmorType = {
             { name: '不壊の黒曜甲', quantity: 2 },
             { name: '砕竜の撃滅拳', quantity: 2 },
             { name: '臨界極まる粘菌', quantity: 3 },
-            { name: '地啼龍の顕玉', quantity: 1 },
+            { name: '地啼竜の顕玉', quantity: 1 },
           ],
           skill: [{ name: '挑戦者', level: 2 }],
         },

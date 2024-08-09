@@ -503,7 +503,7 @@ export const materialsDrops = [
   },
   {
     materialName: '凝縮された爆腺液',
-    drop: ['紅蓮滾るバゼルギウスの頭の部位破壊報酬で入手/M'],
+    drop: ['紅蓮滾るバゼルギウスの頭の部位破壊で入手/M'],
   },
   {
     materialName: '強靭な爪',
@@ -791,7 +791,7 @@ export const materialsDrops = [
   },
   {
     materialName: '轟竜の剛爪',
-    drop: ['ティガレックスの前脚の部位破壊報酬で入手可能/M'],
+    drop: ['ティガレックスの前脚の部位破壊で入手可能/M'],
   },
   {
     materialName: '鋼龍の剛爪',
@@ -839,7 +839,7 @@ export const materialsDrops = [
   },
   {
     materialName: '極悪な牙',
-    drop: ['怒り喰らうイビルジョーの頭の部位破壊報酬/M'],
+    drop: ['怒り喰らうイビルジョーの頭の部位破壊/M'],
   },
   {
     materialName: '獄炎の龍鱗',
@@ -1027,7 +1027,7 @@ export const materialsDrops = [
   },
   {
     materialName: '砕竜の剛鉄拳',
-    drop: ['猛り爆ぜるブラキディオスを狩猟、腕の部位破壊報酬で入手/M'],
+    drop: ['猛り爆ぜるブラキディオスを狩猟、腕の部位破壊で入手/M'],
   },
   {
     materialName: '砕竜の重殻',
@@ -1039,7 +1039,7 @@ export const materialsDrops = [
   },
   {
     materialName: '砕竜の重頭殻',
-    drop: ['猛り爆ぜるブラキディオスを狩猟、頭の部位破壊報酬で入手/M'],
+    drop: ['猛り爆ぜるブラキディオスを狩猟、頭の部位破壊で入手/M'],
   },
   {
     materialName: '砕竜の靭尾',
@@ -1075,7 +1075,7 @@ export const materialsDrops = [
   },
   {
     materialName: '惨爪竜の剛爪',
-    drop: ['オドガロンを討伐の前脚の部位破壊報酬で入手/M'],
+    drop: ['オドガロンを討伐の前脚の部位破壊で入手/M'],
   },
   {
     materialName: '惨爪竜の厚鱗',
@@ -1087,11 +1087,11 @@ export const materialsDrops = [
   },
   {
     materialName: '惨爪竜の重牙',
-    drop: ['オドガロンを討伐、頭の部位破壊報酬で入手/M'],
+    drop: ['オドガロンを討伐、頭の部位破壊で入手/M'],
   },
   {
     materialName: '惨爪竜の上鱗',
-    drop: ['オドガロンを討伐、頭部・両前脚・両後脚の部位破壊報酬/T'],
+    drop: ['オドガロンを討伐、頭部・両前脚・両後脚の部位破壊/T'],
   },
   {
     materialName: '惨爪竜の靭尾',
@@ -1131,7 +1131,7 @@ export const materialsDrops = [
   },
   {
     materialName: '斬竜の天鱗',
-    drop: ['ディノバルドを討伐、頭の部位破壊報酬で入手/M'],
+    drop: ['ディノバルドを討伐、頭の部位破壊で入手/M'],
   },
   {
     materialName: '死屍の厚龍鱗',
@@ -1159,7 +1159,7 @@ export const materialsDrops = [
   },
   {
     materialName: '屍套龍の剛爪',
-    drop: ['死を纏うヴァルハザクを討伐、前足の部位破壊報酬で入手/M'],
+    drop: ['死を纏うヴァルハザクを討伐、前足の部位破壊で入手/M'],
   },
   {
     materialName: '屍套龍の重尾',
@@ -1167,7 +1167,7 @@ export const materialsDrops = [
   },
   {
     materialName: '屍套龍の尖爪',
-    drop: ['ヴァルハザクを討伐、前脚の部位破壊報酬/T'],
+    drop: ['ヴァルハザクを討伐、前脚の部位破壊/T'],
   },
   {
     materialName: '屍套龍の翼',
@@ -1175,11 +1175,11 @@ export const materialsDrops = [
   },
   {
     materialName: '屍套龍の被膜',
-    drop: ['ヴァルハザクを討伐、胴の部位破壊報酬で入手/T'],
+    drop: ['ヴァルハザクを討伐、胴の部位破壊で入手/T'],
   },
   {
     materialName: '屍套龍の宝玉',
-    drop: ['ヴァルハザクを討伐、頭と尻尾の部位破壊報酬で入手/T'],
+    drop: ['ヴァルハザクを討伐、頭と尻尾の部位破壊で入手/T'],
   },
   {
     materialName: 'ジャグラスの上皮',
@@ -1235,7 +1235,7 @@ export const materialsDrops = [
   },
   {
     materialName: '迅竜の重牙',
-    drop: ['ナルガクルガを狩猟、頭の部位破壊報酬で入手/M'],
+    drop: ['ナルガクルガを狩猟、頭の部位破壊で入手/M'],
   },
   {
     materialName: '迅竜の重尾棘',
@@ -1307,7 +1307,7 @@ export const materialsDrops = [
   },
   {
     materialName: '蒼火竜の翼',
-    drop: ['リオレウス亜種を討伐、翼の部位破壊報酬で高確率/T'],
+    drop: ['リオレウス亜種を討伐、翼の部位破壊で高確率/T'],
   },
   {
     materialName: '掻鳥の鱗',
@@ -1425,7 +1425,7 @@ export const materialsDrops = [
   },
   {
     materialName: '地啼竜の顕玉',
-    drop: ['アンイシュワルダの狩猟、頭部剥ぎ取り、頭の部位破壊報酬/M'],
+    drop: ['アンイシュワルダの狩猟、頭部剥ぎ取り、頭の部位破壊/M'],
   },
   {
     materialName: '地啼竜の散華石',
@@ -1665,7 +1665,7 @@ export const materialsDrops = [
   },
   {
     materialName: '爆鎚竜の堅殻',
-    drop: ['ウラガンキンの討伐、顎・背中の部位破壊報酬/T'],
+    drop: ['ウラガンキンの討伐、顎・背中の部位破壊/T'],
   },
   {
     materialName: '爆鎚竜の紅玉',
@@ -1761,7 +1761,7 @@ export const materialsDrops = [
   },
   {
     materialName: '蛮顎竜の尻尾',
-    drop: ['アンジャナフを討伐、尻尾の剥ぎ取り/下位・T・M'],
+    drop: ['アンジャナフを討伐、尻尾の剥ぎ取り/下位・TM'],
   },
   {
     materialName: '蛮顎竜の重牙',
@@ -1877,9 +1877,7 @@ export const materialsDrops = [
   },
   {
     materialName: '氷牙竜の重棘',
-    drop: [
-      'ベリオロスの狩猟、尻尾の剥ぎ取り・翼の部位破壊報酬から確率で入手/M',
-    ],
+    drop: ['ベリオロスの狩猟、尻尾の剥ぎ取り・翼の部位破壊から確率で入手/M'],
   },
   {
     materialName: '氷河を砕く剣爪',
@@ -1896,7 +1894,7 @@ export const materialsDrops = [
   {
     materialName: '氷霜をまとう皮',
     drop: [
-      '凍て刺すレイギエナの狩猟、尻尾の剥ぎ取り、頭・胴・翼の部位破壊報酬から確率で入手/M',
+      '凍て刺すレイギエナの狩猟、尻尾の剥ぎ取り、頭・胴・翼の部位破壊から確率で入手/M',
     ],
   },
   {
@@ -1933,7 +1931,7 @@ export const materialsDrops = [
   },
   {
     materialName: '飛雷竜の厚皮膜',
-    drop: ['トビカガチを討伐、背中の部位破壊報酬/M'],
+    drop: ['トビカガチを討伐、背中の部位破壊/M'],
   },
   {
     materialName: '飛雷竜の厚鱗',
@@ -2289,7 +2287,11 @@ export const materialsDrops = [
   },
   {
     materialName: '溶岩竜の上鱗',
-    drop: ['/T'],
+    drop: ['ヴォルガノスを討伐/T'],
+  },
+  {
+    materialName: '溶岩竜の堅殻',
+    drop: ['ヴォルガノスを討伐、頭の部位破壊/T'],
   },
   {
     materialName: '溶岩竜の特上ヒレ',
@@ -2365,7 +2367,7 @@ export const materialsDrops = [
   },
   {
     materialName: '雷狼竜の天玉',
-    drop: ['ジンオウガの本体・尻尾からの剥ぎ取り、頭の部位破壊報酬で入手/M'],
+    drop: ['ジンオウガの本体・尻尾からの剥ぎ取り、頭の部位破壊で入手/M'],
   },
   {
     materialName: '雷狼竜の雷電殻',
@@ -2405,11 +2407,11 @@ export const materialsDrops = [
   },
   {
     materialName: '竜骨塊',
-    drop: ['ラドバルキンを討伐、後脚・背中の部位破壊/下位・T・M'],
+    drop: ['ラドバルキンを討伐、後脚・背中の部位破壊/下位・TM'],
   },
   {
     materialName: '硫斬竜の剣山状殻',
-    drop: ['ディノバルド亜種の討伐、背中の部位破壊報酬/M'],
+    drop: ['ディノバルド亜種の討伐、背中の部位破壊/M'],
   },
   {
     materialName: '硫斬竜の厚鱗',
@@ -2478,6 +2480,586 @@ export const materialsDrops = [
   {
     materialName: '勇気の証',
     drop: ['ゾラ・マグダラオスのクエストから入手'],
+  },
+  {
+    materialName: '土砂竜の鋭牙',
+    drop: ['ゾラ・マグダラオスのクエストから入手'],
+  },
+  {
+    materialName: 'ジャグラスの鱗',
+    drop: ['ジャグラスの剥ぎ取り/L'],
+  },
+  {
+    materialName: 'ジャグラスの皮',
+    drop: ['ジャグラスの剥ぎ取り/L'],
+  },
+  {
+    materialName: 'ケストドンの頭殻',
+    drop: ['ケストドンの剥ぎ取り/L'],
+  },
+  {
+    materialName: '翼竜の皮',
+    drop: ['メルノスかラフィノスから剥ぎ取り/L'],
+  },
+  {
+    materialName: '強固な岩骨',
+    drop: ['森・荒れ地マップの骨塚から採取/LT'],
+  },
+  {
+    materialName: '肥沃なドロ',
+    drop: ['ボルボロスの落とし物から入手/LTM'],
+  },
+  {
+    materialName: 'オオツノアゲハ',
+    drop: ['交易船で購入、植生研究所で入手/LTM'],
+  },
+  {
+    materialName: 'シャムオスの皮',
+    drop: ['シャムオスから剥ぎ取り/L'],
+  },
+  {
+    materialName: '雌火竜の翼膜',
+    drop: ['リオレイア・リオレイア亜種を討伐、両翼の部位破壊/LT'],
+  },
+  {
+    materialName: '眩鳥の皮',
+    drop: ['ツィツィヤックを討伐/L'],
+  },
+  {
+    materialName: 'ギルオスの鱗',
+    drop: ['ギルオスから剥ぎ取る/L'],
+  },
+  {
+    materialName: 'ギルオスの皮',
+    drop: ['ギルオスから剥ぎ取る/L'],
+  },
+  {
+    materialName: '骨鎚竜の甲殻',
+    drop: ['ラドバルキンを討伐/L'],
+  },
+  {
+    materialName: '闘技王のコイン',
+    drop: ['いずれかの闘技大会をクリア'],
+  },
+  {
+    materialName: 'プケプケコイン',
+    drop: ['闘技大会(プケプケ)をクリア'],
+  },
+  {
+    materialName: 'クルルコイン',
+    drop: ['闘技大会(クルル)をクリア'],
+  },
+  {
+    materialName: 'レイアコイン',
+    drop: ['闘技大会(リオレイア)をクリア'],
+  },
+  {
+    materialName: '惨爪竜の硬筋',
+    drop: ['オドガロンを討伐/L'],
+  },
+  {
+    materialName: '上質な毛皮',
+    drop: ['ケルビの剥ぎ取り/T'],
+  },
+  {
+    materialName: 'ジャグラスの上鱗',
+    drop: ['ジャグラスから剥ぎ取り/T'],
+  },
+  {
+    materialName: 'モスの苔皮',
+    drop: ['モスから剥ぎ取り'],
+  },
+  {
+    materialName: '痺賊竜の上皮',
+    drop: ['ドスギルオスを討伐/T'],
+  },
+  {
+    materialName: 'シャムオスの上皮',
+    drop: ['シャムオスから剥ぎ取り/T'],
+  },
+  {
+    materialName: '翼竜の上皮',
+    drop: ['メルノスかラフィノスから剥ぎ取り/T'],
+  },
+  {
+    materialName: '眩鳥の上皮',
+    drop: ['ツィツィヤックを討伐/T'],
+  },
+  {
+    materialName: 'ギルオスの上皮',
+    drop: ['ギルオスから剥ぎ取り/T'],
+  },
+  {
+    materialName: '飛雷竜の皮獏',
+    drop: ['トビカガチから入手/LTM'],
+  },
+  {
+    materialName: 'バルノスの上皮',
+    drop: ['バルノスから剥ぎ取り/T'],
+  },
+  {
+    materialName: 'バルノスの尖爪',
+    drop: ['バルノスから剥ぎ取り/T'],
+  },
+  {
+    materialName: '頑丈な骨',
+    drop: ['陸珊瑚の台地、瘴気の谷の骨塚から採取/T'],
+  },
+  {
+    materialName: 'ガストドンの尖角',
+    drop: ['ガストドンから剥ぎ取り/T'],
+  },
+  {
+    materialName: '狩猟王のコイン',
+    drop: ['闘技大会04,05,06,07をクリア'],
+  },
+  {
+    materialName: 'ツィツィコイン',
+    drop: ['闘技大会04(ツィツィヤック)をクリア'],
+  },
+  {
+    materialName: 'ガマルコイン',
+    drop: ['闘技大会(ドドガマル)をクリア'],
+  },
+  {
+    materialName: 'レウスコイン',
+    drop: ['闘技大会(レウスコイン)をクリア'],
+  },
+  {
+    materialName: 'ボロスコイン',
+    drop: ['闘技大会(ボロスコイン)をクリア'],
+  },
+  {
+    materialName: 'オトモダチケット',
+    drop: ['重要バウンティをクリア'],
+  },
+  {
+    materialName: '惨爪竜の大硬筋',
+    drop: ['オドガロンを討伐/T'],
+  },
+  {
+    materialName: 'パルノスの尖爪',
+    drop: ['バルノスから剥ぎ取り/T'],
+  },
+  {
+    materialName: 'パルノスの上皮',
+    drop: ['バルノスから剥ぎ取り/T'],
+  },
+  {
+    materialName: '溶岩塊',
+    drop: ['ウラガンキンから入手/T'],
+  },
+  {
+    materialName: '爆鱗竜の堅殻',
+    drop: ['バゼルギウスを討伐、背中の部位破壊/T'],
+  },
+  {
+    materialName: '爆鱗竜の尻尾',
+    drop: ['バゼルギウスの討伐、尻尾を切断/T'],
+  },
+  {
+    materialName: '禍々しい布',
+    drop: ['オトモダチ探検隊で入手'],
+  },
+  {
+    materialName: 'なぞの頭骨',
+    drop: ['龍結晶の地の骨塚から入手'],
+  },
+  {
+    materialName: '炎龍の翼',
+    drop: ['テオ・テスカトルを討伐/T'],
+  },
+  {
+    materialName: '鋼の上龍鱗',
+    drop: ['クシャルダオラを討伐/T'],
+  },
+  {
+    materialName: '屍套龍の堅殻',
+    drop: ['ヴァルハザクを討伐/T'],
+  },
+  {
+    materialName: '冥灯龍の幽翼',
+    drop: ['ゼノ・ジーヴァの剥ぎ取り、翼を部位破壊/T'],
+  },
+  {
+    materialName: '冥灯龍の幽鱗',
+    drop: ['ゼノ・ジーヴァを討伐/T'],
+  },
+  {
+    materialName: '勇気の証G',
+    drop: ['★8以上の古龍クエストで入手'],
+  },
+  {
+    materialName: '恐暴竜の黒皮',
+    drop: ['イビルジョーのクエスト周回/T'],
+  },
+  {
+    materialName: '恐暴竜の尻尾',
+    drop: ['イビルジョーの討伐、尻尾を切断/T'],
+  },
+  {
+    materialName: '黒龍の重殻',
+    drop: ['ミラボレアスの剥ぎ取り、討伐/M'],
+  },
+  {
+    materialName: '黒龍の剛翼',
+    drop: ['ミラボレアスの討伐、翼を部位破壊/M'],
+  },
+  {
+    materialName: '煌黒龍の天殻',
+    drop: ['アルバトリオンから入手/M'],
+  },
+  {
+    materialName: '煌黒龍の妖尾',
+    drop: ['アルバトリオンから入手/M'],
+  },
+  {
+    materialName: '氷牙竜チケット',
+    drop: ['★6終の白騎士で入手/M'],
+  },
+  {
+    materialName: '銀雪を冠した毛皮',
+    drop: ['氷刃佩くベリオロスを狩猟/M'],
+  },
+  {
+    materialName: '地啼竜の厳岩殻',
+    drop: ['アンイシュワルダの討伐、剥ぎ取り/M'],
+  },
+  {
+    materialName: '雷顎竜の厚鱗',
+    drop: ['アンジャナフ亜種の討伐、脚の部位破壊/M'],
+  },
+  {
+    materialName: '雷顎竜の天鱗',
+    drop: ['アンジャナフ亜種の討伐、頭と背中の部位破壊/M'],
+  },
+  {
+    materialName: '冰龍の重殻',
+    drop: ['イヴェルカーナ討伐、剥ぎ取り/M'],
+  },
+  {
+    materialName: '冰龍の剛翼',
+    drop: ['イヴェルカーナ討伐、剥ぎ取り、翼を破壊/M'],
+  },
+  {
+    materialName: '黒狼鳥の重殻',
+    drop: ['イャンガルルガを狩猟/M'],
+  },
+  {
+    materialName: '朽ちた結晶',
+    drop: ['導きの地の森林地帯で入手'],
+  },
+  {
+    materialName: '草むした大骨',
+    drop: ['導きの地の森林地帯で入手'],
+  },
+  {
+    materialName: '黒狼鳥の靭尾',
+    drop: ['イャンガルルガを狩猟、尻尾を切断'],
+  },
+  {
+    materialName: '龍脈の強竜骨',
+    drop: ['導きの地にいるM★1・2のモンスターから入手'],
+  },
+  {
+    materialName: '爆鎚竜の重耐熱殻',
+    drop: ['ウラガンキンを討伐、背中の部位破壊/M'],
+  },
+  {
+    materialName: '爆鎚竜の重殻',
+    drop: ['ウラガンキンを討伐、尻尾の部位破壊/M'],
+  },
+  {
+    materialName: 'ギルオスの厚鱗',
+    drop: ['ギルオスの剥ぎ取り/M'],
+  },
+  {
+    materialName: '幻獣の靭雷尾',
+    drop: ['キリンを討伐/M'],
+  },
+  {
+    materialName: '鋼龍の剛翼',
+    drop: ['クシャルダオラを討伐、翼の部位破壊/M'],
+  },
+  {
+    materialName: '鋼龍の剛翼',
+    drop: ['クシャルダオラを討伐、尻尾の切断/M'],
+  },
+  {
+    materialName: '泥魚竜の重殻',
+    drop: ['ジュラトドスを狩猟/M'],
+  },
+  {
+    materialName: '深緑の大骨',
+    drop: ['導きの地の森林地帯で入手'],
+  },
+  {
+    materialName: '雷狼竜の靭尾',
+    drop: ['ジンオウガの尻尾を切断/M'],
+  },
+  {
+    materialName: '獄狼竜の滅龍毛',
+    drop: ['ジンオウガ亜種を狩猟/M'],
+  },
+  {
+    materialName: '獄狼竜の重殻',
+    drop: ['ジンオウガ亜種を狩猟/M'],
+  },
+  {
+    materialName: '獄狼竜の靭尾',
+    drop: ['ジンオウガ亜種を狩猟/M'],
+  },
+  {
+    materialName: '獄狼竜の靭尾',
+    drop: ['ジンオウガ亜種を狩猟、尻尾を切断/M'],
+  },
+  {
+    materialName: '蝕龍蟲',
+    drop: ['ジンオウガ亜種を狩猟、転倒時に捕獲ネットで背中から採取/M'],
+  },
+  {
+    materialName: '凍結された氷骨',
+    drop: ['導きの地の氷雪地帯で入手'],
+  },
+  {
+    materialName: '氷雪の結晶',
+    drop: ['導きの地の氷雪地帯で入手'],
+  },
+  {
+    materialName: 'ひび割れた結晶',
+    drop: ['導きの地の荒地地帯で入手'],
+  },
+  {
+    materialName: '風化した岩骨',
+    drop: ['導きの地の荒地地帯で入手'],
+  },
+  {
+    materialName: '色あせた結晶',
+    drop: ['導きの地の陸珊瑚地帯で入手'],
+  },
+  {
+    materialName: '覇王の証',
+    drop: ['マスターランクの古龍クエスト報酬'],
+  },
+  {
+    materialName: '鮮やかな紅骨',
+    drop: ['導きの地の陸珊瑚地帯で入手'],
+  },
+  {
+    materialName: 'ゆがんだ結晶',
+    drop: ['導きの地の瘴気地帯で入手'],
+  },
+  {
+    materialName: '異形の狂骨',
+    drop: ['導きの地の瘴気地帯で入手'],
+  },
+  {
+    materialName: '眩鳥の厚皮',
+    drop: ['ツィツィヤックの討伐/M'],
+  },
+  {
+    materialName: '角竜の重尾甲',
+    drop: ['ディアブロスの討伐、尻尾を切断/M'],
+  },
+  {
+    materialName: '大地を穿つ剛角',
+    drop: ['ディアブロス亜種の討伐、角を部位破壊/M'],
+  },
+  {
+    materialName: '斬竜の重殻',
+    drop: ['ディノバルドの討伐/M'],
+  },
+  {
+    materialName: '硫斬竜の重殻',
+    drop: ['ディノバルド亜種の討伐/M'],
+  },
+  {
+    materialName: '蛮顎竜の天鱗',
+    drop: ['アンジャナフの討伐、頭の部位破壊/M'],
+  },
+  {
+    materialName: '炎龍の剛翼',
+    drop: ['テオテスカトルの討伐、翼の部位破壊/M'],
+  },
+  {
+    materialName: '獄炎の厚龍鱗',
+    drop: ['テオテスカトルの討伐/M'],
+  },
+  {
+    materialName: '獄炎の龍脈に鍛えられし岩骨厚龍鱗',
+    drop: ['導きの地の荒地地帯で入手'],
+  },
+  {
+    materialName: '泰然たる結晶',
+    drop: ['導きの地の荒地地帯で入手'],
+  },
+  {
+    materialName: '炎妃龍の剛翼',
+    drop: ['ナナ・テスカトリの討伐、翼の部位破壊/M'],
+  },
+  {
+    materialName: '炎妃龍の重殻',
+    drop: ['ナナ・テスカトリの討伐/M'],
+  },
+  {
+    materialName: '極上の毛皮',
+    drop: ['ガウシカから入手/M'],
+  },
+  {
+    materialName: 'ガウシカの角',
+    drop: ['ガウシカから入手/M'],
+  },
+  {
+    materialName: '溟龍の剛翼',
+    drop: ['ネロミェールの討伐、翼の部位破壊/M'],
+  },
+  {
+    materialName: '溟龍の剛爪',
+    drop: ['ネロミェールの討伐、前脚の部位破壊/M'],
+  },
+  {
+    materialName: '毒妖鳥の重殻',
+    drop: ['プケプケを狩猟/M'],
+  },
+  {
+    materialName: '水妖鳥の重殻',
+    drop: ['プケプケ亜種を狩猟/M'],
+  },
+  {
+    materialName: '凍魚竜の重殻',
+    drop: ['ブラントドスを狩猟/M'],
+  },
+  {
+    materialName: '氷牙竜の厚毛皮',
+    drop: ['ベリオロスのクエスト報酬/M'],
+  },
+  {
+    materialName: '氷牙竜の靭尾',
+    drop: ['ベリオロスの狩猟、尻尾を切断/M'],
+  },
+  {
+    materialName: '豊沃なドロ',
+    drop: ['ボルボロスの落とし物/M'],
+  },
+  {
+    materialName: '土砂竜の靭尾',
+    drop: ['ボルボロスの狩猟、尻尾を切断/M'],
+  },
+  {
+    materialName: '爛輝龍の重金鱗',
+    drop: ['マムタロトの剥ぎ取りと報酬/M'],
+  },
+  {
+    materialName: '爛輝龍の重金殻',
+    drop: ['マムタロトの剥ぎ取りと報酬/M'],
+  },
+  {
+    materialName: '爛輝龍の重金巻角',
+    drop: ['マムタロトの報酬、大角を破壊/M'],
+  },
+  {
+    materialName: '金色の龍神玉',
+    drop: ['マムタロトの報酬、黄金や大角の破壊から入手/M'],
+  },
+  {
+    materialName: '爛輝龍の重金塊',
+    drop: ['マムタロトの落とし物を拾う/M'],
+  },
+  {
+    materialName: '爛輝龍の重金尾殻',
+    drop: ['マムタロトの報酬、尻尾の部位破壊/M'],
+  },
+  {
+    materialName: '赤龍の厚鱗',
+    drop: ['ムフェトジーヴァを討伐/M'],
+  },
+  {
+    materialName: '赤龍の剛翼',
+    drop: ['ムフェトジーヴァを討伐/M'],
+  },
+  {
+    materialName: 'ジオニウム結晶体',
+    drop: ['ムフェトジーヴァを討伐/M'],
+  },
+  {
+    materialName: '赤龍の重尾',
+    drop: ['ムフェトジーヴァを討伐/M'],
+  },
+  {
+    materialName: '雌火竜の厚翼膜',
+    drop: ['リオレイア亜種のクエスト報酬、翼を部位破壊/M'],
+  },
+  {
+    materialName: '導きの結晶【荒地】',
+    drop: ['導きの地の荒地地帯でまれに入手'],
+  },
+  {
+    materialName: '導きの龍骨【荒地】',
+    drop: ['導きの地の荒地地帯でまれに入手'],
+  },
+  {
+    materialName: '導きの龍骨【陸珊瑚】',
+    drop: ['導きの地の陸珊瑚地帯でまれに入手'],
+  },
+  {
+    materialName: '導きの結晶【陸珊瑚】',
+    drop: ['導きの地の陸珊瑚地帯でまれに入手'],
+  },
+  {
+    materialName: '火竜の重殻',
+    drop: ['リオレウスを狩猟/M'],
+  },
+  {
+    materialName: '翼竜の特上皮',
+    drop: ['メルノスかラフィノスから剥ぎ取る/M'],
+  },
+  {
+    materialName: '銀火竜の剛翼',
+    drop: ['リオレウス希少種の剥ぎ取り、翼の部位破壊/M'],
+  },
+  {
+    materialName: '風漂竜の剛翼',
+    drop: ['レイギエナを狩猟、翼の部位破壊/M'],
+  },
+  {
+    materialName: '風漂竜の厚皮',
+    drop: ['レイギエナを狩猟、背中の部位破壊/M'],
+  },
+  {
+    materialName: '紅蓮にゆれる銀殻',
+    drop: ['紅蓮滾るバゼルギウスを狩猟、背中の部位破壊/M'],
+  },
+  {
+    materialName: '爆鱗竜の重尾',
+    drop: ['紅蓮滾るバゼルギウスを狩猟、尻尾を切断/M'],
+  },
+  {
+    materialName: '屍套龍の重殻',
+    drop: ['死を纏うヴァルハザクのクエスト報酬/M'],
+  },
+  {
+    materialName: '屍套龍の剛翼',
+    drop: ['死を纏うヴァルハザクのクエスト報酬、胴の部位破壊/M'],
+  },
+  {
+    materialName: '滅尽龍の重殻',
+    drop: ['悉くを殲ぼすネルギガンテを狩猟、翼の部位破壊/M'],
+  },
+  {
+    materialName: '不滅の厚龍鱗',
+    drop: ['悉くを殲ぼすネルギガンテを狩猟/M'],
+  },
+  {
+    materialName: '滅尽龍の重尾',
+    drop: ['悉くを殲ぼすネルギガンテを狩猟、尻尾を切断/M'],
+  },
+  {
+    materialName: '恐暴竜の重尾',
+    drop: ['怒り喰らうイビルジョーを狩猟、尻尾を切断/M'],
+  },
+  {
+    materialName: '猛り爆ぜるブラキディオス',
+    drop: ['猛り爆ぜるブラキディオスの落とし物/M'],
   },
 ]
 

@@ -15,7 +15,7 @@ const SideButtonNav: React.FC = () => {
       <NavButton onClick={() => scrollToSection('how-to-use')}>？</NavButton>
       <NavButton onClick={() => scrollToSection('category')}>ランク</NavButton>
       <NavButton onClick={() => scrollToSection('derivated')}>派生</NavButton>
-      <NavButton onClick={() => scrollToSection('select-weapon')}>
+      <NavButton onClick={() => scrollToSection('select-armor')}>
         防具
       </NavButton>
       <NavButton onClick={() => scrollToSection('result')}>結果</NavButton>

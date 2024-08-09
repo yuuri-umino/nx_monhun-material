@@ -980,7 +980,7 @@ const lower: ArmorType = {
           name: 'ウルムーグリーヴ',
           materials: [
             { name: '浮空竜の鱗', quantity: 2 },
-            { name: 'ゴム質の毛皮', quantity: 2 },
+            { name: '浮空竜の毛皮', quantity: 2 },
             { name: '浮空竜の翼膜', quantity: 1 },
             { name: 'サンゴの紅骨', quantity: 1 },
           ],

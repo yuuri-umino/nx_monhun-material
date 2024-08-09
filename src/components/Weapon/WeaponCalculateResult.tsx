@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import IconOk from '../../assets/icon-ok.png'
-import { materialsDrops } from '../../utils/weapon/materialsDrops'
+import { materialsDrops } from '../../utils/materialsDrops'
 import SaveModal from './SaveModal'
 import SavedDataSection from './SavedDataSection'
 

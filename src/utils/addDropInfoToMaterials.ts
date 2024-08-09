@@ -1,5 +1,5 @@
 import { materialsDrops } from './materialsDrops'
-import { WeaponType } from './materialsTypes'
+import { WeaponType } from './weapon/materialsTypes'
 
 export const addDropInfoToMaterials = (weaponType: WeaponType): WeaponType => {
   const materialDropMap = new Map<string, string[]>()

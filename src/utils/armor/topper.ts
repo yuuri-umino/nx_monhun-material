@@ -204,7 +204,7 @@ const topper: ArmorType = {
           name: 'ハンターメイルα',
           materials: [
             { name: 'ジャグラスの上皮', quantity: 3 },
-            { name: '上質な堅骨', quantity: 2 },
+            { name: '上質な堅骨', quantity: 4 },
           ],
           skill: [{ name: 'スリンガー装填数UP', level: 2 }],
         },
@@ -255,7 +255,7 @@ const topper: ArmorType = {
           name: 'ハンターメイルβ',
           materials: [
             { name: 'ジャグラスの上皮', quantity: 3 },
-            { name: '上質な堅骨', quantity: 2 },
+            { name: '上質な堅骨', quantity: 4 },
           ],
           skill: [{ name: 'スリンガー装填数UP', level: 1 }],
         },
@@ -293,7 +293,7 @@ const topper: ArmorType = {
           materials: [
             { name: '上質な堅骨', quantity: 3 },
             { name: '上竜骨', quantity: 2 },
-            { name: '上竜骨', quantity: 2 },
+            { name: 'いびつな狂骨', quantity: 2 },
           ],
           skill: [
             { name: '体力増強', level: 1 },
@@ -352,7 +352,7 @@ const topper: ArmorType = {
           materials: [
             { name: '上質な堅骨', quantity: 3 },
             { name: '上竜骨', quantity: 2 },
-            { name: '上竜骨', quantity: 2 },
+            { name: 'いびつな狂骨', quantity: 2 },
           ],
           skill: [{ name: '体力増強', level: 1 }],
         },
@@ -1457,7 +1457,7 @@ const topper: ArmorType = {
           materials: [
             { name: '土砂竜の堅甲', quantity: 3 },
             { name: '土砂竜の尻尾', quantity: 2 },
-            { name: '土砂竜の鋭牙', quantity: 3 },
+            { name: '土砂竜の鋭爪', quantity: 3 },
             { name: 'ケストドンの堅殻', quantity: 4 },
           ],
           skill: [{ name: 'ガード性能', level: 2 }],
@@ -1467,7 +1467,7 @@ const topper: ArmorType = {
           materials: [
             { name: '土砂竜の堅殻', quantity: 4 },
             { name: '土砂竜の堅甲', quantity: 2 },
-            { name: '土砂竜の鋭牙', quantity: 2 },
+            { name: '土砂竜の鋭爪', quantity: 2 },
             { name: '上質な堅骨', quantity: 5 },
           ],
           skill: [{ name: 'スタミナ奪取', level: 2 }],
@@ -1476,8 +1476,8 @@ const topper: ArmorType = {
           name: 'ボロスアームα',
           materials: [
             { name: '土砂竜の堅甲', quantity: 4 },
-            { name: '土砂竜の尻尾', quantity: 2 },
-            { name: 'ケストドンの堅殻', quantity: 4 },
+            { name: '土砂竜の頭殻', quantity: 2 },
+            { name: 'ケストドンの堅殻', quantity: 3 },
             { name: '竜玉', quantity: 1 },
           ],
           skill: [
@@ -1503,7 +1503,7 @@ const topper: ArmorType = {
             { name: '土砂竜の堅甲', quantity: 2 },
             { name: '土砂竜の堅殻', quantity: 4 },
             { name: '肥沃なドロ', quantity: 4 },
-            { name: '上竜骨', quantity: 4 },
+            { name: '尖竜骨', quantity: 4 },
           ],
           skill: [
             { name: 'ランナー', level: 1 },
@@ -1520,7 +1520,7 @@ const topper: ArmorType = {
           materials: [
             { name: '土砂竜の堅甲', quantity: 3 },
             { name: '土砂竜の尻尾', quantity: 2 },
-            { name: '土砂竜の鋭牙', quantity: 3 },
+            { name: '土砂竜の鋭爪', quantity: 3 },
             { name: 'ケストドンの堅殻', quantity: 4 },
           ],
           skill: [{ name: 'ガード性能', level: 1 }],
@@ -1530,7 +1530,7 @@ const topper: ArmorType = {
           materials: [
             { name: '土砂竜の堅殻', quantity: 4 },
             { name: '土砂竜の堅甲', quantity: 2 },
-            { name: '土砂竜の鋭牙', quantity: 2 },
+            { name: '土砂竜の鋭爪', quantity: 2 },
             { name: '上質な堅骨', quantity: 5 },
           ],
           skill: [{ name: 'スタミナ奪取', level: 1 }],
@@ -1539,8 +1539,8 @@ const topper: ArmorType = {
           name: 'ボロスアームβ',
           materials: [
             { name: '土砂竜の堅甲', quantity: 4 },
-            { name: '土砂竜の尻尾', quantity: 2 },
-            { name: 'ケストドンの堅殻', quantity: 4 },
+            { name: '土砂竜の頭殻', quantity: 2 },
+            { name: 'ケストドンの堅殻', quantity: 3 },
             { name: '竜玉', quantity: 1 },
           ],
           skill: [{ name: 'ランナー', level: 1 }],
@@ -1560,7 +1560,7 @@ const topper: ArmorType = {
             { name: '土砂竜の堅甲', quantity: 2 },
             { name: '土砂竜の堅殻', quantity: 4 },
             { name: '肥沃なドロ', quantity: 4 },
-            { name: '上竜骨', quantity: 4 },
+            { name: '尖竜骨', quantity: 4 },
           ],
           skill: [{ name: '気絶耐性', level: 1 }],
         },
@@ -1719,7 +1719,7 @@ const topper: ArmorType = {
           materials: [
             { name: '泥魚竜の堅殻', quantity: 4 },
             { name: '泥魚竜の鋭牙', quantity: 3 },
-            { name: '泥魚竜の大ヒゲ', quantity: 2 },
+            { name: '咬魚の大ヒゲ', quantity: 2 },
             { name: '尖竜骨', quantity: 3 },
           ],
           skill: [
@@ -1776,7 +1776,7 @@ const topper: ArmorType = {
           materials: [
             { name: '泥魚竜の堅殻', quantity: 4 },
             { name: '泥魚竜の鋭牙', quantity: 3 },
-            { name: '泥魚竜の大ヒゲ', quantity: 2 },
+            { name: '咬魚の大ヒゲ', quantity: 2 },
             { name: '尖竜骨', quantity: 3 },
           ],
           skill: [{ name: '水属性攻撃強化', level: 2 }],
@@ -1962,7 +1962,7 @@ const topper: ArmorType = {
           materials: [
             { name: '浮空竜の上毛皮', quantity: 4 },
             { name: '浮空竜の上鱗', quantity: 2 },
-            { name: '浮空竜の堅殻', quantity: 3 },
+            { name: 'ゴム質の堅殻', quantity: 3 },
             { name: 'サンゴの紅骨', quantity: 5 },
           ],
           skill: [{ name: '精霊の加護', level: 2 }],
@@ -2020,7 +2020,7 @@ const topper: ArmorType = {
           materials: [
             { name: '浮空竜の上毛皮', quantity: 4 },
             { name: '浮空竜の上鱗', quantity: 2 },
-            { name: '浮空竜の堅殻', quantity: 3 },
+            { name: 'ゴム質の堅殻', quantity: 3 },
             { name: 'サンゴの紅骨', quantity: 5 },
           ],
           skill: [{ name: '精霊の加護', level: 1 }],
@@ -2200,7 +2200,7 @@ const topper: ArmorType = {
             { name: '雌火竜の堅殻', quantity: 4 },
             { name: '雌火竜の上鱗', quantity: 4 },
             { name: '雌火竜の上棘', quantity: 2 },
-            { name: '尖角骨', quantity: 4 },
+            { name: '尖竜骨', quantity: 4 },
           ],
           skill: [{ name: '毒属性強化', level: 2 }],
         },
@@ -2264,7 +2264,7 @@ const topper: ArmorType = {
             { name: '雌火竜の堅殻', quantity: 4 },
             { name: '雌火竜の上鱗', quantity: 4 },
             { name: '雌火竜の上棘', quantity: 2 },
-            { name: '尖角骨', quantity: 4 },
+            { name: '尖竜骨', quantity: 4 },
           ],
           skill: [{ name: '毒属性強化', level: 1 }],
         },
@@ -3932,7 +3932,7 @@ const topper: ArmorType = {
             { name: '黒角竜の堅殻', quantity: 4 },
             { name: '黒角竜の堅甲', quantity: 2 },
             { name: '上質なねじれた角', quantity: 2 },
-            { name: '黒角竜の延髄', quantity: 2 },
+            { name: '角竜の延髄', quantity: 2 },
           ],
           skill: [{ name: '逆恨み', level: 2 }],
         },
@@ -3996,7 +3996,7 @@ const topper: ArmorType = {
             { name: '黒角竜の堅殻', quantity: 4 },
             { name: '黒角竜の堅甲', quantity: 2 },
             { name: '上質なねじれた角', quantity: 2 },
-            { name: '黒角竜の延髄', quantity: 2 },
+            { name: '角竜の延髄', quantity: 2 },
           ],
           skill: [{ name: '逆恨み', level: 1 }],
         },
@@ -4170,7 +4170,7 @@ const topper: ArmorType = {
             { name: '爆鱗竜の上鱗', quantity: 2 },
             { name: '爆鱗竜の堅殻', quantity: 2 },
             { name: '爆鱗竜の爆腺', quantity: 4 },
-            { name: '爆鱗竜の耐熱殻', quantity: 2 },
+            { name: '爆鎚竜の耐熱殻', quantity: 2 },
           ],
           skill: [
             { name: 'ガード性能', level: 2 },
@@ -4196,7 +4196,7 @@ const topper: ArmorType = {
             { name: '爆鱗竜の堅殻', quantity: 2 },
             { name: '爆鱗竜の上鱗', quantity: 1 },
             { name: '爆鱗竜の爆腺', quantity: 1 },
-            { name: '爆鱗竜の延髄', quantity: 1 },
+            { name: '爆鎚竜の延髄', quantity: 1 },
           ],
           skill: [
             { name: '耳栓', level: 2 },
@@ -4237,7 +4237,7 @@ const topper: ArmorType = {
             { name: '爆鱗竜の上鱗', quantity: 2 },
             { name: '爆鱗竜の堅殻', quantity: 2 },
             { name: '爆鱗竜の爆腺', quantity: 4 },
-            { name: '爆鱗竜の耐熱殻', quantity: 2 },
+            { name: '爆鎚竜の耐熱殻', quantity: 2 },
           ],
           skill: [{ name: 'ガード性能', level: 2 }],
         },
@@ -4257,7 +4257,7 @@ const topper: ArmorType = {
             { name: '爆鱗竜の堅殻', quantity: 2 },
             { name: '爆鱗竜の上鱗', quantity: 1 },
             { name: '爆鱗竜の爆腺', quantity: 1 },
-            { name: '爆鱗竜の延髄', quantity: 1 },
+            { name: '爆鎚竜の延髄', quantity: 1 },
           ],
           skill: [{ name: '耳栓', level: 2 }],
         },
@@ -4406,7 +4406,7 @@ const topper: ArmorType = {
           materials: [
             { name: '古龍骨', quantity: 3 },
             { name: '上質な堅骨', quantity: 3 },
-            { name: '爆鱗竜の爆膜', quantity: 1 },
+            { name: '爆鱗竜の爆腺', quantity: 1 },
             { name: 'いにしえの龍骨', quantity: 1 },
           ],
           skill: [
@@ -4458,7 +4458,7 @@ const topper: ArmorType = {
           materials: [
             { name: '古龍骨', quantity: 3 },
             { name: '上質な堅骨', quantity: 3 },
-            { name: '骨髄竜の延髄', quantity: 1 },
+            { name: '骨鎚竜の延髄', quantity: 1 },
             { name: 'いにしえの龍骨', quantity: 1 },
           ],
           skill: [
@@ -4519,7 +4519,7 @@ const topper: ArmorType = {
           materials: [
             { name: '古龍骨', quantity: 3 },
             { name: '上質な堅骨', quantity: 3 },
-            { name: '骨髄竜の延髄', quantity: 1 },
+            { name: '骨鎚竜の延髄', quantity: 1 },
             { name: 'いにしえの龍骨', quantity: 1 },
           ],
           skill: [{ name: '攻撃', level: 2 }],
@@ -4808,8 +4808,8 @@ const topper: ArmorType = {
           name: '	カイザーメイルα',
           materials: [
             { name: '炎王龍の堅殻', quantity: 5 },
-            { name: '獄炎の翼', quantity: 4 },
-            { name: '獄炎の塵粉', quantity: 4 },
+            { name: '炎龍の翼', quantity: 4 },
+            { name: '炎龍の塵粉', quantity: 4 },
             { name: '火竜の逆鱗', quantity: 1 },
           ],
           skill: [
@@ -4872,8 +4872,8 @@ const topper: ArmorType = {
           name: '	カイザーメイルβ',
           materials: [
             { name: '炎王龍の堅殻', quantity: 5 },
-            { name: '獄炎の翼', quantity: 4 },
-            { name: '獄炎の塵粉', quantity: 4 },
+            { name: '炎龍の翼', quantity: 4 },
+            { name: '炎龍の塵粉', quantity: 4 },
             { name: '火竜の逆鱗', quantity: 1 },
           ],
           skill: [{ name: '特殊射撃強化', level: 2 }],
@@ -4945,7 +4945,7 @@ const topper: ArmorType = {
             { name: '鋼龍の堅殻', quantity: 5 },
             { name: '鋼龍の尖角', quantity: 2 },
             { name: '鋼龍の尻尾', quantity: 2 },
-            { name: '風漂龍の逆鱗', quantity: 1 },
+            { name: '風漂竜の逆鱗', quantity: 1 },
           ],
           skill: [
             { name: '匠', level: 1 },
@@ -4971,7 +4971,7 @@ const topper: ArmorType = {
             { name: '鋼龍の堅殻', quantity: 5 },
             { name: '鋼の上龍鱗', quantity: 4 },
             { name: '鋼龍の翼', quantity: 3 },
-            { name: '古龍の皿', quantity: 3 },
+            { name: '古龍の血', quantity: 3 },
           ],
           skill: [
             { name: '回避距離UP', level: 2 },
@@ -5009,7 +5009,7 @@ const topper: ArmorType = {
             { name: '鋼龍の堅殻', quantity: 5 },
             { name: '鋼龍の尖角', quantity: 2 },
             { name: '鋼龍の尻尾', quantity: 2 },
-            { name: '風漂龍の逆鱗', quantity: 1 },
+            { name: '風漂竜の逆鱗', quantity: 1 },
           ],
           skill: [{ name: '回避性能', level: 2 }],
         },
@@ -5029,7 +5029,7 @@ const topper: ArmorType = {
             { name: '鋼龍の堅殻', quantity: 5 },
             { name: '鋼の上龍鱗', quantity: 4 },
             { name: '鋼龍の翼', quantity: 3 },
-            { name: '古龍の皿', quantity: 3 },
+            { name: '古龍の血', quantity: 3 },
           ],
           skill: [{ name: '回避距離UP', level: 2 }],
         },
@@ -5286,7 +5286,7 @@ const topper: ArmorType = {
       ],
     },
     {
-      name: 'ゼノラーα',
+      name: 'ゼノラージα',
       armors: [
         {
           name: 'ゼノラージヘッドα',
@@ -5343,7 +5343,7 @@ const topper: ArmorType = {
         {
           name: 'ゼノラージフットα',
           materials: [
-            { name: 'ひるみ軽減', quantity: 4 },
+            { name: '冥灯龍の幽鱗', quantity: 4 },
             { name: '冥灯龍の白殻', quantity: 2 },
             { name: '冥灯龍の幽幕', quantity: 2 },
             { name: '風漂竜の逆鱗', quantity: 1 },
@@ -5356,7 +5356,7 @@ const topper: ArmorType = {
       ],
     },
     {
-      name: 'ゼノラーβ',
+      name: 'ゼノラージβ',
       armors: [
         {
           name: 'ゼノラージヘッドβ',
@@ -5401,7 +5401,7 @@ const topper: ArmorType = {
         {
           name: 'ゼノラージフットβ',
           materials: [
-            { name: 'ひるみ軽減', quantity: 4 },
+            { name: '冥灯龍の幽鱗', quantity: 4 },
             { name: '冥灯龍の白殻', quantity: 2 },
             { name: '冥灯龍の幽幕', quantity: 2 },
             { name: '風漂竜の逆鱗', quantity: 1 },
@@ -5430,10 +5430,10 @@ const topper: ArmorType = {
         {
           name: 'バンギスヘルムα',
           materials: [
-            { name: '狂暴竜の黒皮', quantity: 5 },
-            { name: '狂暴竜の頭殻', quantity: 2 },
-            { name: '狂暴竜の鉤爪', quantity: 2 },
-            { name: '狂暴竜の宝玉', quantity: 1 },
+            { name: '恐暴竜の黒皮', quantity: 5 },
+            { name: '恐暴竜の頭殻', quantity: 2 },
+            { name: '恐暴竜の鉤爪', quantity: 2 },
+            { name: '恐暴竜の宝玉', quantity: 1 },
           ],
           skill: [
             { name: '破壊王', level: 1 },
@@ -5443,9 +5443,9 @@ const topper: ArmorType = {
         {
           name: '	バンギスメイルα',
           materials: [
-            { name: '狂暴竜の黒鱗', quantity: 3 },
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: '恐暴竜の黒鱗', quantity: 3 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の唾液', quantity: 2 },
             { name: '堅竜骨', quantity: 4 },
           ],
           skill: [
@@ -5456,9 +5456,9 @@ const topper: ArmorType = {
         {
           name: 'バンギスアームα',
           materials: [
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の大牙', quantity: 2 },
-            { name: '狂暴竜の尻尾', quantity: 2 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の大牙', quantity: 2 },
+            { name: '恐暴竜の尻尾', quantity: 2 },
             { name: 'いにしえの龍骨', quantity: 1 },
           ],
           skill: [
@@ -5469,9 +5469,9 @@ const topper: ArmorType = {
         {
           name: '	バンギスコイルα',
           materials: [
-            { name: '狂暴竜の黒鱗', quantity: 3 },
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: '恐暴竜の黒鱗', quantity: 3 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の唾液', quantity: 2 },
             { name: 'ギルオスの上鱗', quantity: 3 },
           ],
           skill: [
@@ -5482,9 +5482,9 @@ const topper: ArmorType = {
         {
           name: 'バンギスグリーブα',
           materials: [
-            { name: '狂暴竜の黒鱗', quantity: 3 },
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の鉤爪', quantity: 2 },
+            { name: '恐暴竜の黒鱗', quantity: 3 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の鉤爪', quantity: 2 },
             { name: 'ギルオスの上皮', quantity: 4 },
           ],
           skill: [
@@ -5500,19 +5500,19 @@ const topper: ArmorType = {
         {
           name: 'バンギスヘルムβ',
           materials: [
-            { name: '狂暴竜の黒皮', quantity: 5 },
-            { name: '狂暴竜の頭殻', quantity: 2 },
-            { name: '狂暴竜の鉤爪', quantity: 2 },
-            { name: '狂暴竜の宝玉', quantity: 1 },
+            { name: '恐暴竜の黒皮', quantity: 5 },
+            { name: '恐暴竜の頭殻', quantity: 2 },
+            { name: '恐暴竜の鉤爪', quantity: 2 },
+            { name: '恐暴竜の宝玉', quantity: 1 },
           ],
           skill: [{ name: '破壊王', level: 1 }],
         },
         {
           name: '	バンギスメイルβ',
           materials: [
-            { name: '狂暴竜の黒鱗', quantity: 3 },
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: '恐暴竜の黒鱗', quantity: 3 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の唾液', quantity: 2 },
             { name: '堅竜骨', quantity: 4 },
           ],
           skill: [{ name: '早食い', level: 1 }],
@@ -5520,9 +5520,9 @@ const topper: ArmorType = {
         {
           name: 'バンギスアームβ',
           materials: [
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の大牙', quantity: 2 },
-            { name: '狂暴竜の尻尾', quantity: 2 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の大牙', quantity: 2 },
+            { name: '恐暴竜の尻尾', quantity: 2 },
             { name: 'いにしえの龍骨', quantity: 1 },
           ],
           skill: [{ name: '力の解放', level: 2 }],
@@ -5530,9 +5530,9 @@ const topper: ArmorType = {
         {
           name: '	バンギスコイルβ',
           materials: [
-            { name: '狂暴竜の黒鱗', quantity: 3 },
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の唾液', quantity: 2 },
+            { name: '恐暴竜の黒鱗', quantity: 3 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の唾液', quantity: 2 },
             { name: 'ギルオスの上鱗', quantity: 3 },
           ],
           skill: [{ name: '力の解放', level: 1 }],
@@ -5540,9 +5540,9 @@ const topper: ArmorType = {
         {
           name: 'バンギスグリーブβ',
           materials: [
-            { name: '狂暴竜の黒鱗', quantity: 3 },
-            { name: '狂暴竜の黒皮', quantity: 4 },
-            { name: '狂暴竜の鉤爪', quantity: 2 },
+            { name: '恐暴竜の黒鱗', quantity: 3 },
+            { name: '恐暴竜の黒皮', quantity: 4 },
+            { name: '恐暴竜の鉤爪', quantity: 2 },
             { name: 'ギルオスの上皮', quantity: 4 },
           ],
           skill: [{ name: '早食い', level: 2 }],

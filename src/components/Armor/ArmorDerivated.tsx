@@ -26,9 +26,9 @@ const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
     onSelectDerivation(derivation.armors, derivation.name)
 
     // 次のセクションにジャンプ
-    const selectWeaponSection = document.getElementById('select-weapon')
-    if (selectWeaponSection) {
-      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    const selectarmorSection = document.getElementById('select-armor')
+    if (selectarmorSection) {
+      selectarmorSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -36,17 +36,17 @@ const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
     <DerivatedSection id="derivated">
       <div className="section-border">
         <h2 className="toppan">2.シリーズを選択する</h2>
-        <div className="weapon-derivated-list d-flex flex-wrap justify-content-between align-items-center">
+        <div className="armor-derivated-list d-flex flex-wrap justify-content-between align-items-center">
           {derivations.map((derivation, index) => (
             <button
               key={index}
-              className={`toppan weapon-item d-flex align-items-center my-2 py-1 px-2 ${
+              className={`toppan armor-item d-flex align-items-center my-2 py-1 px-2 ${
                 selectedDerivation === derivation.name ? 'selected' : ''
               }`}
               type="button"
               onClick={() => handleSelect(derivation)}
             >
-              <Image src={IconArmor} alt="" className="weapon-icon" />
+              <Image src={IconArmor} alt="" className="armor-icon" />
               <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
             </button>
           ))}
@@ -67,7 +67,7 @@ const DerivatedSection = styled.div`
     padding: 20px 0;
     border-bottom: 2px solid #f6874f;
   }
-  .weapon-derivated-list {
+  .armor-derivated-list {
     max-height: 400px;
     overflow-y: scroll;
     border: 1px solid #f6874f;
@@ -78,7 +78,7 @@ const DerivatedSection = styled.div`
       width: 100%;
     }
   }
-  .weapon-item {
+  .armor-item {
     background-color: #fff3ed;
     border: none;
     border-radius: 6px;
@@ -88,7 +88,7 @@ const DerivatedSection = styled.div`
     p {
       font-size: 14px;
     }
-    .weapon-icon {
+    .armor-icon {
       width: 25px;
       height: auto;
     }
@@ -104,13 +104,13 @@ const DerivatedSection = styled.div`
       padding: 30px 0;
       border-bottom: 3px solid #f6874f;
     }
-    .weapon-derivated-list {
+    .armor-derivated-list {
       padding: 20px;
       &::after {
         width: 45%;
       }
     }
-    .weapon-item {
+    .armor-item {
       width: 45%;
     }
   }
@@ -118,30 +118,30 @@ const DerivatedSection = styled.div`
     .section-border {
       padding: 40px 0;
     }
-    .weapon-derivated-list {
+    .armor-derivated-list {
     }
   }
   @media screen and (min-width: 992px) {
-    .weapon-derivated-list {
+    .armor-derivated-list {
       &::after {
         width: 30%;
       }
     }
-    .weapon-item {
-      width: 30%;
+    .armor-item {
+      width: 48%;
       p {
         font-size: 16px;
       }
     }
   }
   @media screen and (min-width: 1200px) {
-    .weapon-derivated-list {
+    .armor-derivated-list {
       &::after {
         width: 49%;
       }
     }
-    .weapon-item {
-      width: 23%;
+    .armor-item {
+      width: 32%;
     }
   }
 `

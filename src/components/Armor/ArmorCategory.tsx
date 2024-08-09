@@ -23,9 +23,9 @@ const ArmorCategory: React.FC<ArmorCategoryProps> = ({
     onArmorClick(armorType)
 
     // 次のセクションにジャンプ
-    const selectWeaponSection = document.getElementById('derivated')
-    if (selectWeaponSection) {
-      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    const selectArmorSection = document.getElementById('derivated')
+    if (selectArmorSection) {
+      selectArmorSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -70,9 +70,6 @@ const CategorySection = styled.div`
     .lank-list {
       padding-bottom: 30px;
       border-bottom: 3px solid #f6874f;
-      button {
-        font-size: 20px;
-      }
     }
   }
   @media screen and (min-width: 768px) {

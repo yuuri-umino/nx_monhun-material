@@ -46,9 +46,9 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
 
     const materialsMap: { [key: string]: number } = {}
     // 次のセクションにジャンプ
-    const selectWeaponSection = document.getElementById('result')
-    if (selectWeaponSection) {
-      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    const selectArmorSection = document.getElementById('result')
+    if (selectArmorSection) {
+      selectArmorSection.scrollIntoView({ behavior: 'smooth' })
     }
 
     armors.forEach((armor) => {
@@ -67,16 +67,16 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
   }
 
   return (
-    <SelectSection id="select-weapon">
+    <SelectSection id="select-armor">
       <section className="section-border">
         <h2 className="toppan mb-2">3.防具を選択する</h2>
         <p className="caution">シリーズを変更して選択できます。</p>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
-        <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
+        <div className="armor-name d-flex flex-wrap justify-content-between align-items-center">
           {armors.map((armor, index) => (
             <button
               key={index}
-              className={`vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
+              className={`vdl-shadow armor-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
                 selectedArmors.has(armor.name) ? 'selected' : ''
               }`}
               type="button"
@@ -85,7 +85,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
               <div className="checkbox-container">
                 <input
                   type="checkbox"
-                  className="weapon-checkbox"
+                  className="armor-checkbox"
                   checked={selectedArmors.has(armor.name)}
                   readOnly
                 />
@@ -159,7 +159,7 @@ const SelectSection = styled.div`
       color: #333;
     }
   }
-  .weapon-name {
+  .armor-name {
     max-height: 400px;
     overflow-y: scroll;
     border: 1px solid #f6874f;
@@ -170,7 +170,7 @@ const SelectSection = styled.div`
       width: 100%;
     }
   }
-  .weapon-item {
+  .armor-item {
     background-color: #fff3ed;
     border: none;
     border-radius: 6px;
@@ -181,7 +181,7 @@ const SelectSection = styled.div`
     p {
       font-size: 14px;
     }
-    .weapon-icon {
+    .armor-icon {
       width: 25px;
       height: auto;
     }
@@ -197,7 +197,7 @@ const SelectSection = styled.div`
     align-items: center;
     margin-right: 0.5rem;
   }
-  .weapon-checkbox {
+  .armor-checkbox {
     position: relative;
     width: 1rem;
     height: 1rem;
@@ -327,12 +327,12 @@ const SelectSection = styled.div`
         font-size: 24px;
       }
     }
-    .weapon-name {
+    .armor-name {
       &::after {
         width: 47%;
       }
     }
-    .weapon-item {
+    .armor-item {
       width: 47%;
     }
     .reset-btn {
@@ -365,7 +365,7 @@ const SelectSection = styled.div`
     }
   }
   @media screen and (min-width: 992px) {
-    .weapon-item {
+    .armor-item {
       p {
         font-size: 16px;
       }
