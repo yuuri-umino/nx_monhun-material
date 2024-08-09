@@ -55,12 +55,19 @@ const HeaderWrap = styled.header`
       padding: 5px 20px;
       color: #fff !important;
       border-radius: 6px;
+      transition: all 0.3s ease-in-out;
     }
     .armor-btn {
       background-color: #c8551b;
+      &:hover {
+        background-color: #913000;
+      }
     }
     .weapon-btn {
       background-color: #a77d00;
+      &:hover {
+        background-color: #8f6b00;
+      }
     }
     h1 {
       font-size: 18px;

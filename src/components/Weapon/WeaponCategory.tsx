@@ -50,6 +50,11 @@ const WeaponCategory: React.FC<WeaponCategoryProps> = ({
   const handleClick = (weaponType: WeaponType) => {
     setSelectedWeaponType(weaponType.type)
     onWeaponClick(weaponType)
+    // 次のセクションにジャンプ
+    const selectWeaponSection = document.getElementById('derivated')
+    if (selectWeaponSection) {
+      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
   return (
     <>
@@ -118,7 +123,7 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover {
-    opacity: 0.6;
+    background-color: #fee66c;
   }
   img {
     width: 100%;

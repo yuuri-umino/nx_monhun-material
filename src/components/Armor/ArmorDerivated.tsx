@@ -24,6 +24,12 @@ const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
   const handleSelect = (derivation: Derivation) => {
     setSelectedDerivation(derivation.name)
     onSelectDerivation(derivation.armors, derivation.name)
+
+    // 次のセクションにジャンプ
+    const selectWeaponSection = document.getElementById('select-weapon')
+    if (selectWeaponSection) {
+      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -87,7 +93,7 @@ const DerivatedSection = styled.div`
       height: auto;
     }
     &:hover {
-      opacity: 0.8;
+      background-color: #ffd1ba;
     }
     &.selected {
       background-color: #ffd1ba;

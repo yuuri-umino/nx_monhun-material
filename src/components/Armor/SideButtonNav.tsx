@@ -55,8 +55,9 @@ const NavButton = styled.button`
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: #8f6b00;
+    background-color: #913000;
   }
 
   @media screen and (max-width: 576px) {

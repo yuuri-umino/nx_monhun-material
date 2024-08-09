@@ -76,6 +76,10 @@ const HowToUseContainer = styled.div`
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #8f6b00;
+    }
   }
   ul {
     margin: 0;

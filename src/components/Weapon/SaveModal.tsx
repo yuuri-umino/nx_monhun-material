@@ -23,6 +23,11 @@ const SaveModal: React.FC<SaveModalProps> = ({
   }, [currentSaveName])
 
   const handleSave = () => {
+    // 次のセクションにジャンプ
+    const selectWeaponSection = document.getElementById('saved')
+    if (selectWeaponSection) {
+      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    }
     if (inputValue.trim()) {
       onSave(inputValue)
       setInputValue('')

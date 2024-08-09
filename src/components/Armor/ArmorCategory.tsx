@@ -21,6 +21,12 @@ const ArmorCategory: React.FC<ArmorCategoryProps> = ({
   const handleClick = (armorType: ArmorType) => {
     setSelectedArmorType(armorType.type)
     onArmorClick(armorType)
+
+    // 次のセクションにジャンプ
+    const selectWeaponSection = document.getElementById('derivated')
+    if (selectWeaponSection) {
+      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -84,7 +90,7 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover {
-    opacity: 0.6;
+    background-color: #ffd1ba;
   }
   img {
     width: 100%;

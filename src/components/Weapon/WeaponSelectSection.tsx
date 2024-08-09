@@ -39,6 +39,12 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
 
+    // 次のセクションにジャンプ
+    const selectWeaponSection = document.getElementById('result')
+    if (selectWeaponSection) {
+      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    }
+
     weapons.forEach((weapon) => {
       if (selectedWeapons.has(weapon.name)) {
         weapon.materials.forEach((material) => {
@@ -143,7 +149,7 @@ const SelectSection = styled.div`
       height: auto;
     }
     &:hover {
-      opacity: 0.8;
+      background-color: #fee66c;
     }
     &.selected {
       background-color: #fee66c;
