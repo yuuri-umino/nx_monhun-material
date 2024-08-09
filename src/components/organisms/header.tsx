@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const Header: FC = () => {
   const router = useRouter()
@@ -12,14 +13,14 @@ const Header: FC = () => {
       <HeaderWrap id="header">
         <div className="header-inner">
           {isWeaponPage && (
-            <a href="/armor" className="link-change-btn toppan armor-btn">
+            <Link href="/armor" className="link-change-btn toppan armor-btn">
               防具ver
-            </a>
+            </Link>
           )}
           {isArmorPage && (
-            <a href="/weapon" className="link-change-btn toppan weapon-btn">
+            <Link href="/weapon" className="link-change-btn toppan weapon-btn">
               武器ver
-            </a>
+            </Link>
           )}
           <h1
             className={`toppan lh-18 ${isWeaponPage ? 'weapon-color' : 'armor-color'}`}
