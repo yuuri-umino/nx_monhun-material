@@ -124,6 +124,14 @@ const ArmorCalculateResult: React.FC<
               </button>
             </div>
 
+            <p className="save-caution">
+              <span className="d-none d-md-block">
+                素材名にマウスホバーすると
+              </span>
+              <span className="d-block d-md-none">素材名をクリックすると</span>
+              入手先が表示されます。
+            </p>
+
             {currentSaveName && (
               <h3 className="saved-name mb-2 toppan">
                 保存名: {currentSaveName}
@@ -276,6 +284,12 @@ const ResultSection = styled.div`
       border: 2px solid #f6874f;
       box-shadow: none;
     }
+  }
+
+  .save-caution {
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
   }
 
   .saved-name {

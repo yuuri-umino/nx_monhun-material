@@ -30,9 +30,9 @@ const Header: FC = () => {
             {isWeaponPage ? '武器素材計算ツール' : '防具素材計算ツール'}
           </h1>
           <p className="caution">
-            ※強化素材のみです。生産の場合は加味していません。
+            ※素材や数値の誤りがありましたら
             <br className="d-block d-md-none" />
-            ごめんなさい。
+            お手数ですがご報告お願いします。
           </p>
         </div>
       </HeaderWrap>

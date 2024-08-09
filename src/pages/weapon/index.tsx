@@ -1,6 +1,7 @@
 // pages/weapon/index.tsx
 import { useState, useEffect } from 'react'
 import { NextPageWithLayout } from 'next'
+import { NextSeo } from 'next-seo'
 import styled from 'styled-components'
 import DefaultLayout from '@/components/layout/default-layout'
 import CustomHead from '@/components/organisms/head'
@@ -76,7 +77,14 @@ const WeaponPage: NextPageWithLayout = () => {
 
   return (
     <>
-      <CustomHead title="TOP" description="" />
+      <NextSeo
+        title="武器素材計算ツール"
+        description="モンスターハンターアイスボーンの武器素材を計算できるツールです。"
+      />
+      <CustomHead
+        title="武器素材"
+        description="モンスターハンターアイスボーンの武器素材を計算できるツールです。"
+      />
       <SideButtonNav />
       <HowToUse />
       <MainContents>

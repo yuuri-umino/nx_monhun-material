@@ -9,7 +9,7 @@ const CustomHead = ({ title, description }: CustomHeadProps) => {
   return (
     <>
       <Head>
-        <title>{`${title} | `}</title>
+        <title>{`${title} | MHI素材計算ツール `}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>

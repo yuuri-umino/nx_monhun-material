@@ -119,6 +119,12 @@ const DerivatedSection = styled.div`
       padding: 40px 0;
     }
     .armor-derivated-list {
+      &::after {
+        width: 32%;
+      }
+      .armor-item {
+        width: 32%;
+      }
     }
   }
   @media screen and (min-width: 992px) {
@@ -137,7 +143,7 @@ const DerivatedSection = styled.div`
   @media screen and (min-width: 1200px) {
     .armor-derivated-list {
       &::after {
-        width: 49%;
+        width: 32%;
       }
     }
     .armor-item {
