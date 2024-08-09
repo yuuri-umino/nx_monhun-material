@@ -5,19 +5,15 @@ const Footer: FC = () => {
   return (
     <>
       <FooterContainer>
-        <small></small>
+        <small>Monster Hunter アイスボーン素材計算ツール@2024</small>
       </FooterContainer>
     </>
   )
 }
 
 const FooterContainer = styled.footer`
-  position: fixed;
-  top: 50%;
-  right: 10px;
-  transform: translate(0, -50%);
-  z-index: 100;
-  writing-mode: tb-rl;
+  margin-top: 50px;
+  text-align: center;
   font-size: 12px;
   transition: all 0.5s;
   color: #383838;
