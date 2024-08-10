@@ -15,11 +15,17 @@ const CustomHead = ({ title, description }: CustomHeadProps) => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/site-img-og.jpg" />
+        <meta
+          property="og:image"
+          content="https://www.mh-material-calculate.net/images/site-img-og.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="/images/site-img-x.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://www.mh-material-calculate.net/images/site-img-x.jpg"
+        />
       </Head>
     </>
   )
