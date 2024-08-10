@@ -4,13 +4,15 @@ import { FC } from 'react'
 export type GoogleTagManagerId = `GTM-${string}`
 
 type Props = {
-  googleTagManagerId: GoogleTagManagerId
+  googleTagManagerId?: GoogleTagManagerId
 }
 
 const GoogleTagManager: FC<Props> = ({ googleTagManagerId }) => {
+  // googleTagManagerIdが未指定の場合、環境変数からIDを取得
   const gtmId =
     googleTagManagerId ||
-    (process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as GoogleTagManagerId)
+    (process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as GoogleTagManagerId) ||
+    ''
 
   return (
     <>
