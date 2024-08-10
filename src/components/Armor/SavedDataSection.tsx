@@ -57,6 +57,8 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
         5件以上保存すると、古い順から削除されます。
         <br />
         任意で削除もできます。
+        <br />
+        保存した結果はRESTOREで再度利用することができます。
       </p>
       {savedResults.length === 0 ? (
         <p className="toppan text-center mb-0">ここに結果が表示されます</p>

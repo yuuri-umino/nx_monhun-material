@@ -21,6 +21,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
 
   useEffect(() => {
     if (resetTrigger) {
+      setSelectedArmors(new Set())
       setCalculatedMaterials({})
     }
   }, [resetTrigger])
@@ -37,18 +38,13 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
     })
   }
 
-  const handleResetSelectedArmors = () => {
-    setSelectedArmors(new Set())
-  }
-
   const calculateMaterials = () => {
-    setSelectedArmors(new Set())
-
     const materialsMap: { [key: string]: number } = {}
+
     // 次のセクションにジャンプ
-    const selectArmorSection = document.getElementById('result')
-    if (selectArmorSection) {
-      selectArmorSection.scrollIntoView({ behavior: 'smooth' })
+    const resultSection = document.getElementById('result')
+    if (resultSection) {
+      resultSection.scrollIntoView({ behavior: 'smooth' })
     }
 
     armors.forEach((armor) => {
@@ -64,13 +60,19 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
     })
 
     setCalculatedMaterials(materialsMap)
+
+    setSelectedArmors(new Set())
   }
 
   return (
     <SelectSection id="select-armor">
       <section className="section-border">
         <h2 className="toppan mb-2">3.防具を選択する</h2>
-        <p className="caution">シリーズを変更して選択できます。</p>
+        <p className="caution">
+          シリーズを変更して選択できます。
+          <br />
+          ランクを変更した場合は選択した防具はリセットされます。
+        </p>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="armor-name d-flex flex-wrap justify-content-between align-items-center">
           {armors.map((armor, index) => (
@@ -105,7 +107,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
             <button
               className="reset-btn vdl-shadow mb-4 d-block mx-auto"
               type="button"
-              onClick={handleResetSelectedArmors}
+              onClick={() => setSelectedArmors(new Set())}
             >
               RESET
             </button>
