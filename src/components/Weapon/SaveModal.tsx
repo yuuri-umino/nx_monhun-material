@@ -41,7 +41,7 @@ const SaveModal: React.FC<SaveModalProps> = ({
   }
 
   return (
-    <ModalOverlay isOpen={isOpen}>
+    <ModalOverlay $isOpen={isOpen}>
       <ModalContent>
         <h2 className="toppan">名前を入力してください</h2>
         <input
@@ -64,8 +64,8 @@ const SaveModal: React.FC<SaveModalProps> = ({
   )
 }
 
-const ModalOverlay = styled.div<{ isOpen: boolean }>`
-  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+const ModalOverlay = styled.div<{ $isOpen: boolean }>`
+  display: ${(props) => (props.$isOpen ? 'flex' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
