@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { NextPageWithLayout } from 'next'
-import { NextSeo } from 'next-seo'
 import styled from 'styled-components'
 import DefaultLayout from '@/components/layout/default-layout'
 import CustomHead from '@/components/organisms/head'
@@ -45,10 +44,6 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <>
-      <NextSeo
-        title="防具素材計算ツール"
-        description="モンスターハンターアイスボーンの防具素材を計算できるツールです。"
-      />
       <CustomHead
         title="防具素材"
         description="モンスターハンターアイスボーンの防具素材を計算できるツールです。"
