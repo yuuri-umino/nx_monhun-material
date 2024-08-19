@@ -45,6 +45,10 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
     onArmorSelect(armorName, armor) // 親コンポーネントに選択変更を伝える
   }
 
+  const handleReset = () => {
+    setLocalSelectedArmors(new Set())
+  }
+
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
 
@@ -60,6 +64,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
     })
 
     setCalculatedMaterials(materialsMap)
+    handleReset()
   }
 
   return (
@@ -77,7 +82,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
             <button
               key={index}
               className={`vdl-shadow armor-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
-                selectedArmors.has(armor.name) ? 'selected' : ''
+                localSelectedArmors.has(armor.name) ? 'selected' : ''
               }`}
               type="button"
               onClick={() => handleCheckboxChange(armor.name, armor)}
@@ -86,7 +91,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
                 <input
                   type="checkbox"
                   className="armor-checkbox"
-                  checked={selectedArmors.has(armor.name)}
+                  checked={localSelectedArmors.has(armor.name)}
                   readOnly
                 />
               </div>
@@ -97,22 +102,22 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
 
         <section className="selected-armors-list mt-3 mt-md-5">
           <h4 className="toppan text-center">現在選択している防具</h4>
-          {selectedArmors.size === 0 && (
+          {localSelectedArmors.size === 0 && (
             <p className="save-caution">ここに選択した防具が表示されます。</p>
           )}
 
-          {selectedArmors.size > 0 && (
+          {localSelectedArmors.size > 0 && (
             <button
               className="reset-btn vdl-shadow mb-4 d-block mx-auto"
               type="button"
-              onClick={() => setLocalSelectedArmors(new Set())}
+              onClick={handleReset}
             >
               RESET
             </button>
           )}
 
           <ul>
-            {Array.from(selectedArmors.keys()).map((armorName) => (
+            {Array.from(localSelectedArmors).map((armorName) => (
               <li key={armorName} className="text-center mb-3 py-1 fw-bold">
                 {armorName}
               </li>
