@@ -18,7 +18,10 @@ const armorTypes: ArmorType[] = [lower, topper, ex]
 
 const Home: NextPageWithLayout = () => {
   const [selectedArmor, setSelectedArmor] = useState<ArmorType | null>(lower)
-  const [selectedArmors, setSelectedArmors] = useState<Armor[]>([])
+  const [selectedArmors, setSelectedArmors] = useState<Map<string, Armor>>(
+    new Map()
+  )
+  const [displayedArmors, setDisplayedArmors] = useState<Armor[]>([])
   const [selectedDerivationName, setSelectedDerivationName] = useState<
     string | null
   >(null)
@@ -26,7 +29,7 @@ const Home: NextPageWithLayout = () => {
 
   useEffect(() => {
     if (selectedArmor) {
-      setSelectedArmors(selectedArmor.derivations[0]?.armors || [])
+      setDisplayedArmors(selectedArmor.derivations[0]?.armors || [])
       setSelectedDerivationName(selectedArmor.derivations[0]?.name || null)
     }
   }, [selectedArmor])
@@ -37,9 +40,20 @@ const Home: NextPageWithLayout = () => {
   }
 
   const handleSelectDerivation = (armors: Armor[], derivationName: string) => {
-    setSelectedArmors(armors)
+    setDisplayedArmors(armors)
     setSelectedDerivationName(derivationName)
-    setResetTrigger((prev) => !prev)
+  }
+
+  const handleArmorSelection = (armorName: string, armor: Armor) => {
+    setSelectedArmors((prevSelected) => {
+      const newSelected = new Map(prevSelected)
+      if (newSelected.has(armorName)) {
+        newSelected.delete(armorName)
+      } else {
+        newSelected.set(armorName, armor)
+      }
+      return newSelected
+    })
   }
 
   return (
@@ -62,9 +76,11 @@ const Home: NextPageWithLayout = () => {
           />
         )}
         <ArmorSelectSection
-          armors={selectedArmors}
+          armors={displayedArmors}
+          selectedArmors={selectedArmors}
           selectedDerivationName={selectedDerivationName}
           resetTrigger={resetTrigger}
+          onArmorSelect={handleArmorSelection}
         />
       </MainContents>
     </>

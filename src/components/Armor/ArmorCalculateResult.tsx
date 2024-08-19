@@ -239,7 +239,7 @@ const CalculatedSection = styled.div`
       display: none;
       position: absolute;
       top: 50px;
-      width: 250px;
+      width: 220px;
       height: auto;
       background-color: #fff;
       color: #333;

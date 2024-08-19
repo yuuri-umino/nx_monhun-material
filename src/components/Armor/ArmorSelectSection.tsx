@@ -5,29 +5,35 @@ import { Armor } from '../../utils/armor/materialsTypes'
 
 interface SelectProps {
   armors: Armor[]
+  selectedArmors: Map<string, Armor>
   selectedDerivationName: string | null
   resetTrigger: boolean
+  onArmorSelect: (armorName: string, armor: Armor) => void
 }
 
 const ArmorSelectSection: React.FC<SelectProps> = ({
   armors,
+  selectedArmors,
   selectedDerivationName,
   resetTrigger,
+  onArmorSelect,
 }) => {
-  const [selectedArmors, setSelectedArmors] = useState<Set<string>>(new Set())
+  const [localSelectedArmors, setLocalSelectedArmors] = useState<Set<string>>(
+    new Set()
+  )
   const [calculatedMaterials, setCalculatedMaterials] = useState<{
     [key: string]: number
   }>({})
 
   useEffect(() => {
     if (resetTrigger) {
-      setSelectedArmors(new Set())
+      setLocalSelectedArmors(new Set())
       setCalculatedMaterials({})
     }
   }, [resetTrigger])
 
-  const handleCheckboxChange = (armorName: string) => {
-    setSelectedArmors((prevSelected) => {
+  const handleCheckboxChange = (armorName: string, armor: Armor) => {
+    setLocalSelectedArmors((prevSelected) => {
       const newSelected = new Set(prevSelected)
       if (newSelected.has(armorName)) {
         newSelected.delete(armorName)
@@ -36,32 +42,24 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
       }
       return newSelected
     })
+    onArmorSelect(armorName, armor) // 親コンポーネントに選択変更を伝える
   }
 
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
 
-    // 次のセクションにジャンプ
-    const resultSection = document.getElementById('result')
-    if (resultSection) {
-      resultSection.scrollIntoView({ behavior: 'smooth' })
-    }
-
-    armors.forEach((armor) => {
-      if (selectedArmors.has(armor.name)) {
-        armor.materials.forEach((material) => {
-          if (materialsMap[material.name]) {
-            materialsMap[material.name] += material.quantity
-          } else {
-            materialsMap[material.name] = material.quantity
-          }
-        })
-      }
+    // selectedArmors に格納されているすべての防具を参照
+    selectedArmors.forEach((armor) => {
+      armor.materials.forEach((material) => {
+        if (materialsMap[material.name]) {
+          materialsMap[material.name] += material.quantity
+        } else {
+          materialsMap[material.name] = material.quantity
+        }
+      })
     })
 
     setCalculatedMaterials(materialsMap)
-
-    setSelectedArmors(new Set())
   }
 
   return (
@@ -82,7 +80,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
                 selectedArmors.has(armor.name) ? 'selected' : ''
               }`}
               type="button"
-              onClick={() => handleCheckboxChange(armor.name)}
+              onClick={() => handleCheckboxChange(armor.name, armor)}
             >
               <div className="checkbox-container">
                 <input
@@ -107,14 +105,14 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
             <button
               className="reset-btn vdl-shadow mb-4 d-block mx-auto"
               type="button"
-              onClick={() => setSelectedArmors(new Set())}
+              onClick={() => setLocalSelectedArmors(new Set())}
             >
               RESET
             </button>
           )}
 
           <ul>
-            {Array.from(selectedArmors).map((armorName) => (
+            {Array.from(selectedArmors.keys()).map((armorName) => (
               <li key={armorName} className="text-center mb-3 py-1 fw-bold">
                 {armorName}
               </li>
