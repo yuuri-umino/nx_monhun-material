@@ -63,6 +63,11 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
       })
     })
 
+    const selectWeaponSection = document.getElementById('result')
+    if (selectWeaponSection) {
+      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    }
+
     setCalculatedMaterials(materialsMap)
     handleReset()
   }
