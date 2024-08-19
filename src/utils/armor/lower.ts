@@ -19,19 +19,16 @@ const lower: ArmorType = {
         {
           name: 'レザーグラブ',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
-
           skill: [],
         },
         {
           name: 'レザーベルト',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
-
           skill: [],
         },
         {
           name: 'レザーパンツ',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
-
           skill: [],
         },
       ],
@@ -45,7 +42,7 @@ const lower: ArmorType = {
           skill: [{ name: '採集の達人', level: 1 }],
         },
         {
-          name: '	チェーンベスト',
+          name: 'チェーンベスト',
           materials: [{ name: '鉄鉱石', quantity: 1 }],
           skill: [],
         },
@@ -78,7 +75,7 @@ const lower: ArmorType = {
           skill: [{ name: '導蟲反応距離UP', level: 1 }],
         },
         {
-          name: '	ハンターメイル',
+          name: 'ハンターメイル',
           materials: [
             { name: 'ジャグラスの皮', quantity: 2 },
             { name: '竜骨【小】', quantity: 2 },
@@ -94,7 +91,7 @@ const lower: ArmorType = {
           skill: [{ name: '潜伏', level: 1 }],
         },
         {
-          name: '	ハンターコイル',
+          name: 'ハンターコイル',
           materials: [
             { name: 'ジャグラスの皮', quantity: 1 },
             { name: '竜骨【小】', quantity: 1 },
@@ -123,7 +120,7 @@ const lower: ArmorType = {
           skill: [{ name: '体力増強', level: 1 }],
         },
         {
-          name: '	ボーンメイル',
+          name: 'ボーンメイル',
           materials: [
             { name: '竜骨【小】', quantity: 1 },
             { name: '太古の大骨', quantity: 1 },
@@ -139,7 +136,7 @@ const lower: ArmorType = {
           skill: [{ name: 'KO術', level: 1 }],
         },
         {
-          name: '	ボーンコイル',
+          name: 'ボーンコイル',
           materials: [
             { name: '竜骨【小】', quantity: 1 },
             { name: 'ケストドンの甲殻', quantity: 1 },
@@ -168,7 +165,7 @@ const lower: ArmorType = {
           skill: [{ name: '納刀術', level: 1 }],
         },
         {
-          name: '	ランゴメイル',
+          name: 'ランゴメイル',
           materials: [
             { name: 'ランゴスタの甲殻', quantity: 1 },
             { name: 'マカライト鉱石', quantity: 1 },
@@ -184,7 +181,7 @@ const lower: ArmorType = {
           skill: [{ name: '麻痺属性強化', level: 1 }],
         },
         {
-          name: '	ランゴコイル',
+          name: 'ランゴコイル',
           materials: [
             { name: 'ランゴスタの甲殻', quantity: 1 },
             { name: '鉄鉱石', quantity: 4 },
@@ -241,7 +238,7 @@ const lower: ArmorType = {
           skill: [{ name: '早食い', level: 1 }],
         },
         {
-          name: '	ジャグラスメイル',
+          name: 'ジャグラスメイル',
           materials: [
             { name: '賊竜の皮', quantity: 2 },
             { name: '賊竜の爪', quantity: 1 },
@@ -260,7 +257,7 @@ const lower: ArmorType = {
           skill: [{ name: 'オトモヘの采配', level: 1 }],
         },
         {
-          name: '	ジャグラスコイル',
+          name: 'ジャグラスコイル',
           materials: [
             { name: '賊竜の皮', quantity: 1 },
             { name: '賊竜の鱗', quantity: 2 },
@@ -294,7 +291,7 @@ const lower: ArmorType = {
           skill: [{ name: '火耐性', level: 1 }],
         },
         {
-          name: '	クルルメイル',
+          name: 'クルルメイル',
           materials: [
             { name: '掻鳥の皮', quantity: 2 },
             { name: '賊竜の爪', quantity: 1 },
@@ -313,7 +310,7 @@ const lower: ArmorType = {
           skill: [{ name: '運搬の達人', level: 1 }],
         },
         {
-          name: '	クルルコイル',
+          name: 'クルルコイル',
           materials: [
             { name: '掻鳥の皮', quantity: 2 },
             { name: '掻鳥のクチバシ', quantity: 1 },
@@ -345,7 +342,7 @@ const lower: ArmorType = {
           skill: [{ name: '風圧耐性', level: 1 }],
         },
         {
-          name: '	アロイメイル',
+          name: 'アロイメイル',
           materials: [
             { name: 'マカライト鉱石', quantity: 3 },
             { name: '鉄鉱石', quantity: 6 },
@@ -363,7 +360,7 @@ const lower: ArmorType = {
           skill: [{ name: '防御', level: 1 }],
         },
         {
-          name: '	アロイコイル',
+          name: 'アロイコイル',
           materials: [
             { name: 'マカライト鉱石', quantity: 4 },
             { name: '鉄鉱石', quantity: 4 },
@@ -396,7 +393,7 @@ const lower: ArmorType = {
           skill: [{ name: '綿胞子草の知識', level: 1 }],
         },
         {
-          name: '	プケプケメイル',
+          name: 'プケプケメイル',
           materials: [
             { name: '毒妖鳥の鱗', quantity: 2 },
             { name: '毒妖鳥の甲殻', quantity: 1 },
@@ -414,7 +411,7 @@ const lower: ArmorType = {
           skill: [{ name: '毒耐性', level: 1 }],
         },
         {
-          name: '	プケプケコイル',
+          name: 'プケプケコイル',
           materials: [
             { name: '毒妖鳥の甲殻', quantity: 3 },
             { name: '毒妖鳥の尻尾', quantity: 1 },
@@ -449,7 +446,7 @@ const lower: ArmorType = {
           skill: [{ name: 'ガード性能', level: 1 }],
         },
         {
-          name: '	ボロスメイル',
+          name: 'ボロスメイル',
           materials: [
             { name: '土砂竜の甲殻', quantity: 2 },
             { name: '土砂竜の背甲', quantity: 1 },
@@ -469,7 +466,7 @@ const lower: ArmorType = {
           skill: [{ name: 'ランナー', level: 1 }],
         },
         {
-          name: '	ボロスコイル',
+          name: 'ボロスコイル',
           materials: [
             { name: '土砂竜の甲殻', quantity: 2 },
             { name: '土砂竜の背甲', quantity: 1 },
@@ -503,7 +500,7 @@ const lower: ArmorType = {
           skill: [{ name: '水場適応', level: 1 }],
         },
         {
-          name: '	ジュラメイル',
+          name: 'ジュラメイル',
           materials: [
             { name: '泥魚竜の甲殻', quantity: 2 },
             { name: '泥魚竜のヒレ', quantity: 1 },
@@ -522,7 +519,7 @@ const lower: ArmorType = {
           skill: [{ name: '水属性攻撃強化', level: 1 }],
         },
         {
-          name: '	ジュラコイル',
+          name: 'ジュラコイル',
           materials: [
             { name: '泥魚竜の鱗', quantity: 2 },
             { name: '泥魚竜の甲殻', quantity: 1 },
@@ -556,7 +553,7 @@ const lower: ArmorType = {
           skill: [{ name: '体術', level: 1 }],
         },
         {
-          name: '	カガチメイル',
+          name: 'カガチメイル',
           materials: [
             { name: '飛雷竜の毛皮', quantity: 2 },
             { name: '飛雷竜の電極針', quantity: 1 },
@@ -576,7 +573,7 @@ const lower: ArmorType = {
           skill: [{ name: '回避距離UP', level: 1 }],
         },
         {
-          name: '	カガチコイル',
+          name: 'カガチコイル',
           materials: [
             { name: '飛雷竜の鱗', quantity: 2 },
             { name: '飛雷竜の毛皮', quantity: 1 },
@@ -608,7 +605,7 @@ const lower: ArmorType = {
           skill: [{ name: '氷耐性', level: 1 }],
         },
         {
-          name: '	ハイメタメイル',
+          name: 'ハイメタメイル',
           materials: [
             { name: 'ドラグライト鉱石', quantity: 2 },
             { name: 'マカライト鉱石', quantity: 2 },
@@ -628,7 +625,7 @@ const lower: ArmorType = {
           skill: [{ name: '防御', level: 1 }],
         },
         {
-          name: '	ハイメタコイル',
+          name: 'ハイメタコイル',
           materials: [
             { name: 'ドラグライト鉱石', quantity: 2 },
             { name: 'マカライト鉱石', quantity: 1 },
@@ -661,7 +658,7 @@ const lower: ArmorType = {
           skill: [{ name: '回避性能', level: 1 }],
         },
         {
-          name: '	オウビートペット',
+          name: 'オウビートペット',
           materials: [
             { name: 'オオツノアゲハ', quantity: 1 },
             { name: '大地の結晶', quantity: 2 },
@@ -681,7 +678,7 @@ const lower: ArmorType = {
           skill: [{ name: '飛び込み', level: 1 }],
         },
         {
-          name: '	オウビートアンカ',
+          name: 'オウビートアンカ',
           materials: [
             { name: 'オオツノアゲハ', quantity: 1 },
             { name: '大地の結晶', quantity: 2 },
@@ -731,7 +728,7 @@ const lower: ArmorType = {
           skill: [{ name: 'こやし名人', level: 1 }],
         },
         {
-          name: '	タロスメイル',
+          name: 'タロスメイル',
           materials: [
             { name: 'カンタロスの羽', quantity: 2 },
             { name: 'カンタロスの甲殻', quantity: 2 },
@@ -751,7 +748,7 @@ const lower: ArmorType = {
           skill: [{ name: '満足感', level: 1 }],
         },
         {
-          name: '	タロスコイル',
+          name: 'タロスコイル',
           materials: [
             { name: 'カンタロスの羽', quantity: 1 },
             { name: 'カンタロスの甲殻', quantity: 1 },
@@ -786,7 +783,7 @@ const lower: ArmorType = {
           skill: [{ name: '火属性攻撃強化', level: 1 }],
         },
         {
-          name: '	ジャナフメイル',
+          name: 'ジャナフメイル',
           materials: [
             { name: '蛮顎竜の毛皮', quantity: 3 },
             { name: '蛮顎竜の牙', quantity: 2 },
@@ -806,7 +803,7 @@ const lower: ArmorType = {
           skill: [{ name: '特殊射撃強化', level: 1 }],
         },
         {
-          name: '	ジャナフコイル',
+          name: 'ジャナフコイル',
           materials: [
             { name: '蛮顎竜の鱗', quantity: 2 },
             { name: '蛮顎竜の毛皮', quantity: 1 },
@@ -841,7 +838,7 @@ const lower: ArmorType = {
           skill: [{ name: '体力増強', level: 1 }],
         },
         {
-          name: '	レイアメイル',
+          name: 'レイアメイル',
           materials: [
             { name: '雌火竜の鱗', quantity: 2 },
             { name: '雌火竜の甲殻', quantity: 1 },
@@ -861,7 +858,7 @@ const lower: ArmorType = {
           skill: [{ name: '毒属性強化', level: 1 }],
         },
         {
-          name: '	レイアコイル',
+          name: 'レイアコイル',
           materials: [
             { name: '雌火竜の鱗', quantity: 2 },
             { name: '雌火竜の甲殻', quantity: 1 },
@@ -896,7 +893,7 @@ const lower: ArmorType = {
           skill: [{ name: '閃光強化', level: 1 }],
         },
         {
-          name: '	ツィツィメイル',
+          name: 'ツィツィメイル',
           materials: [
             { name: '眩鳥の皮', quantity: 3 },
             { name: '眩鳥の爪', quantity: 2 },
@@ -916,7 +913,7 @@ const lower: ArmorType = {
           skill: [{ name: '気絶耐性', level: 1 }],
         },
         {
-          name: '	ツィツィコイル',
+          name: 'ツィツィコイル',
           materials: [
             { name: '眩鳥の皮', quantity: 2 },
             { name: '眩鳥の爪', quantity: 2 },
@@ -949,7 +946,7 @@ const lower: ArmorType = {
           skill: [{ name: 'スタミナ急速回復', level: 1 }],
         },
         {
-          name: '	ウルムーメイル',
+          name: 'ウルムーメイル',
           materials: [
             { name: '浮空竜の鱗', quantity: 2 },
             { name: 'ゴム質の甲殻', quantity: 1 },
@@ -968,7 +965,7 @@ const lower: ArmorType = {
           skill: [{ name: '砲術', level: 1 }],
         },
         {
-          name: '	ウルムーコイル',
+          name: 'ウルムーコイル',
           materials: [
             { name: '浮空竜の毛皮', quantity: 2 },
             { name: '浮空竜の鱗', quantity: 1 },
@@ -1002,7 +999,7 @@ const lower: ArmorType = {
           skill: [{ name: '笛吹き名人', level: 1 }],
         },
         {
-          name: '	ギルオスメイル',
+          name: 'ギルオスメイル',
           materials: [
             { name: '痺賊竜の皮', quantity: 2 },
             { name: '痺賊竜の尻尾', quantity: 1 },
@@ -1021,7 +1018,7 @@ const lower: ArmorType = {
           skill: [{ name: 'オトモへの采配', level: 1 }],
         },
         {
-          name: '	ギルオスコイル',
+          name: 'ギルオスコイル',
           materials: [
             { name: '痺賊竜の皮', quantity: 2 },
             { name: '痺賊竜の尻尾', quantity: 1 },
@@ -1056,7 +1053,7 @@ const lower: ArmorType = {
           skill: [{ name: 'KO術', level: 1 }],
         },
         {
-          name: '	バルキンメイル',
+          name: 'バルキンメイル',
           materials: [
             { name: '骨鎚竜の鱗', quantity: 2 },
             { name: '骨鎚竜の甲殻', quantity: 1 },
@@ -1076,7 +1073,7 @@ const lower: ArmorType = {
           skill: [{ name: '睡眠属性強化', level: 1 }],
         },
         {
-          name: '	バルキンコイル',
+          name: 'バルキンコイル',
           materials: [
             { name: '骨鎚竜の鱗', quantity: 2 },
             { name: '骨鎚竜の黒油殻', quantity: 1 },
@@ -1111,7 +1108,7 @@ const lower: ArmorType = {
           skill: [{ name: '雷属性攻撃強化', level: 1 }],
         },
         {
-          name: '	インゴットメイル',
+          name: 'インゴットメイル',
           materials: [
             { name: 'ドラグライト鉱石', quantity: 2 },
             { name: '上竜骨', quantity: 1 },
@@ -1131,7 +1128,7 @@ const lower: ArmorType = {
           skill: [{ name: '体力増強', level: 1 }],
         },
         {
-          name: '	インゴットコイル',
+          name: 'インゴットコイル',
           materials: [
             { name: 'ドラグライト鉱石', quantity: 3 },
             { name: '上竜骨', quantity: 1 },
@@ -1166,7 +1163,7 @@ const lower: ArmorType = {
           skill: [{ name: '雷属性攻撃強化', level: 1 }],
         },
         {
-          name: '	ブリゲイドスーツ',
+          name: 'ブリゲイドスーツ',
           materials: [
             { name: '闘技王のコイン', quantity: 3 },
             { name: 'プケプケコイン', quantity: 2 },
@@ -1186,7 +1183,7 @@ const lower: ArmorType = {
           skill: [{ name: '体力増強', level: 1 }],
         },
         {
-          name: '	ブリゲイドコイル',
+          name: 'ブリゲイドコイル',
           materials: [
             { name: '闘技王のコイン', quantity: 2 },
             { name: 'プケプケコイン', quantity: 2 },
@@ -1221,7 +1218,7 @@ const lower: ArmorType = {
           skill: [{ name: '精霊の加護', level: 1 }],
         },
         {
-          name: '	ギエナメイル',
+          name: 'ギエナメイル',
           materials: [
             { name: '風漂竜の皮', quantity: 3 },
             { name: '風漂竜の爪', quantity: 2 },
@@ -1241,7 +1238,7 @@ const lower: ArmorType = {
           skill: [{ name: '飛燕', level: 1 }],
         },
         {
-          name: '	ギエナコイル',
+          name: 'ギエナコイル',
           materials: [
             { name: '風漂竜の皮', quantity: 2 },
             { name: '風漂竜の鱗', quantity: 2 },
@@ -1276,7 +1273,7 @@ const lower: ArmorType = {
           skill: [{ name: '裂傷耐性', level: 1 }],
         },
         {
-          name: '	ガロンメイル',
+          name: 'ガロンメイル',
           materials: [
             { name: '惨爪竜の硬筋', quantity: 2 },
             { name: '惨爪竜の鱗', quantity: 2 },
@@ -1296,7 +1293,7 @@ const lower: ArmorType = {
           skill: [{ name: '体術', level: 1 }],
         },
         {
-          name: '	ガロンコイル',
+          name: 'ガロンコイル',
           materials: [
             { name: '惨爪竜の硬筋', quantity: 3 },
             { name: '惨爪竜の爪', quantity: 2 },
@@ -1331,7 +1328,7 @@ const lower: ArmorType = {
           skill: [{ name: '攻撃', level: 1 }],
         },
         {
-          name: '	レウスメイル',
+          name: 'レウスメイル',
           materials: [
             { name: '火竜の鱗', quantity: 2 },
             { name: '火竜の甲殻', quantity: 4 },
@@ -1351,7 +1348,7 @@ const lower: ArmorType = {
           skill: [{ name: '火耐性', level: 1 }],
         },
         {
-          name: '	レウスコイル',
+          name: 'レウスコイル',
           materials: [
             { name: '火竜の鱗', quantity: 2 },
             { name: '火竜の甲殻', quantity: 2 },
@@ -1386,7 +1383,7 @@ const lower: ArmorType = {
           skill: [{ name: '抜刀術【技】', level: 1 }],
         },
         {
-          name: '	ディアブロメイル',
+          name: 'ディアブロメイル',
           materials: [
             { name: '角竜の甲殻', quantity: 2 },
             { name: '角竜の背甲', quantity: 1 },
@@ -1406,7 +1403,7 @@ const lower: ArmorType = {
           skill: [{ name: '火事場力', level: 1 }],
         },
         {
-          name: '	ディアブロコイル',
+          name: 'ディアブロコイル',
           materials: [
             { name: '角竜の甲殻', quantity: 2 },
             { name: '角竜の背甲', quantity: 1 },
@@ -1441,7 +1438,7 @@ const lower: ArmorType = {
           skill: [{ name: 'ランナー', level: 1 }],
         },
         {
-          name: '	キリンベスト',
+          name: 'キリンベスト',
           materials: [
             { name: '幻獣の皮', quantity: 2 },
             { name: '幻獣のたてがみ', quantity: 2 },
@@ -1461,7 +1458,7 @@ const lower: ArmorType = {
           skill: [{ name: '属性やられ耐性', level: 1 }],
         },
         {
-          name: '	キリンフープ',
+          name: 'キリンフープ',
           materials: [
             { name: '幻獣の皮', quantity: 2 },
             { name: '幻獣の雷角', quantity: 1 },
