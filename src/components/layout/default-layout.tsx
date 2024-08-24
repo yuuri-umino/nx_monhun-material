@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react'
+import { GoogleTagManager } from '@next/third-parties/google'
 import styled from 'styled-components'
 import Head from '@/components/organisms/head'
 import Header from '@/components/organisms/header'
@@ -14,6 +15,7 @@ const DefaultLayout: FC<Props> = (props) => {
     <>
       <Head title={''} description={''} />
       <Header />
+      <GoogleTagManager gtmId="GTM-PFRK798" />
       <Main>{props.children}</Main>
       <Footer />
     </>
