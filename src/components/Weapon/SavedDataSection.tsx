@@ -54,9 +54,13 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
       <p className="save-caution">
         ※結果は5件まで保存できます。
         <br />
-        5件以上保存すると、古い順から削除されます。
+        ※5件以上保存すると、古い順から削除されます。
         <br />
-        任意で削除もできます。
+        ※任意で削除もできます。
+        <br />
+        ※保存した結果はRESTOREで再度利用することができます。
+        <br />
+        ※個数が反映されない場合はもう一度RESTOREを押してみてください。
       </p>
       {savedResults.length === 0 ? (
         <p className="toppan text-center mb-0">ここに結果が表示されます</p>
@@ -131,7 +135,7 @@ const Section = styled.section`
   }
   .save-caution {
     font-size: 12px;
-    text-align: center;
+    text-align: left;
     line-height: 1.6;
   }
   ul {
@@ -175,6 +179,9 @@ const Section = styled.section`
   @media screen and (min-width: 768px) {
     margin-top: 40px;
     padding-top: 40px;
+    .save-caution {
+      text-align: center;
+    }
     ul {
       li {
         margin-bottom: 20px;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import WeaponCalculateResult from './WeaponCalculateResult'
-
 import { Weapon } from '../../utils/weapon/materialsTypes'
+
 interface SelectProps {
   weapons: Weapon[]
   selectedDerivationName: string | null
