@@ -30,9 +30,17 @@ const Header: FC = () => {
             {isWeaponPage ? '武器素材計算ツール' : '防具素材計算ツール'}
           </h1>
           <p className="caution">
-            ※素材や数値の誤りがありましたら
+            ※素材や数値の誤り、動作の不具合等がありましたら
             <br className="d-block d-md-none" />
-            お手数ですがご報告お願いします。
+            お手数ですが下記Xアカウントまでご報告お願いします。
+          </p>
+          <p className="text-center">
+            製作者→なんかつくる人
+            <br />
+            X→
+            <Link href="https://x.com/nankatsukuru" target="_blank">
+              @nankatsukuru
+            </Link>
           </p>
         </div>
       </HeaderWrap>
