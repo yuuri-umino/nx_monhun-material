@@ -15,7 +15,7 @@ const DefaultLayout: FC<Props> = (props) => {
     <>
       <Head title={''} description={''} />
       <Header />
-      <GoogleTagManager gtmId="GTM-PFRK798" />
+      <GoogleTagManager gtmId="GTM-PFRK7983" />
       <Main>{props.children}</Main>
       <Footer />
     </>
