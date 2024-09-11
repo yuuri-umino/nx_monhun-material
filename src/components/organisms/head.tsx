@@ -17,14 +17,14 @@ const CustomHead = ({ title, description }: CustomHeadProps) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.mh-material-calculate.net/images/site-img-og.jpg"
+          content="https://www.mh-material-calculate.net/site-img-og.jpg"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://www.mh-material-calculate.net/images/site-img-x.jpg"
+          content="https://www.mh-material-calculate.net/site-img-og.jpg"
         />
       </Head>
     </>
