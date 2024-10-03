@@ -22,7 +22,7 @@ const ArmorCategory: React.FC<ArmorCategoryProps> = ({
     setSelectedArmorType(armorType.type)
     onArmorClick(armorType)
 
-    // 次のセクションにジャンプ
+    // 次にジャンプ
     const selectArmorSection = document.getElementById('derivated')
     if (selectArmorSection) {
       selectArmorSection.scrollIntoView({ behavior: 'smooth' })
