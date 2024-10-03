@@ -1,6 +1,6 @@
-// components/HowToUse.tsx
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { HowToUseList } from '../../utils/howToUseList'
 
 const HowToUse: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,46 +17,17 @@ const HowToUse: React.FC = () => {
       </button>
       {isOpen && (
         <ul>
-          <li>①武器の種類を選択</li>
-          <li>②派生先を選択</li>
-          <li>③素材を計算したい武器を選択(複数選択可)</li>
-          <li>④Let’s Calculate!</li>
-          <li>
-            ⑤各素材の所持数を入力する
-            <br className="d-block d-sm-none" />
-            <span className="d-block">
-              必要個数に達したら⭕️が表示されます。
-              <br />
-              入力した内容はRESETボタンでリセットができます。
-            </span>
-          </li>
-          <li>
-            ⑥結果を保存する
-            <br />
-            <span className="d-dlock">
-              検索した結果は各素材に入力した所持個数と一緒に名前をつけて保存できます。
-              <br />
-              結果は5件まで保存でき、6件以上登録すると古い順から削除されます。
-              <br />
-              任意で削除することも可能です。
-            </span>
-          </li>
-          <li>
-            ⑦保存した結果を戻す
-            <br />
-            <span className="d-dlock">
-              一度保存したデータを再度計算結果に戻すことが出来ます。
-              <br />
-              戻したい保存データのタブを選択し表示した状態でRESTOREボタンをクリックしてください。
-            </span>
-          </li>
-          <li>
-            💡素材の入手場所がわからない場合
-            <br />
-            <span>
-              計算結果の素材名にパソコンでご覧の場合はマウスをホバー、スマートフォンでご覧の場合はクリックをすることで素材の入手場所を確認することができます。
-            </span>
-          </li>
+          {HowToUseList.weapon.map((item, index) => (
+            <li key={index}>
+              {item.title}
+              {item.desc && (
+                <>
+                  <br />
+                  <span>{item.desc}</span>
+                </>
+              )}
+            </li>
+          ))}
         </ul>
       )}
     </HowToUseContainer>
