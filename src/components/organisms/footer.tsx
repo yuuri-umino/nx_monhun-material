@@ -12,7 +12,7 @@ const Footer: FC = () => {
 }
 
 const FooterContainer = styled.footer`
-  margin-top: 50px;
+  margin: 80px 0 60px;
   text-align: center;
   font-size: 12px;
   transition: all 0.5s;

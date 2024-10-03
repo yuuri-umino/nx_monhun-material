@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import IconOk from '../../assets/icon-ok.png'
 import { materialsDrops } from '../../utils/materialsDrops'
-import SaveModal from './SaveModal'
-import SavedDataSection from './SavedDataSection'
+import SaveModal from '../SaveModal'
+import SavedDataSection from '../SavedDataSection'
 
 interface CalculateResultProps {
   materials: { [key: string]: number }

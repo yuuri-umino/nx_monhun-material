@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 interface SaveModalProps {
   isOpen: boolean
@@ -14,6 +15,9 @@ const SaveModal: React.FC<SaveModalProps> = ({
   onSave,
   currentSaveName,
 }) => {
+  const router = useRouter()
+  const isWeaponPage = router.pathname.includes('/weapon')
+
   const [inputValue, setInputValue] = useState('')
 
   useEffect(() => {
@@ -43,19 +47,30 @@ const SaveModal: React.FC<SaveModalProps> = ({
   return (
     <ModalOverlay $isOpen={isOpen}>
       <ModalContent>
-        <h2 className="toppan">名前を入力してください</h2>
+        <h2
+          className={`toppan ${isWeaponPage ? 'weapon-color' : 'armor-color'}`}
+        >
+          名前を入力してください
+        </h2>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="ANY NAME"
+          className={isWeaponPage ? 'weapon-border' : 'armor-border'}
         />
         <div className="datasave-btn toppan">
-          <button className="save" onClick={handleSave}>
+          <button
+            className={`save ${isWeaponPage ? 'weapon-color weapon-border2px' : 'armor-color armor-border2px'}`}
+            onClick={handleSave}
+          >
             SAVE
           </button>
-          <button className="cancel" onClick={onClose}>
+          <button
+            className={`cancel ${isWeaponPage ? 'weapon-color weapon-border2px' : 'armor-color armor-border2px'}`}
+            onClick={onClose}
+          >
             CANCEL
           </button>
         </div>
@@ -76,7 +91,6 @@ const ModalOverlay = styled.div<{ $isOpen: boolean }>`
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
   h2 {
-    color: #a77d00;
     font-size: 18px;
     margin-bottom: 20px;
   }
@@ -88,6 +102,24 @@ const ModalContent = styled.div`
   border-radius: 5px;
   width: calc(100% - 20px);
   text-align: center;
+  .weapon-color {
+    color: #a77d00;
+  }
+  .weapon-border {
+    border: 1px solid #d29204;
+  }
+  .weapon-border2px {
+    border: 2px solid #d29204;
+  }
+  .armor-color {
+    color: #c8551b;
+  }
+  .armor-border {
+    border: 1px solid #c8551b;
+  }
+  .armor-border2px {
+    border: 2px solid #c8551b;
+  }
   input {
     width: 300px;
     border: 1px solid #a77d00;
@@ -100,8 +132,6 @@ const ModalContent = styled.div`
   }
   button {
     background-color: #fff;
-    border: 2px solid #a77d00;
-    color: #a77d00;
   }
   @media screen and (min-width: 576px) {
     width: 400px;
