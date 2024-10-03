@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { materialsDrops } from '../../utils/materialsDrops'
-import SaveModal from '../Result/SaveModal'
-import SavedDataSection from '../Result/SavedDataSection'
+import SaveModal from '../SaveSection/SaveModal'
+import SavedDataSection from '../SaveSection/SavedDataSection'
 import SaveResetBtn from '../Result/SaveResetBtn'
 import ResultList from '../Result/ResultList'
 
@@ -121,7 +121,7 @@ const ArmorCalculateResult: React.FC<
 
             {currentSaveName && (
               <h3 className="saved-name mb-2 toppan">
-                保存名: {currentSaveName}
+                保存名【{currentSaveName}】
               </h3>
             )}
 
@@ -183,9 +183,8 @@ const ResultSection = styled.div`
     line-height: 1.6;
   }
   .saved-name {
-    text-align: center;
     font-size: 16px;
-    color: #333;
+    color: #c8551b;
   }
 
   @media screen and (min-width: 768px) {
