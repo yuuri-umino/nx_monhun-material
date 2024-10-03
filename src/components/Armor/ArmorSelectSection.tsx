@@ -5,35 +5,27 @@ import { Armor } from '../../utils/armor/materialsTypes'
 
 interface SelectProps {
   armors: Armor[]
-  selectedArmors: Map<string, Armor>
   selectedDerivationName: string | null
   resetTrigger: boolean
-  onArmorSelect: (armorName: string, armor: Armor) => void
 }
 
 const ArmorSelectSection: React.FC<SelectProps> = ({
   armors,
-  selectedArmors,
   selectedDerivationName,
   resetTrigger,
-  onArmorSelect,
 }) => {
-  const [localSelectedArmors, setLocalSelectedArmors] = useState<Set<string>>(
-    new Set()
-  )
+  const [selectedArmors, setSelectedArmors] = useState<Set<string>>(new Set())
   const [calculatedMaterials, setCalculatedMaterials] = useState<{
     [key: string]: number
   }>({})
 
   useEffect(() => {
-    if (resetTrigger) {
-      setLocalSelectedArmors(new Set())
-      setCalculatedMaterials({})
-    }
+    setSelectedArmors(new Set())
+    setCalculatedMaterials({})
   }, [resetTrigger])
 
-  const handleCheckboxChange = (armorName: string, armor: Armor) => {
-    setLocalSelectedArmors((prevSelected) => {
+  const handleCheckboxChange = (armorName: string) => {
+    setSelectedArmors((prevSelected) => {
       const newSelected = new Set(prevSelected)
       if (newSelected.has(armorName)) {
         newSelected.delete(armorName)
@@ -42,61 +34,56 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
       }
       return newSelected
     })
-    onArmorSelect(armorName, armor) // 親コンポーネントに選択変更を伝える
-  }
-
-  const handleReset = () => {
-    setLocalSelectedArmors(new Set())
   }
 
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
+    console.log('Selected weapons:', selectedArmors)
 
-    // selectedArmors に格納されているすべての防具を参照
-    selectedArmors.forEach((armor) => {
-      armor.materials.forEach((material) => {
-        if (materialsMap[material.name]) {
-          materialsMap[material.name] += material.quantity
-        } else {
-          materialsMap[material.name] = material.quantity
-        }
-      })
-    })
-
-    const selectWeaponSection = document.getElementById('result')
-    if (selectWeaponSection) {
-      selectWeaponSection.scrollIntoView({ behavior: 'smooth' })
+    // 次のセクションにジャンプ
+    const selectArmorSection = document.getElementById('result')
+    if (selectArmorSection) {
+      selectArmorSection.scrollIntoView({ behavior: 'smooth' })
     }
 
+    armors.forEach((armor) => {
+      if (selectedArmors.has(armor.name)) {
+        armor.materials.forEach((material) => {
+          if (materialsMap[material.name]) {
+            materialsMap[material.name] += material.quantity
+          } else {
+            materialsMap[material.name] = material.quantity
+          }
+        })
+      }
+    })
+
     setCalculatedMaterials(materialsMap)
-    handleReset()
+
+    // 選択されたアイテムをリセット
+    setSelectedArmors(new Set())
   }
 
   return (
     <SelectSection id="select-armor">
       <section className="section-border">
-        <h2 className="toppan mb-2">3.防具を選択する</h2>
-        <p className="caution">
-          シリーズを変更して選択できます。
-          <br />
-          ランクを変更した場合は選択した防具はリセットされます。
-        </p>
+        <h2 className="toppan">3.防具を選択する</h2>
         <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
         <div className="armor-name d-flex flex-wrap justify-content-between align-items-center">
           {armors.map((armor, index) => (
             <button
               key={index}
               className={`vdl-shadow armor-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
-                localSelectedArmors.has(armor.name) ? 'selected' : ''
+                selectedArmors.has(armor.name) ? 'selected' : ''
               }`}
               type="button"
-              onClick={() => handleCheckboxChange(armor.name, armor)}
+              onClick={() => handleCheckboxChange(armor.name)}
             >
               <div className="checkbox-container">
                 <input
                   type="checkbox"
                   className="armor-checkbox"
-                  checked={localSelectedArmors.has(armor.name)}
+                  checked={selectedArmors.has(armor.name)}
                   readOnly
                 />
               </div>
@@ -104,31 +91,6 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
             </button>
           ))}
         </div>
-
-        <section className="selected-armors-list mt-3 mt-md-5">
-          <h4 className="toppan text-center">現在選択している防具</h4>
-          {localSelectedArmors.size === 0 && (
-            <p className="save-caution">ここに選択した防具が表示されます。</p>
-          )}
-
-          {localSelectedArmors.size > 0 && (
-            <button
-              className="reset-btn vdl-shadow mb-4 d-block mx-auto"
-              type="button"
-              onClick={handleReset}
-            >
-              RESET
-            </button>
-          )}
-
-          <ul>
-            {Array.from(localSelectedArmors).map((armorName) => (
-              <li key={armorName} className="text-center mb-3 py-1 fw-bold">
-                {armorName}
-              </li>
-            ))}
-          </ul>
-        </section>
 
         <button
           className="toppan calc-btn py-2"

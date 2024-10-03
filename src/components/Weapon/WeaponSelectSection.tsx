@@ -38,6 +38,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
 
   const calculateMaterials = () => {
     const materialsMap: { [key: string]: number } = {}
+    console.log('Selected weapons:', selectedWeapons)
 
     // 次のセクションにジャンプ
     const selectWeaponSection = document.getElementById('result')
@@ -58,6 +59,9 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
     })
 
     setCalculatedMaterials(materialsMap)
+
+    // 選択されたアイテムをリセット
+    setSelectedWeapons(new Set())
   }
 
   return (
