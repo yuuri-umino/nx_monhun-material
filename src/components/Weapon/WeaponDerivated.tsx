@@ -101,7 +101,7 @@ const DerivatedSection = styled.div`
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 2px solid #f6dd94;
     }
     .weapon-derivated-list {
       height: auto;

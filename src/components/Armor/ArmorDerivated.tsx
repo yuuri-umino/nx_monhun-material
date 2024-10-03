@@ -102,7 +102,7 @@ const DerivatedSection = styled.div`
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
-      border-bottom: 3px solid #f6874f;
+      border-bottom: 2px solid #f6874f;
     }
     .armor-derivated-list {
       padding: 20px;

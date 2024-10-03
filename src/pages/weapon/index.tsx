@@ -8,7 +8,7 @@ import WeaponCategory from '@/components/Weapon/WeaponCategory'
 import WeaponDerivated from '@/components/Weapon/WeaponDerivated'
 import WeaponSelectSection from '@/components/Weapon/WeaponSelectSection'
 import HowToUse from '@/components/HowToUse'
-import SideButtonNav from '@/components/SideButtonNav'
+import SideButtonNav from '@/components/organisms/SideButtonNav'
 
 import { WeaponType, Weapon } from '@/utils/weapon/materialsTypes'
 import greatSword from '@/utils/weapon/greatSword'

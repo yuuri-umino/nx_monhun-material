@@ -46,31 +46,20 @@ const SaveModal: React.FC<SaveModalProps> = ({
 
   return (
     <ModalOverlay $isOpen={isOpen}>
-      <ModalContent>
-        <h2
-          className={`toppan ${isWeaponPage ? 'weapon-color' : 'armor-color'}`}
-        >
-          名前を入力してください
-        </h2>
+      <ModalContent className={isWeaponPage ? 'weapon' : 'armor'}>
+        <h2 className="toppan">名前を入力してください</h2>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="ANY NAME"
-          className={isWeaponPage ? 'weapon-border' : 'armor-border'}
         />
         <div className="datasave-btn toppan">
-          <button
-            className={`save ${isWeaponPage ? 'weapon-color weapon-border2px' : 'armor-color armor-border2px'}`}
-            onClick={handleSave}
-          >
+          <button className="save" onClick={handleSave}>
             SAVE
           </button>
-          <button
-            className={`cancel ${isWeaponPage ? 'weapon-color weapon-border2px' : 'armor-color armor-border2px'}`}
-            onClick={onClose}
-          >
+          <button className="cancel" onClick={onClose}>
             CANCEL
           </button>
         </div>
@@ -102,27 +91,32 @@ const ModalContent = styled.div`
   border-radius: 5px;
   width: calc(100% - 20px);
   text-align: center;
-  .weapon-color {
-    color: #a77d00;
+  &.weapon {
+    h2,
+    button {
+      color: #a77d00;
+    }
+    input {
+      border: 1px solid #d29204;
+    }
+    button {
+      border: 2px solid #d29204;
+    }
   }
-  .weapon-border {
-    border: 1px solid #d29204;
-  }
-  .weapon-border2px {
-    border: 2px solid #d29204;
-  }
-  .armor-color {
-    color: #c8551b;
-  }
-  .armor-border {
-    border: 1px solid #c8551b;
-  }
-  .armor-border2px {
-    border: 2px solid #c8551b;
+  &.armor {
+    h2,
+    button {
+      color: #c8551b;
+    }
+    input {
+      border: 1px solid #c8551b;
+    }
+    button {
+      border: 2px solid #c8551b;
+    }
   }
   input {
     width: 300px;
-    border: 1px solid #a77d00;
   }
   .datasave-btn {
     gap: 10px;

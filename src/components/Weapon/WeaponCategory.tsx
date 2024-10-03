@@ -103,7 +103,7 @@ const CategorySection = styled.div`
       grid-column-gap: 10px;
       grid-row-gap: 10px;
       padding-bottom: 30px;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 2px solid #f6dd94;
     }
   }
   @media screen and (min-width: 768px) {

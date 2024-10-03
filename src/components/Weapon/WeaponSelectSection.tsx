@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import WeaponCalculateResult from './WeaponCalculateResult'
 import { Weapon } from '../../utils/weapon/materialsTypes'
+import CalculateBtn from '../ItemSelectSection/colculateBtn'
+import ItemList from '../ItemSelectSection/ItemList'
+import ListTitle from '../ItemSelectSection/ListTitle'
 
 interface SelectProps {
   weapons: Weapon[]
@@ -68,37 +71,15 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
     <SelectSection id="select-weapon">
       <section className="section-border">
         <h2 className="toppan">3.武器を選択する</h2>
-        <h3 className="toppan selected-derivation">{selectedDerivationName}</h3>
-        <div className="weapon-name d-flex flex-wrap justify-content-between align-items-center">
-          {weapons.map((weapon, index) => (
-            <button
-              key={index}
-              className={`vdl-shadow weapon-item d-flex align-items-center my-2 py-1 px-2 px-md-4 ${
-                selectedWeapons.has(weapon.name) ? 'selected' : ''
-              }`}
-              type="button"
-              onClick={() => handleCheckboxChange(weapon.name)}
-            >
-              <div className="checkbox-container">
-                <input
-                  type="checkbox"
-                  className="weapon-checkbox"
-                  checked={selectedWeapons.has(weapon.name)}
-                  readOnly
-                />
-              </div>
-              <p className="toppan mb-0 ms-1 ms-lg-4">{weapon.name}</p>
-            </button>
-          ))}
-        </div>
+        <ListTitle selectedDerivationName={selectedDerivationName} />
 
-        <button
-          className="toppan calc-btn py-2"
-          type="button"
-          onClick={calculateMaterials}
-        >
-          Calculate!
-        </button>
+        <ItemList
+          weapons={weapons}
+          selectedItems={selectedWeapons}
+          handleCheckboxChange={handleCheckboxChange}
+        />
+
+        <CalculateBtn onClick={calculateMaterials} />
 
         <WeaponCalculateResult
           materials={calculatedMaterials}
@@ -183,8 +164,8 @@ const SelectSection = styled.div`
       width: 16px;
     }
     &::after {
-      border-right: 3px solid #81630a;
-      border-bottom: 3px solid #81630a;
+      border-right: 2px solid #81630a;
+      border-bottom: 2px solid #81630a;
       content: '';
       display: block;
       height: 11px;
@@ -200,58 +181,10 @@ const SelectSection = styled.div`
       opacity: 1;
     }
   }
-  .calc-btn {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 180px;
-    margin-top: 40px;
-    margin-inline: auto;
-    color: #d29204;
-    transition: 0.3s ease-in-out;
-    text-align: center;
-    background-color: transparent;
-    border: none;
-    &::before,
-    &::after {
-      content: '';
-      width: 18px;
-      height: 18px;
-      border-color: #d29204;
-      box-sizing: border-box;
-      border-style: solid;
-      display: block;
-      position: absolute;
-      transition: all 0.3s ease-in-out;
-    }
-    &:before {
-      top: -6px;
-      left: -6px;
-      border-width: 2px 0 0 2px;
-      z-index: 5;
-    }
-    &:after {
-      bottom: -6px;
-      right: -6px;
-      border-width: 0 2px 2px 0;
-    }
-    &:hover:before,
-    &:hover:after {
-      width: calc(100% + 12px);
-      height: calc(100% + 12px);
-      border-color: #d29204;
-    }
-    &:hover {
-      color: #fff;
-      background-color: #d29204;
-      border-color: #d29204;
-    }
-  }
   @media screen and (min-width: 576px) {
     .section-border {
       padding: 30px 0;
-      border-bottom: 3px solid #f6dd94;
+      border-bottom: 2px solid #f6dd94;
       .selected-derivation {
         font-size: 24px;
       }

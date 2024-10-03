@@ -69,7 +69,7 @@ const CategorySection = styled.div`
   @media screen and (min-width: 576px) {
     .lank-list {
       padding-bottom: 30px;
-      border-bottom: 3px solid #f6874f;
+      border-bottom: 2px solid #f6874f;
     }
   }
   @media screen and (min-width: 768px) {

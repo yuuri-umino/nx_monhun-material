@@ -7,7 +7,7 @@ import ArmorCategory from '@/components/Armor/ArmorCategory'
 import ArmorDerivated from '@/components/Armor/ArmorDerivated'
 import ArmorSelectSection from '@/components/Armor/ArmorSelectSection'
 import HowToUse from '@/components/HowToUse'
-import SideButtonNav from '@/components/SideButtonNav'
+import SideButtonNav from '@/components/organisms/SideButtonNav'
 
 import { ArmorType, Armor } from '../../utils/armor/materialsTypes'
 import lower from '../../utils/armor/lower'
@@ -77,10 +77,8 @@ const Home: NextPageWithLayout = () => {
         )}
         <ArmorSelectSection
           armors={displayedArmors}
-          selectedArmors={selectedArmors}
           selectedDerivationName={selectedDerivationName}
           resetTrigger={resetTrigger}
-          onArmorSelect={handleArmorSelection}
         />
       </MainContents>
     </>

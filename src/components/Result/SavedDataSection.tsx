@@ -53,10 +53,7 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
   }
 
   return (
-    <Section
-      id="saved"
-      className={isWeaponPage ? 'weapon-borderTop' : 'armor-borderTop'}
-    >
+    <Section id="saved" className={isWeaponPage ? 'weapon' : 'armor'}>
       <h2 className={`toppan ${isWeaponPage ? 'weapon-color' : 'armor-color'}`}>
         5.保存した計算結果
       </h2>
@@ -148,14 +145,17 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
 const Section = styled.section`
   margin-top: 20px;
   padding-top: 20px;
+  &.weapon {
+    border-top: 2px solid #f6dd94;
+  }
+  &.armor {
+    border-top: 2px solid #f6874f;
+  }
   .weapon-color {
     color: #a77d00;
   }
   .weapon-border {
     border: 1px solid #d29204;
-  }
-  .weapon-borderTop {
-    border-top: 2px solid #f6dd94;
   }
   .weapon-bg-opa {
     background-color: #fffbe8;
@@ -165,9 +165,6 @@ const Section = styled.section`
   }
   .armor-border {
     border: 1px solid #c8551b;
-  }
-  .armor-borderTop {
-    border-top: 2px solid #f6874f;
   }
   .armor-bg-opa {
     background-color: #fff3ed;
