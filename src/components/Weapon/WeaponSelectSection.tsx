@@ -22,6 +22,11 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
     [key: string]: number
   }>({})
 
+  const [selectedWeaponNames, setSelectedWeaponNames] = useState<string[]>([])
+  const [calculatedWeaponNames, setCalculatedWeaponNames] = useState<string[]>(
+    []
+  ) // 計算結果用の武器名を保持
+
   useEffect(() => {
     setSelectedWeapons(new Set())
     setCalculatedMaterials({})
@@ -35,6 +40,8 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
       } else {
         newSelected.add(weaponName)
       }
+      // 選択された武器名リストを更新
+      setSelectedWeaponNames(Array.from(newSelected))
       return newSelected
     })
   }
@@ -61,10 +68,15 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
       }
     })
 
+    // 素材の計算結果を保存
     setCalculatedMaterials(materialsMap)
+
+    // 計算結果として表示する武器名を保存
+    setCalculatedWeaponNames(selectedWeaponNames)
 
     // 選択されたアイテムをリセット
     setSelectedWeapons(new Set())
+    setSelectedWeaponNames([]) // 選択した武器名はリセット
   }
 
   return (
@@ -85,6 +97,7 @@ const WeaponSelectSection: React.FC<SelectProps> = ({
           materials={calculatedMaterials}
           resetTrigger={resetTrigger}
           setCalculatedMaterials={setCalculatedMaterials}
+          selectedWeaponNames={calculatedWeaponNames}
         />
       </section>
     </SelectSection>

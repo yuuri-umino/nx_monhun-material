@@ -11,11 +11,17 @@ interface CalculateResultProps {
   setCalculatedMaterials: React.Dispatch<
     React.SetStateAction<{ [key: string]: number }>
   >
+  selectedWeaponNames: string[] // 計算後の武器名リスト
 }
 
 const WeaponCalculateResult: React.FC<
   CalculateResultProps & { resetTrigger: boolean }
-> = ({ materials, resetTrigger, setCalculatedMaterials }) => {
+> = ({
+  materials,
+  resetTrigger,
+  setCalculatedMaterials,
+  selectedWeaponNames,
+}) => {
   const [ownedQuantities, setOwnedQuantities] = useState<{
     [key: string]: number
   }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
@@ -119,6 +125,15 @@ const WeaponCalculateResult: React.FC<
               入手先が表示されます。
             </p>
 
+            <div className="select-armors-name mb-2">
+              <p className="toppan mb-2">選択した防具</p>
+              <ul>
+                {selectedWeaponNames.map((name, index) => (
+                  <li key={index}>{name}</li>
+                ))}
+              </ul>
+            </div>
+
             {currentSaveName && (
               <h3 className="saved-name mb-2 toppan">
                 保存名【{currentSaveName}】
@@ -153,6 +168,7 @@ const WeaponCalculateResult: React.FC<
         savedResults={savedResults}
         onDelete={deleteResult}
         onRestore={restoreResult}
+        selectedArmorNames={Object.keys(materials)}
       />
     </>
   )
@@ -186,10 +202,42 @@ const ResultSection = styled.div`
     font-size: 16px;
     color: #a77d00;
   }
+  .select-armors-name {
+    p {
+      color: #a77d00;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style-type: none;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        color: #fff;
+        background: #a77d00;
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
 
   @media screen and (min-width: 768px) {
     .saved-name {
       font-size: 20px;
+    }
+    .select-armors-name {
+      p {
+        font-size: 20px;
+      }
+      ul {
+        li {
+          font-size: 14px;
+        }
+      }
     }
   }
 `

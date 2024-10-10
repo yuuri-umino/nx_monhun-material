@@ -96,7 +96,9 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
               />
             </div>
 
-            <div className="select-armors-name mb-2">
+            <div
+              className={`select-armors-name mb-2 ${isWeaponPage ? 'weapon' : 'armor'}`}
+            >
               <ul>
                 {selectedArmorNames.map((name, index) => (
                   <li key={index}>{name}</li>
@@ -142,7 +144,7 @@ const Section = styled.section`
       border: 1px solid #d29204;
     }
     .save-list-name {
-      color: #d29204;
+      color: #a77d00;
     }
   }
   &.armor {
@@ -203,12 +205,17 @@ const Section = styled.section`
         margin-right: 5px;
         margin-bottom: 5px;
         padding: 5px 10px;
-        color: #fff;
-        background: #c8551b;
         border-radius: 6px;
+        color: #fff;
         font-size: 10px;
         font-weight: bold;
       }
+    }
+    &.weapon ul li {
+      background: #a77d00;
+    }
+    &.armor ul li {
+      background: #c8551b;
     }
   }
   @media screen and (min-width: 576px) {
