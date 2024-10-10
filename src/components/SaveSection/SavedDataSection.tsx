@@ -13,7 +13,8 @@ interface SavedDataSectionProps {
   }>
   onDelete: (index: number) => void
   onRestore: (index: number) => void
-  selectedArmorNames: string[] // 計算後の防具名リスト
+  selectedArmorNames: string[] // 防具名リスト
+  selectedWeaponNames: string[] // 武器名リスト
 }
 
 const SavedDataSection: React.FC<SavedDataSectionProps> = ({
@@ -21,6 +22,7 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
   onDelete,
   onRestore,
   selectedArmorNames,
+  selectedWeaponNames,
 }) => {
   const router = useRouter()
   const isWeaponPage = router.pathname.includes('/weapon')
@@ -99,11 +101,24 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
             <div
               className={`select-armors-name mb-2 ${isWeaponPage ? 'weapon' : 'armor'}`}
             >
-              <ul>
-                {selectedArmorNames.map((name, index) => (
-                  <li key={index}>{name}</li>
-                ))}
-              </ul>
+              {isWeaponPage ? (
+                <>
+                  {/* デバッグ: selectedWeaponNames の内容をコンソールに出力 */}
+                  {console.log('selectedWeaponNames:', selectedWeaponNames)}
+
+                  <ul>
+                    {selectedWeaponNames.map((name, index) => (
+                      <li key={index}>{name}</li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <ul>
+                  {selectedArmorNames.map((name, index) => (
+                    <li key={index}>{name}</li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             <ul>

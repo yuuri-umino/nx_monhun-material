@@ -173,7 +173,8 @@ const ArmorCalculateResult: React.FC<
         savedResults={savedResults}
         onDelete={deleteResult}
         onRestore={restoreResult}
-        selectedArmorNames={selectedArmorNames}
+        selectedArmorNames={selectedArmorNames} // 防具名を渡す
+        selectedWeaponNames={[]} // 防具ページなので武器名は空配列を渡す
       />
     </>
   )

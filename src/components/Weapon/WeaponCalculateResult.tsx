@@ -72,14 +72,17 @@ const WeaponCalculateResult: React.FC<
     setCurrentSaveName('')
   }
 
+  // 保存モーダルを開く
   const openSaveModal = () => {
     setIsModalOpen(true)
   }
 
+  // 保存モーダルを閉じる
   const closeSaveModal = () => {
     setIsModalOpen(false)
   }
 
+  // 保存
   const saveResults = (name: string) => {
     setSavedResults((prevResults) => {
       const newResults = [
@@ -97,10 +100,12 @@ const WeaponCalculateResult: React.FC<
     closeSaveModal()
   }
 
+  // 保存した結果を削除
   const deleteResult = (index: number) => {
     setSavedResults((prevResults) => prevResults.filter((_, i) => i !== index))
   }
 
+  // 保存した結果を復元
   const restoreResult = (index: number) => {
     const resultToRestore = savedResults[index]
     setOwnedQuantities(resultToRestore.ownedQuantities)
@@ -125,7 +130,7 @@ const WeaponCalculateResult: React.FC<
               入手先が表示されます。
             </p>
 
-            <div className="select-armors-name mb-2">
+            <div className="select-weapons-name mb-2">
               <p className="toppan mb-2">選択した防具</p>
               <ul>
                 {selectedWeaponNames.map((name, index) => (
@@ -168,7 +173,8 @@ const WeaponCalculateResult: React.FC<
         savedResults={savedResults}
         onDelete={deleteResult}
         onRestore={restoreResult}
-        selectedArmorNames={Object.keys(materials)}
+        selectedArmorNames={[]} // 武器ページなので防具名は空配列を渡す
+        selectedWeaponNames={selectedWeaponNames} // 武器名を渡す
       />
     </>
   )
@@ -202,7 +208,7 @@ const ResultSection = styled.div`
     font-size: 16px;
     color: #a77d00;
   }
-  .select-armors-name {
+  .select-weapons-name {
     p {
       color: #a77d00;
     }
@@ -229,7 +235,7 @@ const ResultSection = styled.div`
     .saved-name {
       font-size: 20px;
     }
-    .select-armors-name {
+    .select-weapons-name {
       p {
         font-size: 20px;
       }
