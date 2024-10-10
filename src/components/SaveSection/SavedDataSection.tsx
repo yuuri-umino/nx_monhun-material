@@ -13,12 +13,14 @@ interface SavedDataSectionProps {
   }>
   onDelete: (index: number) => void
   onRestore: (index: number) => void
+  selectedArmorNames: string[] // 計算後の防具名リスト
 }
 
 const SavedDataSection: React.FC<SavedDataSectionProps> = ({
   savedResults,
   onDelete,
   onRestore,
+  selectedArmorNames,
 }) => {
   const router = useRouter()
   const isWeaponPage = router.pathname.includes('/weapon')
@@ -92,6 +94,14 @@ const SavedDataSection: React.FC<SavedDataSectionProps> = ({
                 onRestore={() => handleRestore(activeIndex)}
                 isWeaponPage={isWeaponPage}
               />
+            </div>
+
+            <div className="select-armors-name mb-2">
+              <ul>
+                {selectedArmorNames.map((name, index) => (
+                  <li key={index}>{name}</li>
+                ))}
+              </ul>
             </div>
 
             <ul>
@@ -176,6 +186,31 @@ const Section = styled.section`
       font-weight: bold;
     }
   }
+  .select-armors-name {
+    p {
+      color: #c8551b;
+    }
+    ul {
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      border: none;
+      overflow-y: inherit;
+      li {
+        list-style-type: none;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        color: #fff;
+        background: #c8551b;
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
   @media screen and (min-width: 576px) {
     padding-top: 30px;
   }
@@ -192,6 +227,13 @@ const Section = styled.section`
       li {
         margin-bottom: 20px;
         padding: 10px 20px;
+      }
+    }
+    .select-armors-name {
+      ul {
+        li {
+          font-size: 14px;
+        }
       }
     }
   }

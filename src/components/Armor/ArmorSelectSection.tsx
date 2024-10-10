@@ -22,6 +22,9 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
     [key: string]: number
   }>({})
 
+  const [selectedArmorNames, setSelectedArmorNames] = useState<string[]>([])
+  const [calculatedArmorNames, setCalculatedArmorNames] = useState<string[]>([]) // 計算結果用の防具名を保持
+
   useEffect(() => {
     setSelectedArmors(new Set())
     setCalculatedMaterials({})
@@ -35,6 +38,8 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
       } else {
         newSelected.add(armorName)
       }
+      // 選択された防具名リストを更新
+      setSelectedArmorNames(Array.from(newSelected))
       return newSelected
     })
   }
@@ -61,10 +66,15 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
       }
     })
 
+    // 素材の計算結果を保存
     setCalculatedMaterials(materialsMap)
+
+    // 計算結果として表示する防具名を保存
+    setCalculatedArmorNames(selectedArmorNames)
 
     // 選択されたアイテムをリセット
     setSelectedArmors(new Set())
+    setSelectedArmorNames([]) // 選択した防具名はリセット
   }
 
   return (
@@ -86,6 +96,7 @@ const ArmorSelectSection: React.FC<SelectProps> = ({
           materials={calculatedMaterials}
           resetTrigger={resetTrigger}
           setCalculatedMaterials={setCalculatedMaterials}
+          selectedArmorNames={calculatedArmorNames}
         />
       </section>
     </SelectSection>

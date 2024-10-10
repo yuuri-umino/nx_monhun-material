@@ -11,11 +11,17 @@ interface CalculateResultProps {
   setCalculatedMaterials: React.Dispatch<
     React.SetStateAction<{ [key: string]: number }>
   >
+  selectedArmorNames: string[] // 計算後の防具名リスト
 }
 
 const ArmorCalculateResult: React.FC<
   CalculateResultProps & { resetTrigger: boolean }
-> = ({ materials, resetTrigger, setCalculatedMaterials }) => {
+> = ({
+  materials,
+  resetTrigger,
+  setCalculatedMaterials,
+  selectedArmorNames,
+}) => {
   const [ownedQuantities, setOwnedQuantities] = useState<{
     [key: string]: number
   }>(Object.keys(materials).reduce((acc, key) => ({ ...acc, [key]: 0 }), {}))
@@ -66,14 +72,17 @@ const ArmorCalculateResult: React.FC<
     setCurrentSaveName('')
   }
 
+  // 保存モーダルを開く
   const openSaveModal = () => {
     setIsModalOpen(true)
   }
 
+  // 保存モーダルを閉じる
   const closeSaveModal = () => {
     setIsModalOpen(false)
   }
 
+  // 保存
   const saveResults = (name: string) => {
     setSavedResults((prevResults) => {
       const newResults = [
@@ -91,10 +100,12 @@ const ArmorCalculateResult: React.FC<
     closeSaveModal()
   }
 
+  // 保存した結果を削除
   const deleteResult = (index: number) => {
     setSavedResults((prevResults) => prevResults.filter((_, i) => i !== index))
   }
 
+  // 保存した結果を復元
   const restoreResult = (index: number) => {
     const resultToRestore = savedResults[index]
     setOwnedQuantities(resultToRestore.ownedQuantities)
@@ -118,6 +129,15 @@ const ArmorCalculateResult: React.FC<
               <span className="d-block d-md-none">素材名をクリックすると</span>
               入手先が表示されます。
             </p>
+
+            <div className="select-armors-name mb-2">
+              <p className="toppan mb-2">選択した防具</p>
+              <ul>
+                {selectedArmorNames.map((name, index) => (
+                  <li key={index}>{name}</li>
+                ))}
+              </ul>
+            </div>
 
             {currentSaveName && (
               <h3 className="saved-name mb-2 toppan">
@@ -153,6 +173,7 @@ const ArmorCalculateResult: React.FC<
         savedResults={savedResults}
         onDelete={deleteResult}
         onRestore={restoreResult}
+        selectedArmorNames={selectedArmorNames}
       />
     </>
   )
@@ -186,10 +207,42 @@ const ResultSection = styled.div`
     font-size: 16px;
     color: #c8551b;
   }
+  .select-armors-name {
+    p {
+      color: #c8551b;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style-type: none;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        color: #fff;
+        background: #c8551b;
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
 
   @media screen and (min-width: 768px) {
     .saved-name {
       font-size: 20px;
+    }
+    .select-armors-name {
+      p {
+        font-size: 20px;
+      }
+      ul {
+        li {
+          font-size: 14px;
+        }
+      }
     }
   }
 `

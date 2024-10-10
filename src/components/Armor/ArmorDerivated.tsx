@@ -35,21 +35,26 @@ const DerivatedCategory: React.FC<ArmorDerivatedProps> = ({
   return (
     <DerivatedSection id="derivated">
       <div className="section-border">
-        <h2 className="toppan">2.シリーズを選択する</h2>
+        <h2 className="toppan mb-2">2.シリーズを選択する</h2>
+        <p className="text-center">
+          ※αとβは素材数が同じなので[α]のみを表示しています。
+        </p>
         <div className="armor-derivated-list d-flex flex-wrap justify-content-between align-items-center">
-          {derivations.map((derivation, index) => (
-            <button
-              key={index}
-              className={`toppan armor-item d-flex align-items-center my-2 py-1 px-2 ${
-                selectedDerivation === derivation.name ? 'selected' : ''
-              }`}
-              type="button"
-              onClick={() => handleSelect(derivation)}
-            >
-              <Image src={IconArmor} alt="" className="armor-icon" />
-              <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
-            </button>
-          ))}
+          {derivations
+            .filter((derivation) => !derivation.name.includes('β')) // 「β」を含むデータをフィルタリング
+            .map((derivation, index) => (
+              <button
+                key={index}
+                className={`toppan armor-item d-flex align-items-center my-2 py-1 px-2 ${
+                  selectedDerivation === derivation.name ? 'selected' : ''
+                }`}
+                type="button"
+                onClick={() => handleSelect(derivation)}
+              >
+                <Image src={IconArmor} alt="" className="armor-icon" />
+                <p className="mb-0 ms-1 ms-lg-2">{derivation.name}</p>
+              </button>
+            ))}
         </div>
       </div>
     </DerivatedSection>
@@ -66,6 +71,9 @@ const DerivatedSection = styled.div`
   .section-border {
     padding: 20px 0;
     border-bottom: 2px solid #f6874f;
+    p {
+      font-size: 12px;
+    }
   }
   .armor-derivated-list {
     max-height: 400px;
